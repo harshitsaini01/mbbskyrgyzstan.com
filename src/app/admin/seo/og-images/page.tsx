@@ -1,0 +1,122 @@
+"use client";
+
+import { useState, useEffect, useCallback } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { toast } from "sonner";
+import { Loader2, Plus, Trash2, Image as ImageIcon, Check, X } from "lucide-react";
+import { cdn } from "@/lib/cdn";
+
+type OgImage = { id: number; name: string; imageName: string; imagePath: string; status: boolean };
+
+export default function OgImagesPage() {
+    const [images, setImages] = useState<OgImage[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [showAdd, setShowAdd] = useState(false);
+    const [newName, setNewName] = useState("");
+    const [newImagePath, setNewImagePath] = useState("");
+    const [saving, setSaving] = useState(false);
+
+    const load = useCallback(async () => {
+        setLoading(true);
+        const res = await fetch("/api/admin/seo/og-images");
+        if (res.ok) setImages(await res.json());
+        setLoading(false);
+    }, []);
+
+    useEffect(() => { load(); }, [load]);
+
+    const handleAdd = async () => {
+        if (!newName || !newImagePath) { toast.error("Name and image path required"); return; }
+        setSaving(true);
+        const res = await fetch("/api/admin/seo/og-images", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: newName, imageName: newImagePath.split("/").pop() ?? newName, imagePath: newImagePath }),
+        });
+        if (res.ok) { toast.success("OG Image added"); setNewName(""); setNewImagePath(""); setShowAdd(false); load(); }
+        else toast.error("Failed");
+        setSaving(false);
+    };
+
+    const handleDelete = async (id: number) => {
+        if (!confirm("Delete this OG image?")) return;
+        const res = await fetch(`/api/admin/seo/og-images/${id}`, { method: "DELETE" });
+        if (res.ok) { toast.success("Deleted"); load(); }
+    };
+
+    const toggleStatus = async (img: OgImage) => {
+        await fetch(`/api/admin/seo/og-images/${img.id}`, {
+            method: "PATCH",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ status: !img.status }),
+        });
+        load();
+    };
+
+    return (
+        <div className="space-y-6">
+            <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                    <ImageIcon size={22} className="text-red-600" />
+                    <div>
+                        <h1 className="text-2xl font-bold text-gray-900">Default OG Images</h1>
+                        <p className="text-sm text-gray-500">Fallback Open Graph images for social sharing</p>
+                    </div>
+                </div>
+                <Button size="sm" className="bg-red-600 hover:bg-red-700" onClick={() => setShowAdd(true)}>
+                    <Plus size={14} className="mr-1" /> Add OG Image
+                </Button>
+            </div>
+
+            {showAdd && (
+                <div className="bg-white rounded-xl border border-gray-200 p-4 space-y-3">
+                    <h3 className="font-medium text-gray-800">New Default OG Image</h3>
+                    <div className="grid grid-cols-2 gap-3">
+                        <div>
+                            <label className="text-xs text-gray-500 mb-1 block">Name / Label</label>
+                            <Input placeholder="e.g. Homepage Default" value={newName} onChange={(e) => setNewName(e.target.value)} />
+                        </div>
+                        <div>
+                            <label className="text-xs text-gray-500 mb-1 block">Image URL / Path</label>
+                            <Input placeholder="https://... or /storage/og-image.jpg" value={newImagePath} onChange={(e) => setNewImagePath(e.target.value)} />
+                        </div>
+                    </div>
+                    <div className="flex gap-2">
+                        <Button size="sm" onClick={handleAdd} disabled={saving} className="bg-red-600 hover:bg-red-700">
+                            {saving ? <Loader2 size={14} className="animate-spin mr-1" /> : <Check size={14} className="mr-1" />} Add
+                        </Button>
+                        <Button size="sm" variant="ghost" onClick={() => setShowAdd(false)}><X size={14} /></Button>
+                    </div>
+                </div>
+            )}
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                {loading ? (
+                    <div className="col-span-4 p-12 text-center"><Loader2 size={20} className="animate-spin mx-auto text-gray-400" /></div>
+                ) : images.length === 0 ? (
+                    <div className="col-span-4 p-12 text-center bg-white rounded-xl border border-gray-200">
+                        <ImageIcon size={36} className="mx-auto mb-3 text-gray-300" />
+                        <p className="text-gray-500">No OG images yet. Add a default image for social sharing.</p>
+                    </div>
+                ) : (
+                    images.map((img) => (
+                        <div key={img.id} className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+                            <div className="aspect-video bg-gray-100 overflow-hidden">
+                                <img src={cdn(img.imagePath)} alt={img.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).src = "/placeholder-image.jpg"; }} />
+                            </div>
+                            <div className="p-3">
+                                <p className="text-sm font-medium text-gray-800 truncate">{img.name}</p>
+                                <div className="flex items-center justify-between mt-2">
+                                    <Switch checked={img.status} onCheckedChange={() => toggleStatus(img)} />
+                                    <Button size="sm" variant="ghost" className="h-7 w-7 p-0 text-red-500 hover:bg-red-50" onClick={() => handleDelete(img.id)}><Trash2 size={13} /></Button>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                )}
+            </div>
+        </div>
+    );
+}

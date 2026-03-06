@@ -1,0 +1,42 @@
+"use client";
+
+import { useState } from "react";
+import { Download } from "lucide-react";
+import DownloadFormPopup from "@/components/modals/DownloadFormPopup";
+
+interface Props {
+    universityName: string;
+    brochureUrl?: string;
+    label?: string;
+    /** "hero" = yellow outlined (hero section), "download" = yellow outlined compact (download cards), "card" = red compact (default) */
+    variant?: "hero" | "download" | "card";
+}
+
+const FALLBACK_BROCHURE = "/brochures/vietnam_university.pdf";
+
+export default function BrochureButton({ universityName, brochureUrl, label, variant = "card" }: Props) {
+    const [open, setOpen] = useState(false);
+    const effectiveBrochureUrl = brochureUrl || FALLBACK_BROCHURE;
+
+    const btnCls = variant === "hero"
+        ? "border-2 border-yellow-400 text-yellow-400 px-6 py-2.5 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-400 hover:text-yellow-900 transition-all duration-200 text-sm"
+        : variant === "download"
+            ? "shrink-0 inline-flex items-center gap-1.5 border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-red-900 text-xs font-bold px-3 py-2 rounded-xl transition-all duration-200 whitespace-nowrap"
+            : "flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white text-xs font-semibold px-4 py-2 rounded-lg shadow transition-all duration-200 whitespace-nowrap";
+
+    return (
+        <>
+            <button id="download-brochure-btn" onClick={() => setOpen(true)} className={btnCls}>
+                <Download className={variant === "hero" ? "h-4 w-4" : "h-3.5 w-3.5"} />
+                <span>{label ?? (variant === "hero" ? "Download Brochure" : "Download")}</span>
+            </button>
+
+            <DownloadFormPopup
+                isOpen={open}
+                onClose={() => setOpen(false)}
+                universityName={universityName}
+                brochureUrl={effectiveBrochureUrl}
+            />
+        </>
+    );
+}
