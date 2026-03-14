@@ -3,39 +3,70 @@ import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/adminAuth";
 import { revalidatePath } from "next/cache";
 
+function mapPrismaError(err: unknown): { status: number; message: string } {
+    const prismaErr = err as { code?: string; message?: string; meta?: { target?: string[] } };
+
+    if (prismaErr?.code === "P2022") {
+        return {
+            status: 500,
+            message:
+                "Database schema is out of sync with Prisma schema. Run `npx prisma db push` and restart the dev server.",
+        };
+    }
+
+    if (prismaErr?.code === "P2002") {
+        const target = prismaErr.meta?.target?.join(", ") || "unique field";
+        return {
+            status: 409,
+            message: `Duplicate value for ${target}. Please use a different value.`,
+        };
+    }
+
+    return {
+        status: 500,
+        message: err instanceof Error ? err.message : "Failed to process university request",
+    };
+}
+
 // GET /api/admin/universities
 export async function GET(req: NextRequest) {
-    const { session, error: authError } = await requireAdmin();
+    const { error: authError } = await requireAdmin();
     if (authError) return authError;
 
-    const { searchParams } = req.nextUrl;
-    const page = Number(searchParams.get("page") ?? "1");
-    const pageSize = Number(searchParams.get("pageSize") ?? "25");
-    const search = searchParams.get("search") ?? "";
-    const sortBy = searchParams.get("sortBy") ?? "createdAt";
-    const sortDir = (searchParams.get("sortDir") as "asc" | "desc") ?? "desc";
+    try {
+        const { searchParams } = req.nextUrl;
+        const page = Number(searchParams.get("page") ?? "1");
+        const pageSize = Number(searchParams.get("pageSize") ?? "25");
+        const search = searchParams.get("search") ?? "";
+        const sortBy = searchParams.get("sortBy") ?? "createdAt";
+        const sortDir = (searchParams.get("sortDir") as "asc" | "desc") ?? "desc";
 
-    const where = search
-        ? { OR: [{ name: { contains: search, mode: "insensitive" as const } }, { slug: { contains: search, mode: "insensitive" as const } }] }
-        : undefined;
+        const where = search
+            ? { OR: [{ name: { contains: search, mode: "insensitive" as const } }, { slug: { contains: search, mode: "insensitive" as const } }] }
+            : undefined;
 
-    const [data, total] = await Promise.all([
-        prisma.university.findMany({
-            where,
-            skip: (page - 1) * pageSize,
-            take: pageSize,
-            orderBy: { [sortBy]: sortDir },
-            include: { instituteType: { select: { name: true } }, province: { select: { name: true } } },
-        }),
-        prisma.university.count({ where }),
-    ]);
+        const [data, total] = await Promise.all([
+            prisma.university.findMany({
+                where,
+                skip: (page - 1) * pageSize,
+                take: pageSize,
+                orderBy: { [sortBy]: sortDir },
+                include: { instituteType: { select: { name: true } }, province: { select: { name: true } } },
+            }),
+            prisma.university.count({ where }),
+        ]);
 
-    return NextResponse.json({ data, total });
+        return NextResponse.json({ data, total });
+    } catch (err) {
+        console.error("University list error:", err);
+        const mapped = mapPrismaError(err);
+        return NextResponse.json({ error: mapped.message }, { status: mapped.status });
+    }
 }
 
 // POST /api/admin/universities
 export async function POST(req: NextRequest) {
-    const { session, error: authError } = await requireAdmin();
+    const { error: authError } = await requireAdmin();
     if (authError) return authError;
 
     try {
@@ -123,7 +154,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(university, { status: 201 });
     } catch (err) {
         console.error("University create error:", err);
-        const message = err instanceof Error ? err.message : "Failed to create university";
-        return NextResponse.json({ error: message }, { status: 500 });
+        const mapped = mapPrismaError(err);
+        return NextResponse.json({ error: mapped.message }, { status: mapped.status });
     }
 }

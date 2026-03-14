@@ -120,11 +120,15 @@ export default function CreateUniversityPage() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload),
             });
-            if (!res.ok) throw new Error("Failed");
+            if (!res.ok) {
+                const json = await res.json().catch(() => null);
+                const message = json?.error || "Failed to create university.";
+                throw new Error(message);
+            }
             toast.success("University created successfully!");
             router.push("/admin/universities");
-        } catch {
-            toast.error("Failed to create university.");
+        } catch (err) {
+            toast.error(err instanceof Error ? err.message : "Failed to create university.");
         } finally {
             setLoading(false);
         }

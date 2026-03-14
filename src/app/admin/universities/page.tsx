@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { DataTable, Column } from "@/components/admin/DataTable";
 import { Badge } from "@/components/ui/badge";
 import { Pencil, Eye, Trash2, Settings } from "lucide-react";
+import { toast } from "sonner";
 
 type University = {
     id: string;
@@ -88,9 +89,17 @@ export default function AdminUniversitiesPage() {
             const res = await fetch(
                 `/api/admin/universities?page=${page}&pageSize=${pageSize}&search=${encodeURIComponent(search)}&sortBy=${sortBy}&sortDir=${sortDir}`
             );
+            if (!res.ok) {
+                const json = await res.json().catch(() => null);
+                throw new Error(json?.error || "Failed to load universities.");
+            }
             const json = await res.json();
             setData(json.data);
             setTotal(json.total);
+        } catch (err) {
+            setData([]);
+            setTotal(0);
+            toast.error(err instanceof Error ? err.message : "Failed to load universities.");
         } finally {
             setLoading(false);
         }

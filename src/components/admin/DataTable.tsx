@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
     Table,
     TableBody,
@@ -12,7 +12,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Badge } from "@/components/ui/badge";
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -33,9 +32,7 @@ import {
     ChevronsRight,
     Search,
     MoreHorizontal,
-    Pencil,
     Trash2,
-    Eye,
     Download,
     Upload,
     Plus,
@@ -116,15 +113,29 @@ export function DataTable<T extends { id: string | number }>({
     const [localSearch, setLocalSearch] = useState(searchQuery);
 
     const totalPages = Math.ceil(totalCount / pageSize);
+    const currentIds = useMemo(() => new Set(data.map((r) => r.id)), [data]);
+    const selectedVisible = useMemo(
+        () => selected.filter((id) => currentIds.has(id)),
+        [selected, currentIds]
+    );
+    const deleteTargetVisible = useMemo(() => {
+        if (!deleteTarget) return null;
+        const next = deleteTarget.filter((id) => currentIds.has(id));
+        return next.length > 0 ? next : null;
+    }, [deleteTarget, currentIds]);
 
     const toggleSelect = (id: string | number) => {
-        setSelected((prev) =>
-            prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
-        );
+        setSelected((prev) => {
+            const validPrev = prev.filter((x) => currentIds.has(x));
+            return validPrev.includes(id) ? validPrev.filter((x) => x !== id) : [...validPrev, id];
+        });
     };
 
     const toggleAll = () => {
-        setSelected((prev) => (prev.length === data.length ? [] : data.map((r) => r.id)));
+        setSelected((prev) => {
+            const validPrev = prev.filter((id) => currentIds.has(id));
+            return validPrev.length === data.length ? [] : data.map((r) => r.id);
+        });
     };
 
     const handleSort = (col: string) => {
@@ -137,8 +148,8 @@ export function DataTable<T extends { id: string | number }>({
     };
 
     const handleDeleteConfirm = async () => {
-        if (!onDelete || !deleteTarget) return;
-        await onDelete(deleteTarget);
+        if (!onDelete || !deleteTargetVisible) return;
+        await onDelete(deleteTargetVisible);
         setDeleteTarget(null);
         setSelected([]);
     };
@@ -189,13 +200,13 @@ export function DataTable<T extends { id: string | number }>({
                     </div>
 
                     {/* Bulk actions */}
-                    {selected.length > 0 && onDelete && (
+                    {selectedVisible.length > 0 && onDelete && (
                         <div className="flex items-center gap-2">
-                            <span className="text-sm text-gray-500">{selected.length} selected</span>
+                            <span className="text-sm text-gray-500">{selectedVisible.length} selected</span>
                             <Button
                                 variant="destructive"
                                 size="sm"
-                                onClick={() => setDeleteTarget(selected)}
+                                onClick={() => setDeleteTarget(selectedVisible)}
                             >
                                 <Trash2 size={13} className="mr-1.5" /> Delete Selected
                             </Button>
@@ -211,7 +222,7 @@ export function DataTable<T extends { id: string | number }>({
                                 {onDelete && (
                                     <TableHead className="w-10">
                                         <Checkbox
-                                            checked={selected.length === data.length && data.length > 0}
+                                            checked={selectedVisible.length === data.length && data.length > 0}
                                             onCheckedChange={toggleAll}
                                         />
                                     </TableHead>
@@ -270,7 +281,7 @@ export function DataTable<T extends { id: string | number }>({
                                         {onDelete && (
                                             <TableCell>
                                                 <Checkbox
-                                                    checked={selected.includes(row.id)}
+                                                    checked={selectedVisible.includes(row.id)}
                                                     onCheckedChange={() => toggleSelect(row.id)}
                                                 />
                                             </TableCell>
@@ -375,8 +386,8 @@ export function DataTable<T extends { id: string | number }>({
 
             {/* Delete confirm */}
             <DeleteConfirmDialog
-                open={!!deleteTarget}
-                count={deleteTarget?.length ?? 0}
+                open={!!deleteTargetVisible}
+                count={deleteTargetVisible?.length ?? 0}
                 onConfirm={handleDeleteConfirm}
                 onCancel={() => setDeleteTarget(null)}
             />
