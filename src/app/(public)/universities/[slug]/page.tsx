@@ -39,9 +39,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }).catch(() => null);
     if (!u) return { title: "University Not Found" };
     return buildMetadata({
-        title: u.metaTitle || `${u.name} — MBBS in Vietnam`,
+        title: u.metaTitle || `${u.name} — MBBS in Kyrgyzstan`,
         description: u.metaDescription || u.shortnote || `Study MBBS at ${u.name}.`,
-        entitySeo: { metaKeyword: u.metaKeyword || `${u.name}, MBBS Vietnam` },
+        entitySeo: { metaKeyword: u.metaKeyword || `${u.name}, MBBS Kyrgyzstan` },
         ogImage: u.bannerPath ? cdn(u.bannerPath) ?? undefined : (u.thumbnailPath ? cdn(u.thumbnailPath) ?? undefined : undefined),
     });
 }
@@ -78,8 +78,8 @@ export default async function UniversityDetailPage({ params }: Props) {
         { icon: FileText, title: "Submit Application", description: "Complete the online application form with all required documents and academic records.", timeframe: "1–2 days", color: "blue" },
         { icon: CheckCircle, title: "Document Verification", description: "Our admissions team verifies your documents and confirms academic eligibility.", timeframe: "3–5 days", color: "green" },
         { icon: CreditCard, title: "Fee Payment", description: "Pay the initial registration fee and receive your official admission offer letter.", timeframe: "1–2 days", color: "purple" },
-        { icon: Plane, title: "Visa Processing", description: "We assist with your Vietnamese student visa application and provide invitation letter.", timeframe: "15–20 days", color: "orange" },
-        { icon: Calendar, title: "Arrival & Enrollment", description: "Arrive in Vietnam and complete your university enrollment and orientation.", timeframe: "2–3 days", color: "pink" },
+        { icon: Plane, title: "Visa Processing", description: "We assist with your Kyrgyz student visa application and provide invitation letter.", timeframe: "15–20 days", color: "orange" },
+        { icon: Calendar, title: "Arrival & Enrollment", description: "Arrive in Kyrgyzstan and complete your university enrollment and orientation.", timeframe: "2–3 days", color: "pink" },
     ];
     const stepColors: Record<string, string> = {
         blue: "bg-blue-100 text-blue-600", green: "bg-green-100 text-green-600",
@@ -215,9 +215,9 @@ export default async function UniversityDetailPage({ params }: Props) {
                         <h3 className="text-2xl font-bold mb-3">Need Assistance?</h3>
                         <p className="text-red-100 mb-6">Our dedicated admissions team is here to help you throughout the application process</p>
                         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                            <Link href="mailto:info@mbbsinvietnam.com" className="flex items-center gap-3">
+                            <Link href="mailto:info@mbbskyrgyzstan.com" className="flex items-center gap-3">
                                 <div className="bg-white p-2 rounded-full"><Mail className="h-5 w-5 text-red-600" /></div>
-                                <div className="text-left"><p className="font-semibold">Email Support</p><p className="text-red-200 text-sm">info@mbbsinvietnam.com</p></div>
+                                <div className="text-left"><p className="font-semibold">Email Support</p><p className="text-red-200 text-sm">info@mbbskyrgyzstan.com</p></div>
                             </Link>
                             <Link href="/contact-us" className="flex items-center gap-3">
                                 <div className="bg-white p-2 rounded-full"><Phone className="h-5 w-5 text-red-600" /></div>

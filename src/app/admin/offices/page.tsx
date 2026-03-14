@@ -12,7 +12,7 @@ import { ImageUpload } from "@/components/admin/ImageUpload";
 
 type Office = { id: number; name: string; address: string; city: string | null; state: string | null; country: string | null; phone: string | null; email: string | null; mapEmbed: string | null; imagePath: string | null; position: number; status: boolean };
 
-const blank: Omit<Office, "id"> = { name: "", address: "", city: "", state: "", country: "Vietnam", phone: "", email: "", mapEmbed: "", imagePath: null, position: 1, status: true };
+const blank: Omit<Office, "id"> = { name: "", address: "", city: "", state: "", country: "Kyrgyzstan", phone: "", email: "", mapEmbed: "", imagePath: null, position: 1, status: true };
 
 export default function OfficesPage() {
     const [items, setItems] = useState<Office[]>([]);

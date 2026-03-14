@@ -27,9 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }).catch(() => null);
     if (!s) return { title: "Scholarship Not Found" };
     return buildMetadata({
-        title: s.metaTitle || `${s.title} — MBBS Scholarship Vietnam`,
-        description: s.metaDescription || s.shortnote || `Apply for ${s.title}. Scholarships for MBBS in Vietnam.`,
-        entitySeo: { metaKeyword: s.metaKeyword || `${s.title}, MBBS scholarship Vietnam` },
+        title: s.metaTitle || `${s.title} — MBBS Scholarship Kyrgyzstan`,
+        description: s.metaDescription || s.shortnote || `Apply for ${s.title}. Scholarships for MBBS in Kyrgyzstan.`,
+        entitySeo: { metaKeyword: s.metaKeyword || `${s.title}, MBBS scholarship Kyrgyzstan` },
     });
 }
 
@@ -221,7 +221,7 @@ export default async function ScholarshipDetailPage({ params }: Props) {
                                     </div>
                                 )}
                                 <h4 className="font-semibold text-gray-800">{scholarship.university.name}</h4>
-                                {scholarship.university.city && <p className="text-sm text-gray-500 mt-1">{scholarship.university.city}, Vietnam</p>}
+                                {scholarship.university.city && <p className="text-sm text-gray-500 mt-1">{scholarship.university.city}, Kyrgyzstan</p>}
                                 <Link href={`/universities/${scholarship.university.slug}`}
                                     className="mt-4 block text-center border border-red-200 text-red-600 hover:bg-red-50 py-2 rounded-lg text-sm font-medium transition-colors">
                                     View University →

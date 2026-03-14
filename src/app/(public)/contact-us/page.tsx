@@ -6,7 +6,7 @@ import { Phone, Mail, MapPin, Clock, Send, Loader2 } from "lucide-react";
 
 const contactInfo = [
     { icon: <Phone className="w-6 h-6 text-red-600" />, label: "Phone", value: "+91 89xxxxxx", href: "tel:+9189xxxxxxxx" },
-    { icon: <Mail className="w-6 h-6 text-red-600" />, label: "Email", value: "info@mbbsinvietnam.com", href: "mailto:info@mbbsinvietnam.com" },
+    { icon: <Mail className="w-6 h-6 text-red-600" />, label: "Email", value: "info@mbbskyrgyzstan.com", href: "mailto:info@mbbskyrgyzstan.com" },
     { icon: <MapPin className="w-6 h-6 text-red-600" />, label: "Office", value: "New Delhi, India (Head Office)", href: "#" },
     { icon: <Clock className="w-6 h-6 text-red-600" />, label: "Hours", value: "Mon–Sat: 9 AM – 7 PM IST", href: "#" },
 ];
@@ -44,7 +44,7 @@ export default function ContactPage() {
                 <div className="max-w-7xl mx-auto px-4 text-center">
                     <h1 className="text-4xl lg:text-5xl font-bold mb-4">Contact Us</h1>
                     <p className="text-xl text-red-100 max-w-2xl mx-auto">
-                        Have questions about MBBS in Vietnam? Our counsellors are ready to help you every step of the way.
+                        Have questions about MBBS in Kyrgyzstan? Our counsellors are ready to help you every step of the way.
                     </p>
                 </div>
             </div>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                         <div>
                             <h2 className="text-2xl font-bold text-gray-800 mb-4">Get In Touch</h2>
                             <p className="text-gray-600">
-                                Our expert counsellors have helped thousands of students secure MBBS admissions in Vietnam.
+                                Our expert counsellors have helped thousands of students secure MBBS admissions in Kyrgyzstan.
                                 Reach out to us for personalized guidance.
                             </p>
                         </div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
                                     "15+ years of experience in overseas MBBS",
                                     "End-to-end admission support",
                                     "Visa, accommodation, and travel assistance",
-                                    "Post-arrival support in Vietnam",
+                                    "Post-arrival support in Kyrgyzstan",
                                 ].map((point) => (
                                     <li key={point} className="flex items-start space-x-2 text-gray-600 text-sm">
                                         <span className="w-2 h-2 bg-red-500 rounded-full flex-shrink-0 mt-1.5" />

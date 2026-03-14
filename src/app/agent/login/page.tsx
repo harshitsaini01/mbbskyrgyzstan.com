@@ -34,7 +34,7 @@ export default function AgentLoginPage() {
                         <GraduationCap className="w-9 h-9 text-white" />
                     </div>
                     <h1 className="text-2xl font-bold text-white">Agent Portal</h1>
-                    <p className="text-slate-400 mt-1 text-sm">MBBS Vietnam — Partner Access</p>
+                    <p className="text-slate-400 mt-1 text-sm">MBBS Kyrgyzstan — Partner Access</p>
                 </div>
 
                 <div className="bg-white rounded-2xl shadow-2xl p-8">

@@ -13,7 +13,7 @@ interface Props {
 
 const PHONE_CODES = [
     { code: "+91", country: "India" },
-    { code: "+84", country: "Vietnam" },
+    { code: "+996", country: "Kyrgyzstan" },
     { code: "+1", country: "USA/Canada" },
     { code: "+44", country: "UK" },
     { code: "+92", country: "Pakistan" },

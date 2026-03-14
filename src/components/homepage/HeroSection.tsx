@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Users, GraduationCap, Globe, Award } from "lucide-react";
 import { useDownloadModal } from "@/lib/modalContext";
 
-const FALLBACK_BROCHURE = "/brochures/vietnam_university.pdf";
+const FALLBACK_BROCHURE = "/brochures/kyrgyzstan_university.pdf";
 
 export default function HeroSection() {
     const { openModal } = useDownloadModal();
@@ -18,22 +18,29 @@ export default function HeroSection() {
                     backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
                 }}
             />
+
             <div className="relative max-w-7xl mx-auto px-4 py-16">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    
                     {/* Left */}
                     <div className="space-y-8">
                         <div className="space-y-4">
                             <div className="flex items-center space-x-2 text-red-200">
                                 <Globe className="w-5 h-5" />
-                                <span className="text-sm font-medium">Official Partner of top Vietnamese Universities</span>
+                                <span className="text-sm font-medium">
+                                    Official Partner of Top Kyrgyzstan Medical Universities
+                                </span>
                             </div>
+
                             <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
                                 MBBS in
-                                <span className="block text-yellow-300">Vietnam</span>
+                                <span className="block text-yellow-300">Kyrgyzstan</span>
                             </h1>
+
                             <p className="text-xl text-red-100 leading-relaxed">
-                                Discover world-class medical education in the heart of Southeast Asia with globally
-                                recognized degrees and affordable tuition.
+                                Study MBBS in Kyrgyzstan with globally recognized medical
+                                universities, affordable tuition fees, and excellent clinical
+                                training opportunities for international students.
                             </p>
                         </div>
 
@@ -45,8 +52,11 @@ export default function HeroSection() {
                                 <span>Explore Universities</span>
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
+
                             <button
-                                onClick={() => openModal("MBBS in Vietnam", FALLBACK_BROCHURE)}
+                                onClick={() =>
+                                    openModal("MBBS in Kyrgyzstan", FALLBACK_BROCHURE)
+                                }
                                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
                                 suppressHydrationWarning={true}
                             >
@@ -57,13 +67,17 @@ export default function HeroSection() {
                         {/* Stats */}
                         <div className="grid grid-cols-3 gap-8 pt-8 border-t border-red-500">
                             {[
-                                { value: "15+", label: "Top Medical Universities" },
-                                { value: "500+", label: "Satisfied Students" },
-                                { value: "100%", label: "Support" },
+                                { value: "10+", label: "Top Medical Universities" },
+                                { value: "1000+", label: "Indian Students" },
+                                { value: "100%", label: "Admission Support" },
                             ].map((stat) => (
                                 <div key={stat.label} className="text-center">
-                                    <div className="text-3xl font-bold text-yellow-300">{stat.value}</div>
-                                    <div className="text-red-200 text-sm">{stat.label}</div>
+                                    <div className="text-3xl font-bold text-yellow-300">
+                                        {stat.value}
+                                    </div>
+                                    <div className="text-red-200 text-sm">
+                                        {stat.label}
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -72,23 +86,26 @@ export default function HeroSection() {
                     {/* Right */}
                     <div className="relative">
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6">
-                            <h3 className="text-2xl font-bold mb-6">Why Choose Vietnam?</h3>
+                            <h3 className="text-2xl font-bold mb-6">
+                                Why Choose Kyrgyzstan?
+                            </h3>
+
                             <div className="space-y-4">
                                 {[
                                     {
                                         icon: <GraduationCap className="w-6 h-6 text-red-600" />,
-                                        title: "Global Recognition",
-                                        desc: "Degrees recognized by WHO, NMC (India), ECFMG (USA), and global medical councils.",
+                                        title: "Globally Recognized Degrees",
+                                        desc: "Universities approved by NMC (India), WHO, ECFMG, and other global medical councils.",
                                     },
                                     {
                                         icon: <Users className="w-6 h-6 text-red-600" />,
-                                        title: "English Medium",
-                                        desc: "Complete education in English with experienced international faculty.",
+                                        title: "English Medium Education",
+                                        desc: "Complete MBBS program taught in English for international students.",
                                     },
                                     {
                                         icon: <Award className="w-6 h-6 text-red-600" />,
-                                        title: "Affordable Excellence",
-                                        desc: "Low tuition fees and living costs with high-quality clinical training.",
+                                        title: "Affordable Medical Education",
+                                        desc: "Low tuition fees and cost of living compared to many other countries.",
                                     },
                                 ].map((item) => (
                                     <div key={item.title} className="flex items-start space-x-4">
@@ -103,6 +120,7 @@ export default function HeroSection() {
                                 ))}
                             </div>
                         </div>
+
                         <div className="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full opacity-20 animate-pulse" />
                         <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white rounded-full opacity-20 animate-pulse delay-1000" />
                     </div>

@@ -196,7 +196,7 @@ export default function UniversitySearch({ universities }: Props) {
                                             </h3>
                                             <div className="flex items-center text-gray-500 text-sm gap-1">
                                                 <MapPin className="w-3.5 h-3.5 flex-shrink-0 text-red-500" />
-                                                <span>{location || "Vietnam"}</span>
+                                                <span>{location || "Kyrgyzstan"}</span>
                                                 {u.establishedYear && (
                                                     <>
                                                         <span className="mx-1">•</span>

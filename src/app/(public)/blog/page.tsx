@@ -7,9 +7,9 @@ import { cdn } from "@/lib/cdn";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-    title: "MBBS Vietnam Blog — Medical Education Tips, University Reviews & More",
-    description: "Read our expert blog on MBBS in Vietnam. University reviews, student experiences, admission tips, and medical education guides.",
-    entitySeo: { metaKeyword: "MBBS Vietnam blog, medical education Vietnam, study abroad blog" },
+    title: "MBBS Kyrgyzstan Blog — Medical Education Tips, University Reviews & More",
+    description: "Read our expert blog on MBBS in Kyrgyzstan. University reviews, student experiences, admission tips, and medical education guides.",
+    entitySeo: { metaKeyword: "MBBS Kyrgyzstan blog, medical education Kyrgyzstan, study abroad blog" },
     pageKey: "blog",
 });
 
@@ -37,7 +37,7 @@ export default async function BlogPage() {
                 <div className="max-w-7xl mx-auto px-4 text-center">
                     <h1 className="text-4xl lg:text-5xl font-bold mb-4">Blog &amp; News</h1>
                     <p className="text-xl text-red-100 max-w-3xl mx-auto">
-                        Expert insights on MBBS in Vietnam, admission tips, university reviews, and student success stories.
+                        Expert insights on MBBS in Kyrgyzstan, admission tips, university reviews, and student success stories.
                     </p>
                 </div>
             </div>

@@ -55,7 +55,7 @@ export default function CreateBlogPage() {
                     <h2 className="font-semibold text-gray-900 border-b pb-3">Post Details</h2>
                     <div className="space-y-1.5">
                         <Label>Title <span className="text-red-500">*</span></Label>
-                        <Input value={form.title} onChange={(e) => { set("title", e.target.value); set("slug", slugify(e.target.value)); }} placeholder="e.g. MBBS in Vietnam — Complete Guide 2025" />
+                        <Input value={form.title} onChange={(e) => { set("title", e.target.value); set("slug", slugify(e.target.value)); }} placeholder="e.g. MBBS in Kyrgyzstan — Complete Guide 2025" />
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-1.5">

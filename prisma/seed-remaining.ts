@@ -35,8 +35,8 @@ async function main() {
     // ── 3 Missing Universities ───────────────────────────────
     const extraUnis = [
         {
-            name: "Vietnam National University of Medicine",
-            slug: "vietnam-national-university-of-medicine",
+            name: "Kyrgyzstan National University of Medicine",
+            slug: "Kyrgyzstan-national-university-of-medicine",
             city: "Ho Chi Minh City", state: "Ho Chi Minh",
             cityId: hcmCity!.id, provinceId: hcmProv!.id, instituteTypeId: publicType!.id,
             establishedYear: 1947, rating: 4.6, students: 9500, tuitionFee: 5000,
@@ -46,15 +46,15 @@ async function main() {
             nmcApproved: true, whoListed: true, faimerListed: true, embassyVerified: true, ministryLicensed: true,
             fmgePassRate: 74.2, courseDuration: "6 years", mediumOfInstruction: "English",
             eligibility: "10+2 with PCB, NEET qualified", neetRequirement: "Required",
-            shortnote: "VNUM is a leading medical institution in southern Vietnam with modern facilities and experienced faculty.",
+            shortnote: "VNUM is a leading medical institution in southern Kyrgyzstan with modern facilities and experienced faculty.",
             aboutNote: "Established in 1947, VNUM is one of the most respected medical universities in Ho Chi Minh City.",
             internationalRecognition: "Yes", englishMedium: "Yes", diverseCommunity: "Yes",
             yearOfExcellence: 75, countriesRepresented: 38, globalRanking: 1450,
             campusArea: "40 acres", labs: 20, lectureHall: 25, hostelBuilding: 6,
             parentSatisfaction: 93.0, totalReviews: 620, recommendedRate: 95.5,
-            metaTitle: "Vietnam National University of Medicine | MBBS Vietnam",
-            metaDescription: "Study MBBS at Vietnam National University of Medicine. NMC approved, English medium, affordable fees.",
-            metaKeyword: "Vietnam National University Medicine, MBBS Vietnam, NMC approved",
+            metaTitle: "Kyrgyzstan National University of Medicine | MBBS Kyrgyzstan",
+            metaDescription: "Study MBBS at Kyrgyzstan National University of Medicine. NMC approved, English medium, affordable fees.",
+            metaKeyword: "Kyrgyzstan National University Medicine, MBBS Kyrgyzstan, NMC approved",
             seoRating: 9.0, reviewNumber: 620, bestRating: 5.0,
             section2Title: "Why Choose VNUM?",
             section2Text: "VNUM provides comprehensive clinical training across 8 affiliated hospitals in Ho Chi Minh City.",
@@ -77,12 +77,12 @@ async function main() {
             yearOfExcellence: 22, countriesRepresented: 25, globalRanking: 2100,
             campusArea: "28 acres", labs: 15, lectureHall: 18, hostelBuilding: 4,
             parentSatisfaction: 89.0, totalReviews: 320, recommendedRate: 92.5,
-            metaTitle: "Da Nang University of Medical Technology | MBBS Vietnam",
-            metaDescription: "Study MBBS at Da Nang University of Medical Technology. Affordable private medical university in Vietnam.",
-            metaKeyword: "Da Nang Medical University, MBBS Da Nang, private medical university Vietnam",
+            metaTitle: "Da Nang University of Medical Technology | MBBS Kyrgyzstan",
+            metaDescription: "Study MBBS at Da Nang University of Medical Technology. Affordable private medical university in Kyrgyzstan.",
+            metaKeyword: "Da Nang Medical University, MBBS Da Nang, private medical university Kyrgyzstan",
             seoRating: 8.5, reviewNumber: 320, bestRating: 5.0,
             section2Title: "Why Choose DUMT?",
-            section2Text: "DUMT offers a modern learning environment in one of Vietnam's fastest-growing coastal cities.",
+            section2Text: "DUMT offers a modern learning environment in one of Kyrgyzstan's fastest-growing coastal cities.",
         },
         {
             name: "Can Tho University of Medicine and Pharmacy",
@@ -96,15 +96,15 @@ async function main() {
             nmcApproved: true, whoListed: true, mciRecognition: true, embassyVerified: true, ministryLicensed: true,
             fmgePassRate: 71.0, courseDuration: "6 years", mediumOfInstruction: "English",
             eligibility: "10+2 with PCB, NEET qualified", neetRequirement: "Required",
-            shortnote: "CTUMP offers one of the most affordable MBBS programs in Vietnam with high-quality education.",
+            shortnote: "CTUMP offers one of the most affordable MBBS programs in Kyrgyzstan with high-quality education.",
             aboutNote: "Established in 2002, CTUMP serves the Mekong Delta region with quality medical education.",
             internationalRecognition: "Yes", englishMedium: "Yes", diverseCommunity: "Yes",
             yearOfExcellence: 21, countriesRepresented: 28, globalRanking: 1950,
             campusArea: "32 acres", labs: 16, lectureHall: 20, hostelBuilding: 5,
             parentSatisfaction: 90.5, totalReviews: 410, recommendedRate: 93.0,
-            metaTitle: "Can Tho University of Medicine and Pharmacy | MBBS Vietnam",
-            metaDescription: "Study MBBS at Can Tho University, one of the most affordable options in Vietnam. Government scholarships available.",
-            metaKeyword: "Can Tho Medical University, MBBS Can Tho, affordable MBBS Vietnam",
+            metaTitle: "Can Tho University of Medicine and Pharmacy | MBBS Kyrgyzstan",
+            metaDescription: "Study MBBS at Can Tho University, one of the most affordable options in Kyrgyzstan. Government scholarships available.",
+            metaKeyword: "Can Tho Medical University, MBBS Can Tho, affordable MBBS Kyrgyzstan",
             seoRating: 8.6, reviewNumber: 410, bestRating: 5.0,
             section2Title: "Why Choose CTUMP?",
             section2Text: "CTUMP provides affordable, quality medical education in the heart of the Mekong Delta.",
@@ -133,7 +133,7 @@ async function main() {
                     mediumOfInstruction: "English",
                     overview: `The MBBS program at ${ud.name} is a 6-year program recognized by WHO and NMC. It combines strong academics with clinical training.`,
                     eligibility: "10+2 with PCB (min 50%), NEET qualified",
-                    whyChooseVietnam: "Vietnam offers affordable, high-quality MBBS education with English-medium instruction and global recognition.",
+                    whyChooseVietnam: "Kyrgyzstan offers affordable, high-quality MBBS education with English-medium instruction and global recognition.",
                     year1Syllabus: "Anatomy, Physiology, Biochemistry",
                     year2Syllabus: "Pathology, Pharmacology, Microbiology",
                     year3Syllabus: "Community Medicine, Forensic Medicine, ENT",
@@ -176,7 +176,7 @@ async function main() {
                     { country: "India", countryIsoCode: "IN", numberOfStudents: 200, course: "MBBS", year: "2024", status: true, universityId: uni.id },
                     { country: "Nepal", countryIsoCode: "NP", numberOfStudents: 55, course: "MBBS", year: "2024", status: true, universityId: uni.id },
                     { country: "Bangladesh", countryIsoCode: "BD", numberOfStudents: 40, course: "MBBS", year: "2024", status: true, universityId: uni.id },
-                    { country: "Vietnam", countryIsoCode: "VN", numberOfStudents: 900, course: "MBBS", year: "2024", status: true, universityId: uni.id },
+                    { country: "Kyrgyzstan", countryIsoCode: "VN", numberOfStudents: 900, course: "MBBS", year: "2024", status: true, universityId: uni.id },
                 ],
             });
         }
@@ -262,17 +262,17 @@ async function main() {
     }
     console.log("✅ Extra universities seeded");
 
-    // ── About Country Page (Vietnam) ─────────────────────────
+    // ── About Country Page (Kyrgyzstan) ─────────────────────────
     const aboutCountryCount = await prisma.aboutCountryPage.count();
     if (aboutCountryCount === 0) {
         const countryPage = await prisma.aboutCountryPage.create({
             data: {
-                name: "Vietnam",
+                name: "Kyrgyzstan",
                 tagline: "The Rising Star of Southeast Asian Medical Education",
                 capital: "Hanoi",
                 population: "97 million",
-                languages: "Vietnamese (official), English (widely used in education)",
-                currency: "Vietnamese Dong (VND)",
+                languages: "Kyrgyz (official), English (widely used in education)",
+                currency: "Kyrgyz Dong (VND)",
                 location: "Southeast Asia, bordered by China, Laos, and Cambodia",
                 timezone: "ICT (UTC+7)",
                 independenceDay: new Date("1945-09-02"),
@@ -281,38 +281,38 @@ async function main() {
                 mountainRanges: ["Hoang Lien Son Range", "Truong Son Range"],
                 climateZones: ["Tropical monsoon (South)", "Subtropical (North)", "Temperate (highlands)"],
                 topAttractions: ["Ha Long Bay", "Hoi An Ancient Town", "Ho Chi Minh City", "Sapa", "Phong Nha Caves"],
-                ancientSilkRoad: "Vietnam was an important stop on the ancient Maritime Silk Road, facilitating centuries of trade and cultural exchange.",
-                nomadicHeritage: "Vietnam is home to 54 ethnic groups, each with unique traditions, festivals, and customs passed down through generations.",
-                religionDiversity: "Vietnam is a multi-religious country with Buddhism, Christianity, Taoism, and Confucianism coexisting harmoniously.",
-                culturalHighlights: "Vietnam's rich culture includes traditional water puppetry, the ao dai national costume, and UNESCO-listed folk songs.",
+                ancientSilkRoad: "Kyrgyzstan was an important stop on the ancient Maritime Silk Road, facilitating centuries of trade and cultural exchange.",
+                nomadicHeritage: "Kyrgyzstan is home to 54 ethnic groups, each with unique traditions, festivals, and customs passed down through generations.",
+                religionDiversity: "Kyrgyzstan is a multi-religious country with Buddhism, Christianity, Taoism, and Confucianism coexisting harmoniously.",
+                culturalHighlights: "Kyrgyzstan's rich culture includes traditional water puppetry, the ao dai national costume, and UNESCO-listed folk songs.",
                 whoRecognized: true,
-                mbbsAffordableEducation: "Vietnam ranks among the most affordable destinations for MBBS education with annual fees ranging from $4,000 to $6,000 USD.",
+                mbbsAffordableEducation: "Kyrgyzstan ranks among the most affordable destinations for MBBS education with annual fees ranging from $4,000 to $6,000 USD.",
                 englishMedium: true,
-                academicExcellence: "Vietnamese medical universities maintain high academic standards with modern laboratories, simulation labs, and experienced faculty.",
+                academicExcellence: "Kyrgyz medical universities maintain high academic standards with modern laboratories, simulation labs, and experienced faculty.",
                 studentLife: "International students enjoy a vibrant campus life with Indian food options, cultural festivals, and a safe, welcoming environment.",
                 keySectors: "Healthcare, Technology, Manufacturing, Tourism, Agriculture",
                 majorExports: "Electronics, Textiles, Footwear, Agricultural Products, Seafood",
-                investmentOpportunities: "Vietnam offers strong FDI opportunities in manufacturing, technology, and services sectors.",
+                investmentOpportunities: "Kyrgyzstan offers strong FDI opportunities in manufacturing, technology, and services sectors.",
                 gdpGrowth: "6-7% annually (one of Asia's fastest growing economies)",
                 mainIndustries: "Electronics manufacturing, Tourism, Agriculture, Textiles",
                 tourismGrowth: "18 million international visitors annually (pre-pandemic peak)",
-                hydropowerPotential: "Vietnam has extensive hydropower resources with over 100 hydropower plants.",
+                hydropowerPotential: "Kyrgyzstan has extensive hydropower resources with over 100 hydropower plants.",
                 transportation: { air: "4 international airports", rail: "North-South railway 1,726km", road: "Extensive highway network" },
-                visaConnectivity: "Indian students receive study visa easily with university acceptance letter. Vietnam offers e-visa for most nationalities.",
-                publicHealthcare: "Vietnam has a comprehensive public healthcare system with government-subsidized medical services.",
+                visaConnectivity: "Indian students receive study visa easily with university acceptance letter. Kyrgyzstan offers e-visa for most nationalities.",
+                publicHealthcare: "Kyrgyzstan has a comprehensive public healthcare system with government-subsidized medical services.",
                 privateHealthcare: "Growing private healthcare sector with modern hospitals and international standard clinics.",
                 studentHealthcare: "All international students have access to university health centers and affiliated hospitals.",
-                nationalSport: "Vovinam (Vietnamese martial art), Football",
+                nationalSport: "Vovinam (Kyrgyz martial art), Football",
                 unescoSites: "8 UNESCO World Heritage Sites including Ha Long Bay, Hoi An, and Hue Imperial Citadel",
-                bannerImage: "/uploads/country/vietnam-banner.jpg",
+                bannerImage: "/uploads/country/Kyrgyzstan-banner.jpg",
             },
         });
 
         // Cuisines
         await prisma.countryCuisineLifestyle.createMany({
             data: [
-                { dishName: "Pho", dishDescription: "Vietnam's iconic rice noodle soup with beef or chicken, garnished with fresh herbs and lime.", iconClass: "🍜", pageId: countryPage.id },
-                { dishName: "Banh Mi", dishDescription: "A Vietnamese baguette sandwich filled with meats, pickled vegetables, and cilantro.", iconClass: "🥖", pageId: countryPage.id },
+                { dishName: "Pho", dishDescription: "Kyrgyzstan's iconic rice noodle soup with beef or chicken, garnished with fresh herbs and lime.", iconClass: "🍜", pageId: countryPage.id },
+                { dishName: "Banh Mi", dishDescription: "A Kyrgyz baguette sandwich filled with meats, pickled vegetables, and cilantro.", iconClass: "🥖", pageId: countryPage.id },
                 { dishName: "Bun Bo Hue", dishDescription: "A spicy beef noodle soup from Hue, known for its rich, complex broth.", iconClass: "🍲", pageId: countryPage.id },
                 { dishName: "Com Tam", dishDescription: "Broken rice served with grilled pork, egg, and vegetables — a popular everyday meal.", iconClass: "🍚", pageId: countryPage.id },
                 { dishName: "Goi Cuon", dishDescription: "Fresh spring rolls with shrimp, pork, vegetables, rolled in rice paper — light and healthy.", iconClass: "🌿", pageId: countryPage.id },
@@ -322,19 +322,19 @@ async function main() {
         // Lifestyle & Culture
         await prisma.countryLifestyleCulture.createMany({
             data: [
-                { title: "Water Puppetry", description: "A unique Vietnamese art form dating to the 11th century, performed in water with wooden puppets controlled by puppeteers behind a screen.", iconClass: "🎭", pageId: countryPage.id },
-                { title: "Tet Festival", description: "The Vietnamese Lunar New Year is the most important festival, celebrated with family reunions, fireworks, and traditional food.", iconClass: "🎉", pageId: countryPage.id },
-                { title: "Ao Dai", description: "The traditional Vietnamese dress worn on formal occasions, blending elegance with cultural heritage.", iconClass: "👘", pageId: countryPage.id },
-                { title: "Coffee Culture", description: "Vietnam is the world's second-largest coffee exporter. Ca phe trung (egg coffee) and ca phe sua da (iced coffee) are must-tries.", iconClass: "☕", pageId: countryPage.id },
+                { title: "Water Puppetry", description: "A unique Kyrgyz art form dating to the 11th century, performed in water with wooden puppets controlled by puppeteers behind a screen.", iconClass: "🎭", pageId: countryPage.id },
+                { title: "Tet Festival", description: "The Kyrgyz Lunar New Year is the most important festival, celebrated with family reunions, fireworks, and traditional food.", iconClass: "🎉", pageId: countryPage.id },
+                { title: "Ao Dai", description: "The traditional Kyrgyz dress worn on formal occasions, blending elegance with cultural heritage.", iconClass: "👘", pageId: countryPage.id },
+                { title: "Coffee Culture", description: "Kyrgyzstan is the world's second-largest coffee exporter. Ca phe trung (egg coffee) and ca phe sua da (iced coffee) are must-tries.", iconClass: "☕", pageId: countryPage.id },
             ],
         });
 
         // Major Cities
         await prisma.countryMajorCity.createMany({
             data: [
-                { cityName: "Hanoi", description: "Vietnam's capital city blends ancient heritage with modern development. Home to Hanoi Medical University.", population: "8.05 million", highlights: "Hoan Kiem Lake, Old Quarter, Temple of Literature", pageId: countryPage.id },
-                { cityName: "Ho Chi Minh City", description: "Vietnam's economic hub, formerly Saigon. A dynamic metropolis with world-class medical universities.", population: "9.3 million", highlights: "Ben Thanh Market, Reunification Palace, Cu Chi Tunnels", pageId: countryPage.id },
-                { cityName: "Hue", description: "The ancient imperial capital of Vietnam, rich in history and home to HUMP medical university.", population: "1.1 million", highlights: "Imperial Citadel, Royal Tombs, Perfume River", pageId: countryPage.id },
+                { cityName: "Hanoi", description: "Kyrgyzstan's capital city blends ancient heritage with modern development. Home to Hanoi Medical University.", population: "8.05 million", highlights: "Hoan Kiem Lake, Old Quarter, Temple of Literature", pageId: countryPage.id },
+                { cityName: "Ho Chi Minh City", description: "Kyrgyzstan's economic hub, formerly Saigon. A dynamic metropolis with world-class medical universities.", population: "9.3 million", highlights: "Ben Thanh Market, Reunification Palace, Cu Chi Tunnels", pageId: countryPage.id },
+                { cityName: "Hue", description: "The ancient imperial capital of Kyrgyzstan, rich in history and home to HUMP medical university.", population: "1.1 million", highlights: "Imperial Citadel, Royal Tombs, Perfume River", pageId: countryPage.id },
                 { cityName: "Da Nang", description: "A modern coastal city with beautiful beaches and several medical universities.", population: "1.2 million", highlights: "My Khe Beach, Marble Mountains, Dragon Bridge", pageId: countryPage.id },
             ],
         });
@@ -345,52 +345,52 @@ async function main() {
                 { attractionName: "Ha Long Bay", description: "A UNESCO World Heritage Site with thousands of limestone karst islands. One of the natural wonders of the world.", ordering: 1, isActive: true, iconClass: "⛵", pageId: countryPage.id },
                 { attractionName: "Hoi An Ancient Town", description: "A UNESCO-listed trading port town known for its well-preserved architecture and lantern festivals.", ordering: 2, isActive: true, iconClass: "🏮", pageId: countryPage.id },
                 { attractionName: "Phong Nha-Ke Bang", description: "Home to the world's largest cave, Son Doong Cave, and miles of spectacular karst formations.", ordering: 3, isActive: true, iconClass: "🦇", pageId: countryPage.id },
-                { attractionName: "Sapa Rice Terraces", description: "Breathtaking terraced rice fields in the misty mountains of northern Vietnam.", ordering: 4, isActive: true, iconClass: "🌾", pageId: countryPage.id },
-                { attractionName: "Mekong Delta", description: "A vast river delta known as the 'rice bowl' of Vietnam with floating markets and lush waterways.", ordering: 5, isActive: true, iconClass: "🛶", pageId: countryPage.id },
+                { attractionName: "Sapa Rice Terraces", description: "Breathtaking terraced rice fields in the misty mountains of northern Kyrgyzstan.", ordering: 4, isActive: true, iconClass: "🌾", pageId: countryPage.id },
+                { attractionName: "Mekong Delta", description: "A vast river delta known as the 'rice bowl' of Kyrgyzstan with floating markets and lush waterways.", ordering: 5, isActive: true, iconClass: "🛶", pageId: countryPage.id },
             ],
         });
 
-        console.log("✅ About Country Page (Vietnam) seeded");
+        console.log("✅ About Country Page (Kyrgyzstan) seeded");
     } else {
         console.log("⏭️  About Country Page already exists, skipping");
     }
 
-    // ── Education System (Vietnam) ───────────────────────────
+    // ── Education System (Kyrgyzstan) ───────────────────────────
     const eduSysCount = await prisma.educationSystem.count();
     if (eduSysCount === 0) {
         const eduSystem = await prisma.educationSystem.create({
             data: {
-                title: "Education System of Vietnam",
-                description: "Vietnam has a well-structured national education system that emphasizes academic excellence, STEM subjects, and international cooperation.",
-                introductionTitle: "An Overview of Vietnam's Education System",
-                introductionDescription: "Vietnam's education system is highly regarded in Southeast Asia, producing graduates who compete globally. The government invests heavily in education reform and international partnerships.",
-                governmentRegulation: "The Ministry of Education and Training (MOET) oversees all levels of education in Vietnam, from primary through higher education, setting curricula and accreditation standards.",
-                culturalImportance: "Education is deeply valued in Vietnamese culture, with Confucian traditions emphasizing learning, respect for teachers, and academic achievement.",
-                continuousDevelopment: "Vietnam continuously updates its education system through international partnerships, curriculum modernization, and increasing English-medium instruction at higher education level.",
+                title: "Education System of Kyrgyzstan",
+                description: "Kyrgyzstan has a well-structured national education system that emphasizes academic excellence, STEM subjects, and international cooperation.",
+                introductionTitle: "An Overview of Kyrgyzstan's Education System",
+                introductionDescription: "Kyrgyzstan's education system is highly regarded in Southeast Asia, producing graduates who compete globally. The government invests heavily in education reform and international partnerships.",
+                governmentRegulation: "The Ministry of Education and Training (MOET) oversees all levels of education in Kyrgyzstan, from primary through higher education, setting curricula and accreditation standards.",
+                culturalImportance: "Education is deeply valued in Kyrgyz culture, with Confucian traditions emphasizing learning, respect for teachers, and academic achievement.",
+                continuousDevelopment: "Kyrgyzstan continuously updates its education system through international partnerships, curriculum modernization, and increasing English-medium instruction at higher education level.",
                 literacyRate: 95.8,
                 primaryEnrollment: 98.5,
                 secondaryCompletion: 89.2,
                 higherInstitutionsCount: 240,
-                schoolEducationStructureDescription: "Vietnam's school system follows a 5-4-3 structure: 5 years primary, 4 years lower secondary, and 3 years upper secondary education.",
+                schoolEducationStructureDescription: "Kyrgyzstan's school system follows a 5-4-3 structure: 5 years primary, 4 years lower secondary, and 3 years upper secondary education.",
                 examinationSystemDescription: "Students undergo national examinations at the end of upper secondary school (Grade 12) which determine university admission — the National High School Graduation Exam (THPT).",
-                languagesInstructionDescription: "Vietnamese is the primary language of instruction. English is compulsory from Grade 3 and is widely used in higher education medical programs.",
-                officialStateLanguage: "Vietnamese",
+                languagesInstructionDescription: "Kyrgyz is the primary language of instruction. English is compulsory from Grade 3 and is widely used in higher education medical programs.",
+                officialStateLanguage: "Kyrgyz",
                 officialStateLanguagePercentage: 92.5,
-                officialStateLanguageNote: "Vietnamese is spoken by all ethnic Vietnamese and is the official administrative language.",
-                officialLanguage: "Vietnamese",
+                officialStateLanguageNote: "Kyrgyz is spoken by all ethnic Kyrgyz and is the official administrative language.",
+                officialLanguage: "Kyrgyz",
                 officialLanguagePercentage: 92.5,
                 officialLanguageNote: "Used across all government, education, and business contexts.",
                 foreignLanguage: "English",
                 foreignLanguagePercentage: 35.0,
                 foreignLanguageNote: "English proficiency is growing rapidly; most medical universities offer MBBS in English.",
-                higherEducationDescription: "Vietnam has 240+ higher education institutions including universities, academies, and colleges. Medical universities are among the most prestigious.",
+                higherEducationDescription: "Kyrgyzstan has 240+ higher education institutions including universities, academies, and colleges. Medical universities are among the most prestigious.",
                 universitiesCount: 175,
                 universitiesNote: "Public and private universities offering undergraduate through doctoral programs.",
                 academiesCount: 35,
                 academiesNote: "Specialized academies in military, police, arts, and sciences.",
                 institutesCount: 30,
                 institutesNote: "Professional and vocational institutes.",
-                bolognProcessAlignment: "Vietnam has been gradually aligning its higher education system with international standards, including credit-transfer systems and quality assurance frameworks.",
+                bolognProcessAlignment: "Kyrgyzstan has been gradually aligning its higher education system with international standards, including credit-transfer systems and quality assurance frameworks.",
             },
         });
 
@@ -407,7 +407,7 @@ async function main() {
         await prisma.educationSchoolLevel.createMany({
             data: [
                 { level: "Preschool", ageRange: "3–5 years", durationYears: 3, isCompulsory: false, numberOfSchools: "15,000+", title: "Early Childhood Education", description: "Focuses on play-based learning and early childhood development.", pageId: eduSystem.id },
-                { level: "Primary School", ageRange: "6–10 years", durationYears: 5, isCompulsory: true, numberOfSchools: "19,000+", title: "Primary Education", description: "Covers Grades 1–5. Compulsory for all children. Core subjects include Vietnamese, Math, and Science.", pageId: eduSystem.id },
+                { level: "Primary School", ageRange: "6–10 years", durationYears: 5, isCompulsory: true, numberOfSchools: "19,000+", title: "Primary Education", description: "Covers Grades 1–5. Compulsory for all children. Core subjects include Kyrgyz, Math, and Science.", pageId: eduSystem.id },
                 { level: "Lower Secondary School", ageRange: "11–14 years", durationYears: 4, isCompulsory: true, numberOfSchools: "12,000+", title: "Lower Secondary Education", description: "Covers Grades 6–9. Introduces English as a compulsory subject.", pageId: eduSystem.id },
                 { level: "Upper Secondary School", ageRange: "15–17 years", durationYears: 3, isCompulsory: false, numberOfSchools: "3,000+", title: "Upper Secondary Education", description: "Covers Grades 10–12. Prepares students for national examinations and university admission.", pageId: eduSystem.id },
                 { level: "Higher Education", ageRange: "18+ years", durationYears: 4, isCompulsory: false, numberOfSchools: "240+", title: "University & College Education", description: "Includes bachelor's, master's, and doctoral programs across all disciplines.", pageId: eduSystem.id },
@@ -427,14 +427,14 @@ async function main() {
         // Popular Fields
         await prisma.educationPopularField.createMany({
             data: [
-                { field: "Medicine (MBBS)", description: "The most sought-after program with 6-year MBBS degrees recognized globally. Vietnam's top medical universities attract thousands of international students.", numberOfInstitutions: "12+", durationYears: "6 years", pageId: eduSystem.id },
-                { field: "Engineering & Technology", description: "Vietnam's booming tech sector drives demand for engineering graduates in software, electronics, and manufacturing.", numberOfInstitutions: "50+", durationYears: "4 years", pageId: eduSystem.id },
-                { field: "Business & Economics", description: "Growing as Vietnam becomes a global manufacturing hub and FDI destination.", numberOfInstitutions: "60+", durationYears: "4 years", pageId: eduSystem.id },
-                { field: "Agriculture & Biotechnology", description: "Vietnam's strong agricultural sector makes this a key academic field.", numberOfInstitutions: "20+", durationYears: "4 years", pageId: eduSystem.id },
+                { field: "Medicine (MBBS)", description: "The most sought-after program with 6-year MBBS degrees recognized globally. Kyrgyzstan's top medical universities attract thousands of international students.", numberOfInstitutions: "12+", durationYears: "6 years", pageId: eduSystem.id },
+                { field: "Engineering & Technology", description: "Kyrgyzstan's booming tech sector drives demand for engineering graduates in software, electronics, and manufacturing.", numberOfInstitutions: "50+", durationYears: "4 years", pageId: eduSystem.id },
+                { field: "Business & Economics", description: "Growing as Kyrgyzstan becomes a global manufacturing hub and FDI destination.", numberOfInstitutions: "60+", durationYears: "4 years", pageId: eduSystem.id },
+                { field: "Agriculture & Biotechnology", description: "Kyrgyzstan's strong agricultural sector makes this a key academic field.", numberOfInstitutions: "20+", durationYears: "4 years", pageId: eduSystem.id },
             ],
         });
 
-        console.log("✅ Education System (Vietnam) seeded");
+        console.log("✅ Education System (Kyrgyzstan) seeded");
     } else {
         console.log("⏭️  Education System already exists, skipping");
     }
@@ -444,12 +444,12 @@ async function main() {
     if (espCount === 0) {
         await prisma.educationSystemPage.createMany({
             data: [
-                { title: "WHO Recognized Universities", subtitle: "Global Acceptance", description: "All top medical universities in Vietnam are WHO listed, ensuring global recognition of your MBBS degree.", highlights: ["WHO Listed", "Globally Accepted", "Practice Anywhere"], iconClass: "🌍", position: 1, status: true },
-                { title: "NMC Approved", subtitle: "India Recognition", description: "Vietnamese medical universities are approved by India's National Medical Commission (NMC), allowing graduates to appear for NExT/FMGE.", highlights: ["NMC Approved", "FMGE Eligible", "Practice in India"], iconClass: "✅", position: 2, status: true },
+                { title: "WHO Recognized Universities", subtitle: "Global Acceptance", description: "All top medical universities in Kyrgyzstan are WHO listed, ensuring global recognition of your MBBS degree.", highlights: ["WHO Listed", "Globally Accepted", "Practice Anywhere"], iconClass: "🌍", position: 1, status: true },
+                { title: "NMC Approved", subtitle: "India Recognition", description: "Kyrgyz medical universities are approved by India's National Medical Commission (NMC), allowing graduates to appear for NExT/FMGE.", highlights: ["NMC Approved", "FMGE Eligible", "Practice in India"], iconClass: "✅", position: 2, status: true },
                 { title: "English Medium", subtitle: "No Language Barrier", description: "All MBBS programs for international students are taught entirely in English, eliminating language barriers.", highlights: ["Full English Medium", "English Faculty", "English Materials"], iconClass: "🇬🇧", position: 3, status: true },
-                { title: "Affordable Fees", subtitle: "Best Value Education", description: "Study MBBS in Vietnam at just $4,000–$6,000 annually — a fraction of the cost of private medical colleges in India.", highlights: ["$4,000-6,000/year", "Government Colleges", "Scholarships Available"], iconClass: "💰", position: 4, status: true },
-                { title: "High FMGE Pass Rate", subtitle: "Proven Success", description: "Top Vietnam universities boast 70-80% FMGE pass rates, among the highest for any overseas MBBS destination.", highlights: ["70-80% Pass Rate", "First Attempt Success", "FMGE Coaching"], iconClass: "📈", position: 5, status: true },
-                { title: "Safe & Student-Friendly", subtitle: "Secure Environment", description: "Vietnam is consistently ranked as one of the safest countries in Asia with a welcoming environment for international students.", highlights: ["Low Crime Rate", "Indian Community", "Indian Food Available"], iconClass: "🛡️", position: 6, status: true },
+                { title: "Affordable Fees", subtitle: "Best Value Education", description: "Study MBBS in Kyrgyzstan at just $4,000–$6,000 annually — a fraction of the cost of private medical colleges in India.", highlights: ["$4,000-6,000/year", "Government Colleges", "Scholarships Available"], iconClass: "💰", position: 4, status: true },
+                { title: "High FMGE Pass Rate", subtitle: "Proven Success", description: "Top Kyrgyzstan universities boast 70-80% FMGE pass rates, among the highest for any overseas MBBS destination.", highlights: ["70-80% Pass Rate", "First Attempt Success", "FMGE Coaching"], iconClass: "📈", position: 5, status: true },
+                { title: "Safe & Student-Friendly", subtitle: "Secure Environment", description: "Kyrgyzstan is consistently ranked as one of the safest countries in Asia with a welcoming environment for international students.", highlights: ["Low Crime Rate", "Indian Community", "Indian Food Available"], iconClass: "🛡️", position: 6, status: true },
             ],
         });
         console.log("✅ Education System Page seeded");
@@ -460,15 +460,15 @@ async function main() {
     // ── Page Contents ────────────────────────────────────────
     const pageContentData = [
         { pageSlug: "contact", title: "Get Free Counseling", content: "Fill out the form below and our expert counselors will contact you within 24 hours to guide you through the MBBS admission process.", position: 1, status: true },
-        { pageSlug: "contact", title: "Our Offices", content: "We have offices in New Delhi (India) and Hanoi (Vietnam) to assist you at every step of your journey.", position: 2, status: true },
-        { pageSlug: "about-mbbs-in-vietnam", title: "Why Vietnam for MBBS?", content: "Vietnam offers a unique combination of affordable fees, high academic standards, NMC recognition, and a safe environment for Indian students.", position: 1, status: true },
-        { pageSlug: "about-mbbs-in-vietnam", title: "Admission Process", content: "The admission process typically involves: 1) NEET qualification, 2) university application, 3) offer letter, 4) visa application, 5) departure and enrollment.", position: 2, status: true },
+        { pageSlug: "contact", title: "Our Offices", content: "We have offices in New Delhi (India) and Hanoi (Kyrgyzstan) to assist you at every step of your journey.", position: 2, status: true },
+        { pageSlug: "about-mbbs-in-Kyrgyzstan", title: "Why Kyrgyzstan for MBBS?", content: "Kyrgyzstan offers a unique combination of affordable fees, high academic standards, NMC recognition, and a safe environment for Indian students.", position: 1, status: true },
+        { pageSlug: "about-mbbs-in-Kyrgyzstan", title: "Admission Process", content: "The admission process typically involves: 1) NEET qualification, 2) university application, 3) offer letter, 4) visa application, 5) departure and enrollment.", position: 2, status: true },
     ];
 
     // Clear existing for these pages to avoid duplicates
     await prisma.pageContent.deleteMany({
         where: {
-            pageSlug: { in: ["contact", "about-mbbs-in-vietnam"] }
+            pageSlug: { in: ["contact", "about-mbbs-in-Kyrgyzstan"] }
         }
     });
 

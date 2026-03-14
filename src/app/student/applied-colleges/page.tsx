@@ -54,7 +54,7 @@ export default async function AppliedCollegesPage() {
                     </div>
                     <h2 className="text-xl font-semibold text-gray-800 mb-2">No Applications Yet</h2>
                     <p className="text-gray-500 text-center max-w-sm mb-8">
-                        {`You haven't applied to any colleges yet. Browse our universities and find your ideal MBBS program in Vietnam.`}
+                        {`You haven't applied to any colleges yet. Browse our universities and find your ideal MBBS program in Kyrgyzstan.`}
                     </p>
                     <Link
                         href="/universities"
@@ -115,7 +115,7 @@ export default async function AppliedCollegesPage() {
                     <div className="bg-red-50 border border-red-100 rounded-2xl p-6 flex items-center justify-between">
                         <div>
                             <h3 className="font-semibold text-gray-900 mb-1">Looking for more options?</h3>
-                            <p className="text-sm text-gray-600">Explore all universities and programs available in Vietnam.</p>
+                            <p className="text-sm text-gray-600">Explore all universities and programs available in Kyrgyzstan.</p>
                         </div>
                         <Link
                             href="/universities"

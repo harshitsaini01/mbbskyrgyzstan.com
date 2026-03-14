@@ -4,9 +4,9 @@ import { buildMetadata } from "@/lib/seo";
 import ApplyFormClient from "@/components/apply/ApplyFormClient";
 
 export const metadata = buildMetadata({
-    title: "Apply for MBBS in Vietnam — Free Counselling",
-    description: "Apply directly to top Vietnamese medical universities. No agency fees, expert guidance, response within 24 hours. Fill in the form to start your MBBS journey.",
-    entitySeo: { metaKeyword: "apply MBBS Vietnam, Vietnam medical university application, MBBS admission Vietnam" },
+    title: "Apply for MBBS in Kyrgyzstan — Free Counselling",
+    description: "Apply directly to top Kyrgyz medical universities. No agency fees, expert guidance, response within 24 hours. Fill in the form to start your MBBS journey.",
+    entitySeo: { metaKeyword: "apply MBBS Kyrgyzstan, Kyrgyzstan medical university application, MBBS admission Kyrgyzstan" },
 });
 
 const NEXT_STEPS = [

@@ -57,7 +57,7 @@ export default function CreateFaqPage() {
                 <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-4">
                     <div className="space-y-1.5">
                         <Label>Question <span className="text-red-500">*</span></Label>
-                        <Input value={form.question} onChange={(e) => set("question", e.target.value)} placeholder="What is the eligibility for MBBS in Vietnam?" />
+                        <Input value={form.question} onChange={(e) => set("question", e.target.value)} placeholder="What is the eligibility for MBBS in Kyrgyzstan?" />
                     </div>
                     <div className="space-y-1.5">
                         <Label>Answer <span className="text-red-500">*</span></Label>

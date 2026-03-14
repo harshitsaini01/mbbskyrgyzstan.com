@@ -3,17 +3,17 @@ import { GraduationCap, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtu
 
 const quickLinks = [
     { name: "Universities", path: "/universities" },
-    { name: "About Vietnam", path: "/about-vietnam" },
+    { name: "About Kyrgyzstan", path: "/about-kyrgyzstan" },
     { name: "Compare Universities", path: "/compare" },
     { name: "Education System", path: "/education-system" },
     { name: "Contact Us", path: "/contact-us" },
 ];
 
 const universities = [
-    { name: "Hanoi Medical University", href: "/universities/hanoi-medical-university" },
-    { name: "International School of Medicine", href: "/universities/international-higher-school-of-medicine-ihsm" },
-    { name: "Can Tho University of Medicine", href: "/universities/can-tho-university-of-medicine-and-pharmacy" },
-    { name: "Ho Chi Minh City University", href: "/universities/ho-chi-minh-city-university-of-medicine-and-pharmacy" },
+    { name: "Kyrgyz State Medical Academy", href: "/universities" },
+    { name: "International School of Medicine", href: "/universities" },
+    { name: "Osh State University", href: "/universities" },
+    { name: "Jalal-Abad State University", href: "/universities" },
     { name: "View All Universities", href: "/universities" },
 ];
 
@@ -28,7 +28,7 @@ const services = [
 const resources = [
     { name: "Application Guide", href: "/apply" },
     { name: "Scholarship Guide", href: "/scholarships" },
-    { name: "Country Information", href: "/about-vietnam" },
+    { name: "Country Information", href: "/about-kyrgyzstan" },
     { name: "FMGE Pass Rates", href: "/fmge-rates" },
     { name: "Blog & News", href: "/blog" },
 ];
@@ -46,7 +46,7 @@ export default function Footer() {
                                 <GraduationCap className="w-6 h-6 text-white" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-bold">MBBS in Vietnam</h3>
+                                <h3 className="text-xl font-bold">MBBS in Kyrgyzstan</h3>
                             </div>
                         </div>
                         <div className="space-y-3">
@@ -56,7 +56,7 @@ export default function Footer() {
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="w-4 h-4 text-red-400 flex-shrink-0" />
-                                <span className="text-gray-400 text-sm">info@mbbsinvietnam.com</span>
+                                <span className="text-gray-400 text-sm">info@mbbskyrgyzstan.com</span>
                             </div>
                             <div className="flex items-start space-x-3">
                                 <MapPin className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
@@ -69,10 +69,10 @@ export default function Footer() {
                             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
                             <div className="flex space-x-4">
                                 {[
-                                    { Icon: Facebook, href: "https://facebook.com/mbbsinvietnam", label: "Facebook" },
-                                    { Icon: Twitter, href: "https://twitter.com/mbbsinvietnam", label: "Twitter" },
-                                    { Icon: Instagram, href: "https://instagram.com/mbbsinvietnam", label: "Instagram" },
-                                    { Icon: Youtube, href: "https://youtube.com/@mbbsinvietnam", label: "YouTube" },
+                                    { Icon: Facebook, href: "https://facebook.com/mbbskyrgyzstan", label: "Facebook" },
+                                    { Icon: Twitter, href: "https://twitter.com/mbbskyrgyzstan", label: "Twitter" },
+                                    { Icon: Instagram, href: "https://instagram.com/mbbskyrgyzstan", label: "Instagram" },
+                                    { Icon: Youtube, href: "https://youtube.com/@mbbskyrgyzstan", label: "YouTube" },
                                 ].map(({ Icon, href, label }) => (
                                     <a
                                         key={label}
@@ -152,7 +152,7 @@ export default function Footer() {
                 <div className="max-w-7xl mx-auto px-4 py-6">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <div className="text-gray-400 text-sm">
-                            © {new Date().getFullYear()} MBBS in Vietnam | Partner of Embassy of Vietnam
+                            © {new Date().getFullYear()} MBBS in Kyrgyzstan | Partner of Embassy of Kyrgyzstan
                         </div>
                         <div className="flex space-x-6 text-sm">
                             <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>

@@ -10,7 +10,7 @@ export default function UniversityRankings({ rankings }: Props) {
     const accreditations = [
         { icon: Globe, title: "WHO Listed", href: "https://www.who.int/", desc: "Listed in World Health Organization Directory", status: "Verified" },
         { icon: CheckCircle, title: "Internationally Accredited", desc: "Approved by international medical councils for global practice", status: "Approved" },
-        { icon: Shield, title: "Ministry Recognition", desc: "Recognized by Ministry of Education, Vietnam", status: "Licensed" },
+        { icon: Shield, title: "Ministry Recognition", desc: "Recognized by Ministry of Education, Kyrgyzstan", status: "Licensed" },
         { icon: Star, title: "International Standards", desc: "Meets global medical education standards (FAIMER, WFME)", status: "Certified" },
     ];
 

@@ -19,13 +19,13 @@ const getAutoResponse = (userMessage: string): string => {
         return "Ensure all documents are in PDF format and clearly legible. Required documents typically include 10+2 marksheet, NEET scorecard, and passport. Need help with a specific document?";
     }
     if (msg.includes("visa")) {
-        return "Once you get an admission offer, our team will guide you through the Vietnamese student visa process. It typically takes 4–6 weeks. Want to know more?";
+        return "Once you get an admission offer, our team will guide you through the Kyrgyz student visa process. It typically takes 4–6 weeks. Want to know more?";
     }
     if (msg.includes("fee") || msg.includes("cost") || msg.includes("tuition")) {
-        return "Tuition fees in Vietnam are very affordable — typically $3,000–$5,000/year. Total cost of MBBS including accommodation is usually $25,000–$35,000. Want details for a specific university?";
+        return "Tuition fees in Kyrgyzstan are very affordable — typically $3,000–$5,000/year. Total cost of MBBS including accommodation is usually $25,000–$35,000. Want details for a specific university?";
     }
     if (msg.includes("neet") || msg.includes("eligibility")) {
-        return "For MBBS in Vietnam, you need NEET qualification (minimum qualifying percentile) and 50% in PCB (Physics, Chemistry, Biology) in 10+2. Specific cutoffs vary by university.";
+        return "For MBBS in Kyrgyzstan, you need NEET qualification (minimum qualifying percentile) and 50% in PCB (Physics, Chemistry, Biology) in 10+2. Specific cutoffs vary by university.";
     }
     if (msg.includes("contact") || msg.includes("counsellor") || msg.includes("call")) {
         return "Our counsellors are available Mon–Sat, 9am–7pm IST. You can reach us at our Contact page or we'll call you after you submit an inquiry!";
@@ -33,7 +33,7 @@ const getAutoResponse = (userMessage: string): string => {
     if (msg.includes("status")) {
         return "Check your inquiry status anytime in the 'Applied Colleges' section of your dashboard. Our team typically responds within 24 hours.";
     }
-    return "Thanks for your message! I'm here to help with questions about MBBS in Vietnam — fees, eligibility, universities, visa, or the application process. How can I assist you today?";
+    return "Thanks for your message! I'm here to help with questions about MBBS in Kyrgyzstan — fees, eligibility, universities, visa, or the application process. How can I assist you today?";
 };
 
 export default function StudentChatWidget() {
@@ -42,7 +42,7 @@ export default function StudentChatWidget() {
     const [messages, setMessages] = useState<ChatMessage[]>([
         {
             id: "1",
-            message: "Hello! 👋 I'm here to help with your MBBS Vietnam journey. Ask me anything about fees, eligibility, universities, or the admission process!",
+            message: "Hello! 👋 I'm here to help with your MBBS Kyrgyzstan journey. Ask me anything about fees, eligibility, universities, or the admission process!",
             isFromSupport: true,
             timestamp: new Date().toISOString(),
         }
@@ -119,7 +119,7 @@ export default function StudentChatWidget() {
                         <Bot className="w-4 h-4" />
                     </div>
                     <div>
-                        <p className="font-semibold text-sm leading-none">MBBS Vietnam Support</p>
+                        <p className="font-semibold text-sm leading-none">MBBS Kyrgyzstan Support</p>
                         <p className="text-xs text-red-200 mt-0.5">Typically replies instantly</p>
                     </div>
                 </div>

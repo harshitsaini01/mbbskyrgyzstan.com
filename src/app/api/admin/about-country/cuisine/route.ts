@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 // Cuisine & Lifestyle items live under an AboutCountryPage record.
-// We always work with page_id = 1 (the singleton Vietnam country page).
+// We always work with page_id = 1 (the singleton Kyrgyzstan country page).
 
 const PAGE_ID = 1;
 
@@ -10,7 +10,7 @@ export async function GET() {
     // Ensure page exists
     await prisma.aboutCountryPage.upsert({
         where: { id: PAGE_ID },
-        create: { id: PAGE_ID, name: "Vietnam" },
+        create: { id: PAGE_ID, name: "Kyrgyzstan" },
         update: {},
     });
     const items = await prisma.countryCuisineLifestyle.findMany({

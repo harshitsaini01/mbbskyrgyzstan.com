@@ -4,9 +4,9 @@ import { Users, Award, Globe, HeartHandshake, Target, BookOpen, Phone, ArrowRigh
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-    title: "About Us — Global MBBS in Vietnam Consultants | MbbsInVietnam.com",
-    description: "We are Vietnam's top medical education consultancy helping students from around the world secure admissions in recognized medical universities since 2015.",
-    entitySeo: { metaKeyword: "about mbbs vietnam, global medical consultancy, mbbs admission support, study mbbs vietnam team" },
+    title: "About Us — Global MBBS in Kyrgyzstan Consultants | mbbskyrgyzstan.com",
+    description: "We are Kyrgyzstan's top medical education consultancy helping students from around the world secure admissions in recognized medical universities since 2015.",
+    entitySeo: { metaKeyword: "about mbbs Kyrgyzstan, global medical consultancy, mbbs admission support, study mbbs Kyrgyzstan team" },
     pageKey: "about-us",
 });
 
@@ -18,10 +18,10 @@ const stats = [
 ];
 
 const services = [
-    { icon: BookOpen, title: "University Listings", desc: "Access comprehensive information and listings of top-tier medical universities across Vietnam." },
+    { icon: BookOpen, title: "University Listings", desc: "Access comprehensive information and listings of top-tier medical universities across Kyrgyzstan." },
     { icon: Users, title: "Student Counseling", desc: "Expert guidance to help you choose the right university based on your academic goals and budget." },
     { icon: Shield, title: "Admission Assistance", desc: "End-to-end support for the application process, ensuring all documentation is handled professionally." },
-    { icon: Globe, title: "International Support", desc: "Comprehensive on-ground support in Vietnam, assisting with everything from arrival to graduation." },
+    { icon: Globe, title: "International Support", desc: "Comprehensive on-ground support in Kyrgyzstan, assisting with everything from arrival to graduation." },
 ];
 
 export default function AboutUsPage() {
@@ -42,7 +42,7 @@ export default function AboutUsPage() {
                         <span className="text-yellow-300">from Every Corner of the World</span>
                     </h1>
                     <p className="text-xl text-red-50 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-                        MbbsInVietnam.com is dedicated to bridging the gap between aspiring medical students and world-class quality education in Vietnam.
+                        mbbskyrgyzstan.com is dedicated to bridging the gap between aspiring medical students and world-class quality education in Kyrgyzstan.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link href="/universities" className="bg-white text-red-700 hover:bg-gray-100 font-bold px-10 py-4 rounded-xl shadow-lg transition-all transform hover:scale-105 active:scale-95">
@@ -87,7 +87,7 @@ export default function AboutUsPage() {
                                 <div>
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3">Mission</h3>
                                     <p className="text-gray-600 text-lg leading-relaxed">
-                                        To bridge the gap between aspiring medical students and quality education by providing comprehensive information about MBBS programs in Vietnam&apos;s top universities.
+                                        To bridge the gap between aspiring medical students and quality education by providing comprehensive information about MBBS programs in Kyrgyzstan&apos;s top universities.
                                     </p>
                                 </div>
                             </div>
@@ -99,7 +99,7 @@ export default function AboutUsPage() {
                                 <div>
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3">Vision</h3>
                                     <p className="text-gray-600 text-lg leading-relaxed">
-                                        To become the most trusted and comprehensive platform for MBBS admissions in Vietnam, empowering students from every country to achieve their dreams of becoming medical professionals.
+                                        To become the most trusted and comprehensive platform for MBBS admissions in Kyrgyzstan, empowering students from every country to achieve their dreams of becoming medical professionals.
                                     </p>
                                 </div>
                             </div>
@@ -156,7 +156,7 @@ export default function AboutUsPage() {
                 </div>
             </div>
 
-            {/* Why Vietnam - Generic */}
+            {/* Why Kyrgyzstan - Generic */}
             <div className="bg-gray-50 py-24 border-y border-gray-100">
                 <div className="max-w-5xl mx-auto px-4 text-center">
                     <div className="inline-block p-4 bg-white rounded-full shadow-lg mb-8">
@@ -164,7 +164,7 @@ export default function AboutUsPage() {
                     </div>
                     <h2 className="text-4xl font-black text-gray-900 mb-6 underline decoration-red-600/20 underline-offset-8">10 Years of Excellence in Education Consulting</h2>
                     <p className="text-xl text-gray-600 leading-relaxed mb-10">
-                        MbbsInVietnam.com is a specialized education consultancy focused exclusively on medical admissions in Vietnam. We were the first to establish <strong>direct official partnerships</strong> with top Vietnamese medical universities for international students.
+                        mbbskyrgyzstan.com is a specialized education consultancy focused exclusively on medical admissions in Kyrgyzstan. We were the first to establish <strong>direct official partnerships</strong> with top Kyrgyz medical universities for international students.
                     </p>
                     <p className="text-lg text-gray-500 italic max-w-3xl mx-auto">
                         &quot;Our mission has always been to simplify the complex world of international medical admissions, making premium education accessible to students of all backgrounds globally.&quot;
@@ -177,7 +177,7 @@ export default function AboutUsPage() {
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
                 <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
                     <h2 className="text-4xl lg:text-5xl font-black mb-6">Ready to Start Your <span className="text-yellow-400">MBBS Journey?</span></h2>
-                    <p className="text-gray-300 text-xl mb-12 font-light">Join the global community of students pursuing their medical careers in Vietnam. Get personalized guidance from our experts today.</p>
+                    <p className="text-gray-300 text-xl mb-12 font-light">Join the global community of students pursuing their medical careers in Kyrgyzstan. Get personalized guidance from our experts today.</p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
                         <Link href="/contact-us" className="bg-red-600 text-white hover:bg-red-700 font-bold px-12 py-5 rounded-2xl shadow-2xl transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
                             <Phone className="w-5 h-5" /> Book Free Consultation

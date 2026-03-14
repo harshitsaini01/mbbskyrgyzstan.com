@@ -240,8 +240,8 @@ export default function UniversityProgramsPage() {
                                             <Textarea value={form.eligibility} onChange={(e) => set("eligibility", e.target.value)} rows={2} />
                                         </div>
                                         <div className="space-y-1.5">
-                                            <Label>Why Choose Vietnam</Label>
-                                            <Textarea value={form.whyChooseVietnam} onChange={(e) => set("whyChooseVietnam", e.target.value)} rows={3} placeholder="Reasons why students should choose Vietnam for MBBS..." />
+                                            <Label>Why Choose Kyrgyzstan</Label>
+                                            <Textarea value={form.whyChooseVietnam} onChange={(e) => set("whyChooseVietnam", e.target.value)} rows={3} placeholder="Reasons why students should choose Kyrgyzstan for MBBS..." />
                                         </div>
                                         <div className="space-y-1.5">
                                             <Label>Additional Information</Label>

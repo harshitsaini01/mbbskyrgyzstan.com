@@ -87,7 +87,7 @@ export default function FmgeRatesTable({ data }: Props) {
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             {/* Header — matches old React Newanup.tsx exactly */}
             <div className="bg-gradient-to-r from-red-500 to-red-700 px-8 py-6 text-white">
-                <h3 className="text-3xl font-bold mb-2">Vietnam Medical Universities</h3>
+                <h3 className="text-3xl font-bold mb-2">Kyrgyzstan Medical Universities</h3>
                 <p className="text-red-100 mb-4">
                     FMGE (Foreign Medical Graduate Exam) Acceptance Rates &amp; Performance Data
                 </p>

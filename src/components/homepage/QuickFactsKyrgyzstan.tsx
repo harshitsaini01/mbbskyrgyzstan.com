@@ -1,42 +1,71 @@
 import {
-    Mountain, Stethoscope, Star, GraduationCap, TrendingUp, Globe, Sun, Utensils,
-    Building, Users, Plane, Heart,
+    Mountain,
+    Stethoscope,
+    Star,
+    GraduationCap,
+    TrendingUp,
+    Utensils,
+    Building,
+    Users,
+    Plane,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import { cdn } from "@/lib/cdn";
 import {
-    essentialFacts, geographyPoints, climateZones, attractions, majorCities,
-    defaultCuisines, transportOptions, visaFacts, mbbsHighlights, economyStats,
-    quickFacts, healthcare, mbbsWhyStats, studentLifeCards,
-} from "@/data/vietnam-facts";
+    essentialFacts,
+    geographyPoints,
+    climateZones,
+    attractions,
+    majorCities,
+    defaultCuisines,
+    transportOptions,
+    visaFacts,
+    mbbsHighlights,
+    economyStats,
+    quickFacts,
+    healthcare,
+    mbbsWhyStats,
+    studentLifeCards,
+} from "@/data/kyrgyzstan-facts";
 
+export default async function QuickFactsKyrgyzstan() {
+    let cuisines: {
+        id: number;
+        dishName: string | null;
+        dishDescription: string | null;
+        dishImage: string | null;
+        iconClass: string | null;
+    }[] = defaultCuisines;
 
-export default async function QuickFactsVietnam() {
-    // Fetch cuisine items from DB; fall back to static data when empty
-    let cuisines: { id: number; dishName: string | null; dishDescription: string | null; dishImage: string | null; iconClass: string | null }[] = defaultCuisines;
     try {
         const dbItems = await prisma.countryCuisineLifestyle.findMany({
             where: { pageId: 1 },
             orderBy: { id: "asc" },
         });
-        if (dbItems.length > 0) cuisines = dbItems;
+
+        if (dbItems.length > 0) {
+            cuisines = dbItems;
+        }
     } catch {
-        // silently fall back to static data
+        // Use static fallback data when DB data is unavailable.
     }
+
     return (
         <div>
-            {/* ─── Essential Facts ─── */}
             <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-gray-800 mb-4">Quick Facts About Vietnam</h2>
+                        <h2 className="text-4xl font-bold text-gray-800 mb-4">Quick Facts About Kyrgyzstan</h2>
                         <p className="text-lg text-gray-600">Key information every MBBS aspirant should know</p>
                     </div>
                     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
                         {essentialFacts.map((f) => (
-                            <div key={f.label} className={`text-center p-6 bg-gradient-to-br from-${f.color}-50 to-${f.color}-100 rounded-xl hover:shadow-lg transition-shadow`}>
+                            <div
+                                key={f.label}
+                                className={`text-center p-6 bg-gradient-to-br from-${f.color}-50 to-${f.color}-100 rounded-xl hover:shadow-lg transition-shadow`}
+                            >
                                 <f.icon className={`h-12 w-12 text-${f.color}-600 mx-auto mb-4`} />
                                 <h3 className="text-lg font-bold text-gray-800">{f.label}</h3>
                                 <p className="text-gray-600 text-sm mt-1">{f.value}</p>
@@ -46,14 +75,13 @@ export default async function QuickFactsVietnam() {
                 </div>
             </section>
 
-            {/* ─── Geography & Climate ─── */}
             <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <Mountain className="h-16 w-16 text-red-600 mx-auto mb-4" />
-                        <h2 className="text-4xl font-bold text-gray-800 mb-4">Geography &amp; Climate</h2>
+                        <h2 className="text-4xl font-bold text-gray-800 mb-4">Geography and Climate</h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            A long, narrow S-shaped country stretching 1,650 km — from mountains to tropical coast
+                            A landlocked and mountainous country in Central Asia with four-season weather and strong student infrastructure.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -80,7 +108,7 @@ export default async function QuickFactsVietnam() {
                             </div>
                         </div>
                     </div>
-                    {/* Top Attractions */}
+
                     <div className="bg-gradient-to-r from-orange-600 to-red-600 p-8 rounded-2xl text-white">
                         <h3 className="text-2xl font-bold mb-6 text-center">Top Tourist Attractions</h3>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -96,16 +124,16 @@ export default async function QuickFactsVietnam() {
                 </div>
             </section>
 
-            {/* ─── MBBS Education Hub ─── */}
             <section className="py-16 bg-gradient-to-r from-red-600 to-orange-700 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <GraduationCap className="h-16 w-16 text-orange-200 mx-auto mb-4" />
                         <h2 className="text-4xl font-bold mb-4">MBBS Education Hub</h2>
                         <p className="text-xl text-orange-100 max-w-3xl mx-auto">
-                            A top destination for international medical students — WHO recognized universities with global accreditations
+                            Kyrgyzstan is a practical destination for medical students seeking affordable tuition, English-medium options, and global pathways.
                         </p>
                     </div>
+
                     <div className="grid md:grid-cols-3 gap-8 mb-10">
                         {mbbsHighlights.map((item) => (
                             <div key={item.label} className="bg-white/10 backdrop-blur-sm p-8 rounded-xl hover:bg-white/20 transition-all">
@@ -115,15 +143,11 @@ export default async function QuickFactsVietnam() {
                             </div>
                         ))}
                     </div>
+
                     <div className="bg-white/10 backdrop-blur-sm p-8 rounded-xl text-center">
-                        <h3 className="text-2xl font-bold mb-6">Why Choose Vietnam for MBBS?</h3>
+                        <h3 className="text-2xl font-bold mb-6">Why Choose Kyrgyzstan for MBBS?</h3>
                         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {[
-                                { val: "6 Years", label: "Course Duration" },
-                                { val: "NMC + WHO", label: "Recognition" },
-                                { val: "35-45%", label: "FMGE Pass Rate" },
-                                { val: "$3-5K/yr", label: "Annual Tuition" },
-                            ].map(s => (
+                            {mbbsWhyStats.map((s) => (
                                 <div key={s.label} className="bg-white/10 rounded-xl py-4 px-3">
                                     <div className="text-2xl font-bold">{s.val}</div>
                                     <div className="text-orange-200 text-sm mt-1">{s.label}</div>
@@ -134,24 +158,32 @@ export default async function QuickFactsVietnam() {
                 </div>
             </section>
 
-            {/* ─── Major Cities ─── */}
             <section className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <Building className="h-16 w-16 text-blue-600 mx-auto mb-4" />
                         <h2 className="text-4xl font-bold text-gray-800 mb-4">Major University Cities</h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Urban centres offering modern amenities, affordable living, and world-class medical colleges
+                            Urban centers offering student housing, practical training access, and a cost-effective lifestyle.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {majorCities.map((city) => (
-                            <div key={city.name} className={`bg-gradient-to-br ${city.gradient} text-white p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300`}>
+                            <div
+                                key={city.name}
+                                className={`bg-gradient-to-br ${city.gradient} text-white p-8 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300`}
+                            >
                                 <h3 className="text-2xl font-bold mb-3">{city.name}</h3>
                                 <p className={`${city.textMain} mb-4`}>{city.desc}</p>
                                 <div className={`space-y-2 text-sm ${city.textSub}`}>
-                                    <div className="flex items-center gap-2"><Users className="h-4 w-4" /><span>{city.pop}</span></div>
-                                    <div className="flex items-center gap-2"><Star className="h-4 w-4" /><span>{city.highlight}</span></div>
+                                    <div className="flex items-center gap-2">
+                                        <Users className="h-4 w-4" />
+                                        <span>{city.pop}</span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <Star className="h-4 w-4" />
+                                        <span>{city.highlight}</span>
+                                    </div>
                                 </div>
                             </div>
                         ))}
@@ -159,36 +191,38 @@ export default async function QuickFactsVietnam() {
                 </div>
             </section>
 
-            {/* ─── Economy ─── */}
             <section className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <TrendingUp className="h-16 w-16 text-green-600 mx-auto mb-4" />
                         <h2 className="text-4xl font-bold text-gray-800 mb-4">Growing Economy</h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            One of Asia's fastest-growing economies — stable, welcoming to foreigners, and affordable for students
+                            A developing economy with growing demand in healthcare and education services.
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
                             <div className="bg-gradient-to-br from-yellow-50 to-amber-100 p-6 rounded-xl shadow-lg">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-3">🏆 Key Sectors</h3>
-                                <p className="text-gray-600">Electronics manufacturing, textiles, seafood exports, tourism, and a booming tech startup ecosystem.</p>
+                                <h3 className="text-xl font-semibold text-gray-800 mb-3">Key Sectors</h3>
+                                <p className="text-gray-600">Mining, agriculture, hydropower, trade, and services remain major contributors.</p>
                             </div>
                             <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl shadow-lg">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-3">📈 Major Exports</h3>
-                                <p className="text-gray-600">Samsung, LG, Intel have major investments. Vietnam is among the world's top electronics exporters.</p>
+                                <h3 className="text-xl font-semibold text-gray-800 mb-3">Student Budget</h3>
+                                <p className="text-gray-600">Housing, food, and local travel costs are generally lower than many other study-abroad destinations.</p>
                             </div>
                             <div className="bg-gradient-to-br from-blue-50 to-cyan-100 p-6 rounded-xl shadow-lg">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-3">🌍 Student Economy</h3>
-                                <p className="text-gray-600">Monthly living costs are very affordable for international MBBS students. The Vietnamese Dong offers favorable exchange rates for many currencies.</p>
+                                <h3 className="text-xl font-semibold text-gray-800 mb-3">Medical Education Demand</h3>
+                                <p className="text-gray-600">International interest in Kyrgyz MBBS programs continues to grow each admission cycle.</p>
                             </div>
                         </div>
                         <div className="bg-gradient-to-br from-green-600 to-blue-700 p-8 rounded-2xl text-white">
                             <h3 className="text-2xl font-bold mb-6">Economic Indicators</h3>
                             <div className="space-y-4">
-                                {economyStats.map(s => (
-                                    <div key={s.label} className="flex justify-between items-center border-b border-white/20 pb-3 last:border-0">
+                                {economyStats.map((s) => (
+                                    <div
+                                        key={s.label}
+                                        className="flex justify-between items-center border-b border-white/20 pb-3 last:border-0"
+                                    >
                                         <span className="text-blue-100">{s.label}</span>
                                         <span className="font-semibold">{s.value}</span>
                                     </div>
@@ -199,16 +233,16 @@ export default async function QuickFactsVietnam() {
                 </div>
             </section>
 
-            {/* ─── Cuisine & Lifestyle ─── */}
             <section className="py-16 bg-gradient-to-r from-amber-50 to-orange-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <Utensils className="h-16 w-16 text-orange-600 mx-auto mb-4" />
-                        <h2 className="text-4xl font-bold text-gray-800 mb-4">Cuisine &amp; Student Life</h2>
+                        <h2 className="text-4xl font-bold text-gray-800 mb-4">Cuisine and Student Life</h2>
                         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                            Vietnam's food is fresh, flavourful, and incredibly affordable — a huge plus for international students from every corner of the world
+                            Local cuisine is affordable and diverse, with many options suitable for international students.
                         </p>
                     </div>
+
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                         {cuisines.map((c) => (
                             <div key={c.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden">
@@ -234,14 +268,11 @@ export default async function QuickFactsVietnam() {
                             </div>
                         ))}
                     </div>
+
                     <div className="bg-gradient-to-r from-orange-600 to-red-700 p-8 rounded-2xl text-white">
                         <h3 className="text-2xl font-bold mb-6 text-center">Student Lifestyle</h3>
                         <div className="grid md:grid-cols-3 gap-6">
-                            {[
-                                { icon: Heart, label: "Safe Environment", desc: "Vietnam is consistently ranked among Asia's safest countries for students." },
-                                { icon: Building, label: "Modern Hostels", desc: "University hostels equipped with Wi-Fi, common areas, and 24/7 security." },
-                                { icon: Users, label: "Global Community", desc: "Active international student associations in Hanoi, HCMC, and Hue providing multicultural support." },
-                            ].map((item) => (
+                            {studentLifeCards.map((item) => (
                                 <div key={item.label} className="text-center">
                                     <item.icon className="h-8 w-8 mx-auto mb-2 text-orange-200" />
                                     <h4 className="font-semibold">{item.label}</h4>
@@ -253,13 +284,14 @@ export default async function QuickFactsVietnam() {
                 </div>
             </section>
 
-            {/* ─── Travel & Connectivity ─── */}
             <section className="py-16 bg-gradient-to-r from-slate-100 to-gray-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <Plane className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                        <h2 className="text-4xl font-bold text-gray-800 mb-4">Travel &amp; Connectivity</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">Well-connected to the world — multiple international routes and a straightforward student visa process for most nationalities</p>
+                        <h2 className="text-4xl font-bold text-gray-800 mb-4">Travel and Connectivity</h2>
+                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                            International arrivals and regional transport options make student onboarding practical and manageable.
+                        </p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="bg-white p-8 rounded-xl shadow-lg">
@@ -274,7 +306,7 @@ export default async function QuickFactsVietnam() {
                             </div>
                         </div>
                         <div className="bg-white p-8 rounded-xl shadow-lg">
-                            <h3 className="text-2xl font-bold text-gray-800 mb-6">Visa &amp; Connectivity</h3>
+                            <h3 className="text-2xl font-bold text-gray-800 mb-6">Visa and Onboarding</h3>
                             <div className="space-y-4">
                                 {visaFacts.map((item, i) => (
                                     <div key={i} className="flex items-center gap-3">
@@ -288,13 +320,12 @@ export default async function QuickFactsVietnam() {
                 </div>
             </section>
 
-            {/* ─── Healthcare ─── */}
             <section className="py-16 bg-gradient-to-r from-green-50 to-blue-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <Stethoscope className="h-16 w-16 text-green-600 mx-auto mb-4" />
                         <h2 className="text-4xl font-bold text-gray-800 mb-4">Healthcare System</h2>
-                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">Affordable healthcare for locals and international students alike</p>
+                        <p className="text-lg text-gray-600 max-w-3xl mx-auto">Healthcare access for students is available through university and city networks.</p>
                     </div>
                     <div className="grid md:grid-cols-3 gap-8">
                         {healthcare.map((h) => (
@@ -307,13 +338,12 @@ export default async function QuickFactsVietnam() {
                 </div>
             </section>
 
-            {/* ─── Quick Trivia Banner ─── */}
             <section className="py-16 bg-red-600 text-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <Star className="h-16 w-16 text-yellow-300 mx-auto mb-4" />
                         <h2 className="text-4xl font-bold mb-4">Did You Know?</h2>
-                        <p className="text-xl text-red-100">Interesting facts about Vietnam</p>
+                        <p className="text-xl text-red-100">Interesting facts about Kyrgyzstan</p>
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {quickFacts.map((f) => (
@@ -327,12 +357,11 @@ export default async function QuickFactsVietnam() {
                 </div>
             </section>
 
-            {/* ─── CTA ─── */}
             <section className="py-16 bg-gradient-to-r from-red-600 to-red-800 text-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-4xl font-bold mb-6">Start Your MBBS Journey in Vietnam</h2>
+                    <h2 className="text-4xl font-bold mb-6">Start Your MBBS Journey in Kyrgyzstan</h2>
                     <p className="text-xl text-red-100 mb-8">
-                        Discover world-class medical education in Southeast Asia's most beautiful country
+                        Discover high-value medical education in one of Central Asia&apos;s most student-friendly destinations.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link href="/universities" className="bg-white text-red-700 px-8 py-3 rounded-full font-semibold hover:bg-red-50 transition-colors">

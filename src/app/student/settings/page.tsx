@@ -142,7 +142,7 @@ export default function SettingsPage() {
                         </div>
                         <div className="sm:col-span-2">
                             <label className={LABEL}>Interested University</label>
-                            <input className={INPUT} value={profile.interestedUniversity || ""} onChange={(e) => set("interestedUniversity", e.target.value)} placeholder="e.g. Hanoi Medical University" />
+                            <input className={INPUT} value={profile.interestedUniversity || ""} onChange={(e) => set("interestedUniversity", e.target.value)} placeholder="e.g. Kyrgyz State Medical Academy" />
                         </div>
                     </div>
                 </div>

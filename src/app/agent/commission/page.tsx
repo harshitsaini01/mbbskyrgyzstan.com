@@ -66,7 +66,7 @@ export default async function AgentCommissionPage() {
                     </div>
                 </div>
                 <div className="bg-amber-50 border border-amber-100 rounded-xl p-4 text-sm text-amber-800 mt-4">
-                    <strong>Note:</strong> Commission is counted when a student's status is marked as &quot;Enrolled&quot; by the admin team. Contact us at support@mbbsinvietnam.com for payout requests.
+                    <strong>Note:</strong> Commission is counted when a student's status is marked as &quot;Enrolled&quot; by the admin team. Contact us at support@mbbskyrgyzstan.com for payout requests.
                 </div>
             </div>
         </div>

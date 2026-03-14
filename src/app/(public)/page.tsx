@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import HeroSection from "@/components/homepage/HeroSection";
 import UniversityGrid from "@/components/homepage/UniversityGrid";
-import AboutVietnam from "@/components/homepage/AboutVietnam";
+import AboutKyrgyzstan from "@/components/homepage/AboutKyrgyzstan";
 import ScholarshipsSection from "@/components/homepage/ScholarshipsSection";
 import EducationSystem from "@/components/homepage/EducationSystem";
 import MinistryLinks from "@/components/homepage/MinistryLinks";
@@ -11,10 +11,10 @@ import FmgeSection from "@/components/homepage/FmgeSection";
 import { organizationSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-    title: "MBBS in Vietnam — Study MBBS in Vietnam 2025 | Low Fees, NMC Recognized",
+    title: "MBBS in Kyrgyzstan — Study MBBS in Kyrgyzstan 2025 | Low Fees, NMC Recognized",
     description:
-        "Study MBBS in Vietnam at top NMC & WHO recognized medical universities. Affordable tuition, English medium, high FMGE pass rates. Apply for 2025-26 admission.",
-    keywords: "MBBS in Vietnam, study MBBS Vietnam, medical university Vietnam, NMC recognized Vietnam, MBBS admission 2025",
+        "Study MBBS in Kyrgyzstan at top NMC & WHO recognized medical universities. Affordable tuition, English medium, high FMGE pass rates. Apply for 2025-26 admission.",
+    keywords: "MBBS in Kyrgyzstan, study MBBS Kyrgyzstan, medical university Kyrgyzstan, NMC recognized Kyrgyzstan, MBBS admission 2025",
 };
 
 const UniversityGridFallback = () => (
@@ -56,7 +56,7 @@ export default function HomePage() {
             <Suspense fallback={<UniversityGridFallback />}>
                 <UniversityGrid />
             </Suspense>
-            <AboutVietnam />
+            <AboutKyrgyzstan />
             
             <Suspense fallback={<div className="py-16 bg-gray-50" />}>
                 <CompareUniversities />

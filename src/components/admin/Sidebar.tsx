@@ -148,7 +148,7 @@ export function AdminSidebar() {
             <div className="h-16 flex items-center px-5 border-b border-gray-800">
                 <Link href="/admin" className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-lg bg-red-600 flex items-center justify-center text-white font-bold text-sm">M</div>
-                    <span className="font-semibold text-sm text-white">MBBS Vietnam</span>
+                    <span className="font-semibold text-sm text-white">MBBS Kyrgyzstan</span>
                 </Link>
             </div>
 

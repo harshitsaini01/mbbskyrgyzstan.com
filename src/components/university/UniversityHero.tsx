@@ -52,14 +52,14 @@ export default function UniversityHero({ university }: Props) {
                         </div>
                         <h1 className="text-4xl lg:text-5xl font-bold mb-4 leading-tight drop-shadow-md">{university.name}</h1>
                         <p className="text-red-100 text-lg leading-relaxed mb-8">
-                            {university.shortnote || university.aboutNote || "Join one of Southeast Asia's premier medical institutions. World-class education, international recognition, and affordable fees await you."}
+                            {university.shortnote || university.aboutNote || "Join one of Central Asia's leading medical institutions. World-class education, international recognition, and affordable fees await you."}
                         </p>
                         <div className="grid grid-cols-2 gap-5 mb-8">
                             <div className="flex items-center space-x-3">
                                 <MapPin className="h-5 w-5 text-yellow-400 shrink-0" />
                                 <div>
                                     <p className="font-semibold text-sm">Location</p>
-                                    <p className="text-red-100 text-sm">{university.cityRelation?.name || university.city || "Vietnam"}{university.province?.name ? `, ${university.province.name}` : ""}</p>
+                                    <p className="text-red-100 text-sm">{university.cityRelation?.name || university.city || "Kyrgyzstan"}{university.province?.name ? `, ${university.province.name}` : ""}</p>
                                 </div>
                             </div>
                             <div className="flex items-center space-x-3">

@@ -32,7 +32,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
                             <GraduationCap className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                            <div className="text-sm font-bold text-gray-800">MBBS Vietnam</div>
+                            <div className="text-sm font-bold text-gray-800">MBBS Kyrgyzstan</div>
                             <div className="text-xs text-gray-500">Student Portal</div>
                         </div>
                     </Link>

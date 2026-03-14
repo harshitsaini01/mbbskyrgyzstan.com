@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://mbbsinvietnam.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://mbbskyrgyzstan.com";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const now = new Date();
@@ -18,7 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { url: `${SITE_URL}/fmge-rates`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
         { url: `${SITE_URL}/about-us`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
         { url: `${SITE_URL}/contact-us`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-        { url: `${SITE_URL}/about-vietnam`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+        { url: `${SITE_URL}/about-kyrgyzstan`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
         { url: `${SITE_URL}/education-system`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
         { url: `${SITE_URL}/our-partners`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
         { url: `${SITE_URL}/apply`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

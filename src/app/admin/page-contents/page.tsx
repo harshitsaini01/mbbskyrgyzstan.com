@@ -19,8 +19,8 @@ const pages = [
         ],
     },
     {
-        title: "About Vietnam",
-        route: "/about-vietnam",
+        title: "About Kyrgyzstan",
+        route: "/about-kyrgyzstan",
         icon: "🇻🇳",
         desc: "Country info, lifestyle, cuisine, tourist spots",
         managedBy: "About Country module",

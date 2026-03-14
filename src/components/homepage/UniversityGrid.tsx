@@ -26,7 +26,7 @@ function formatStudents(students: string | null | undefined): string {
     if (!isNaN(n) && String(n) === students.trim()) {
         return n >= 1000 ? `${(n / 1000).toFixed(1)}K+` : `${n}+`;
     }
-    return students; // e.g. "3000+" or "5K" — display as-is
+    return students;
 }
 
 export default async function UniversityGrid() {
@@ -57,10 +57,13 @@ export default async function UniversityGrid() {
         <section className="py-8 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-800 mb-4">Top Universities in Vietnam</h2>
+                    <h2 className="text-4xl font-bold text-gray-800 mb-4">
+                        Top Universities in Kyrgyzstan
+                    </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Explore world-class educational institutions offering quality programs recognized
-                        globally and designed for international students.
+                        Explore top medical universities in Kyrgyzstan offering globally
+                        recognized MBBS programs with affordable tuition fees and excellent
+                        clinical training opportunities for international students.
                     </p>
                 </div>
 
@@ -96,7 +99,9 @@ export default async function UniversityGrid() {
                                     {/* Image */}
                                     <div className="relative h-48 overflow-hidden">
                                         {(() => {
-                                            const src = cdn(university.thumbnailPath) || "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=800";
+                                            const src =
+                                                cdn(university.thumbnailPath) ||
+                                                "https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=800";
                                             const isLocalUpload = src.startsWith("/uploads/");
                                             return (
                                                 <Image
@@ -119,7 +124,9 @@ export default async function UniversityGrid() {
                                         {university.rating && (
                                             <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center space-x-1">
                                                 <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                                                <span className="text-sm font-medium">{Number(university.rating).toFixed(1)}</span>
+                                                <span className="text-sm font-medium">
+                                                    {Number(university.rating).toFixed(1)}
+                                                </span>
                                             </div>
                                         )}
                                     </div>
@@ -133,8 +140,10 @@ export default async function UniversityGrid() {
                                             <div className="flex items-center text-gray-600 text-sm mb-2">
                                                 <MapPin className="w-4 h-4 mr-1" />
                                                 <span>
-                                                    {university.cityRelation?.name || university.city || "Vietnam"}
-                                                    {university.province?.name ? `, ${university.province.name}` : ""}
+                                                    {university.cityRelation?.name || university.city || "Kyrgyzstan"}
+                                                    {university.province?.name
+                                                        ? `, ${university.province.name}`
+                                                        : ""}
                                                 </span>
                                                 {university.establishedYear && (
                                                     <>
@@ -149,12 +158,16 @@ export default async function UniversityGrid() {
                                         <div className="grid grid-cols-2 gap-4 mb-4">
                                             <div className="text-center p-3 bg-gray-50 rounded-lg">
                                                 <Users className="w-5 h-5 text-red-600 mx-auto mb-1" />
-                                                <div className="text-sm font-medium text-gray-800">{formatStudents(university.students)}</div>
+                                                <div className="text-sm font-medium text-gray-800">
+                                                    {formatStudents(university.students)}
+                                                </div>
                                                 <div className="text-xs text-gray-600">Students</div>
                                             </div>
                                             <div className="text-center p-3 bg-gray-50 rounded-lg">
                                                 <Award className="w-5 h-5 text-red-600 mx-auto mb-1" />
-                                                <div className="text-sm font-medium text-gray-800">{formatFee(university.tuitionFee ? Number(university.tuitionFee) : null)}</div>
+                                                <div className="text-sm font-medium text-gray-800">
+                                                    {formatFee(university.tuitionFee ? Number(university.tuitionFee) : null)}
+                                                </div>
                                                 <div className="text-xs text-gray-600">Annual Fees</div>
                                             </div>
                                         </div>
@@ -177,7 +190,9 @@ export default async function UniversityGrid() {
                                         <div className="mb-4 flex-grow">
                                             <div className="flex items-center space-x-2 text-sm text-gray-600">
                                                 <Globe className="w-4 h-4" />
-                                                <span>Recognized by: {approvedBy.slice(0, 3).join(", ")}</span>
+                                                <span>
+                                                    Recognized by: {approvedBy.slice(0, 3).join(", ")}
+                                                </span>
                                             </div>
                                         </div>
 
