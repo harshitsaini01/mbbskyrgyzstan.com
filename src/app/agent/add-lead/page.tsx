@@ -94,7 +94,7 @@ export default function AgentAddLeadPage() {
                         </div>
                         <div className="md:col-span-2 space-y-1.5">
                             <label className="text-xs text-gray-500">Preferred University (optional)</label>
-                            <Input value={form.universityName} onChange={e => set("universityName", e.target.value)} placeholder="e.g. Hue University of Medicine" />
+                            <Input value={form.universityName} onChange={e => set("universityName", e.target.value)} placeholder="e.g. International School of Medicine" />
                         </div>
                         <div className="md:col-span-2 space-y-1.5">
                             <label className="text-xs text-gray-500">Notes</label>

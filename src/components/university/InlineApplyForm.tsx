@@ -15,7 +15,7 @@ interface Props {
 }
 
 const PHONE_CODES = [
-    { code: "+91", country: "India" }, { code: "+84", country: "Vietnam" },
+    { code: "+91", country: "India" }, { code: "+996", country: "Kyrgyzstan" },
     { code: "+1", country: "USA/Canada" }, { code: "+44", country: "UK" },
     { code: "+92", country: "Pakistan" }, { code: "+880", country: "Bangladesh" },
     { code: "+977", country: "Nepal" }, { code: "+94", country: "Sri Lanka" },
@@ -25,7 +25,7 @@ const PHONE_CODES = [
 
 const COUNTRIES = [
     "India", "Bangladesh", "Nepal", "Pakistan", "Sri Lanka", "UAE",
-    "Malaysia", "Nigeria", "Kenya", "Ghana", "Vietnam", "China",
+    "Malaysia", "Nigeria", "Kenya", "Ghana", "Kyrgyzstan", "China",
     "USA", "Canada", "UK", "Other",
 ];
 

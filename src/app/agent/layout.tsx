@@ -27,7 +27,7 @@ export default async function AgentLayout({ children }: { children: React.ReactN
                         </div>
                         <div>
                             <p className="text-sm font-bold">Agent Portal</p>
-                            <p className="text-xs text-slate-400">MBBS Vietnam</p>
+                            <p className="text-xs text-slate-400">MBBS Kyrgyzstan</p>
                         </div>
                     </div>
                 </div>

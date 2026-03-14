@@ -3,7 +3,7 @@ import { AdminShell } from "@/components/admin/AdminShell";
 import { Toaster } from "sonner";
 
 export const metadata = {
-    title: { default: "Admin Panel | MBBS Vietnam", template: "%s | Admin" },
+    title: { default: "Admin Panel | MBBS Kyrgyzstan", template: "%s | Admin" },
 };
 
 export default async function AdminLayout({ children }: { children: ReactNode }) {

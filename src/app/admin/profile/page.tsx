@@ -115,7 +115,7 @@ export default function AdminProfilePage() {
                     </div>
                     <div className="space-y-1">
                         <Label>Phone</Label>
-                        <Input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+84 xxx xxxx" />
+                        <Input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+996 xxx xxx xxx" />
                     </div>
                     <div className="space-y-1">
                         <Label>Designation</Label>

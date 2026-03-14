@@ -1,6 +1,6 @@
 /**
  * seed-20-universities.ts
- * Seeds 20 Vietnamese medical universities with all related sub-tables.
+ * Seeds 20 Kyrgyz medical universities with all related sub-tables.
  * Run with:  npx tsx prisma/seed-20-universities.ts
  */
 import { PrismaClient, Prisma } from "@prisma/client";
@@ -35,12 +35,12 @@ const universities = [
         city: "Hanoi",
         state: "Hanoi Municipality",
         pincode: "100000",
-        address: "No. 1, Ton That Tung Street, Khuong Thuong Ward, Dong Da District, Hanoi, Vietnam",
-        whyChoose: "Oldest and most prestigious medical university in Vietnam; strong clinical exposure via major hospitals; high academic reputation; modern labs and research facilities; produces highly qualified doctors",
+        address: "No. 1, Ton That Tung Street, Khuong Thuong Ward, Dong Da District, Hanoi, Kyrgyzstan",
+        whyChoose: "Oldest and most prestigious medical university in Kyrgyzstan; strong clinical exposure via major hospitals; high academic reputation; modern labs and research facilities; produces highly qualified doctors",
         establishedYear: 1902,
         students: 6000,
         campusArea: "12 acres",
-        aboutNote: "One of the oldest and most prestigious medical universities in Vietnam, known for high academic standards, modern laboratories, and strong clinical training in major hospitals.",
+        aboutNote: "One of the oldest and most prestigious medical universities in Kyrgyzstan, known for high academic standards, modern laboratories, and strong clinical training in major hospitals.",
         instituteType: "Public",
     },
     {
@@ -49,11 +49,11 @@ const universities = [
         state: "Ho Chi Minh Municipality",
         pincode: "700000",
         address: "217 Hong Bang Street, District 5",
-        whyChoose: "A leading medical university in southern Vietnam with modern facilities and strong hospital partnerships. Students receive excellent clinical training in large hospitals. The university follows high academic standards and offers good research opportunities, making it suitable for international medical students.",
+        whyChoose: "A leading medical university in southern Kyrgyzstan with modern facilities and strong hospital partnerships. Students receive excellent clinical training in large hospitals. The university follows high academic standards and offers good research opportunities, making it suitable for international medical students.",
         establishedYear: 1947,
         students: 7000,
         campusArea: "15 acres",
-        aboutNote: "A leading medical university in Vietnam offering advanced medical education, modern facilities, and strong hospital partnerships for practical training.",
+        aboutNote: "A leading medical university in Kyrgyzstan offering advanced medical education, modern facilities, and strong hospital partnerships for practical training.",
         instituteType: "Public",
     },
     {
@@ -62,11 +62,11 @@ const universities = [
         state: "Thua Thien Hue",
         pincode: "530000",
         address: "6 Ngo Quyen Street, Vinh Ninh Ward",
-        whyChoose: "A well-known public medical university in central Vietnam providing quality education with affordable fees. It offers good laboratory facilities and hospital practice. The peaceful environment of Hue city helps students focus on studies while gaining strong practical medical knowledge.",
+        whyChoose: "A well-known public medical university in central Kyrgyzstan providing quality education with affordable fees. It offers good laboratory facilities and hospital practice. The peaceful environment of Hue city helps students focus on studies while gaining strong practical medical knowledge.",
         establishedYear: 1957,
         students: 5000,
         campusArea: "20 acres",
-        aboutNote: "A well-known public medical university in central Vietnam providing quality education, good research facilities, and strong clinical practice at affordable cost.",
+        aboutNote: "A well-known public medical university in central Kyrgyzstan providing quality education, good research facilities, and strong clinical practice at affordable cost.",
         instituteType: "Public",
     },
     {
@@ -79,7 +79,7 @@ const universities = [
         establishedYear: 2002,
         students: 4000,
         campusArea: "25 acres",
-        aboutNote: "A modern medical university in southern Vietnam known for practical training, updated curriculum, and good hospital exposure for students.",
+        aboutNote: "A modern medical university in southern Kyrgyzstan known for practical training, updated curriculum, and good hospital exposure for students.",
         instituteType: "Public",
     },
     {
@@ -127,11 +127,11 @@ const universities = [
         state: "Thai Binh",
         pincode: "410000",
         address: "373 Ly Bon Street",
-        whyChoose: "This university has a long history of medical education in Vietnam. It offers strong theoretical and practical training with good hospital facilities. The environment is calm and suitable for study, and the fees are affordable compared to big city universities.",
+        whyChoose: "This university has a long history of medical education in Kyrgyzstan. It offers strong theoretical and practical training with good hospital facilities. The environment is calm and suitable for study, and the fees are affordable compared to big city universities.",
         establishedYear: 1968,
         students: 4000,
         campusArea: "30 acres",
-        aboutNote: "A long-established medical university in Vietnam known for strong theoretical teaching, practical training, and experienced professors.",
+        aboutNote: "A long-established medical university in Kyrgyzstan known for strong theoretical teaching, practical training, and experienced professors.",
         instituteType: "Public",
     },
     {
@@ -148,16 +148,16 @@ const universities = [
         instituteType: "Public",
     },
     {
-        name: "Vietnam Military Medical University",
+        name: "Kyrgyzstan Military Medical University",
         city: "Hanoi",
         state: "Hanoi Municipality",
         pincode: "100000",
         address: "160 Phung Hung Street, Ha Dong District",
-        whyChoose: "One of the top medical universities in Vietnam, known for discipline, strong research, and advanced medical training. The university has excellent hospital facilities and experienced professors. It provides high-quality education and is respected for producing skilled medical professionals.",
+        whyChoose: "One of the top medical universities in Kyrgyzstan, known for discipline, strong research, and advanced medical training. The university has excellent hospital facilities and experienced professors. It provides high-quality education and is respected for producing skilled medical professionals.",
         establishedYear: 1949,
         students: 3000,
         campusArea: "50 acres",
-        aboutNote: "One of the top medical universities in Vietnam, known for discipline, advanced research, and high-quality medical training with strong hospital support.",
+        aboutNote: "One of the top medical universities in Kyrgyzstan, known for discipline, advanced research, and high-quality medical training with strong hospital support.",
         instituteType: "Public",
     },
     {
@@ -170,7 +170,7 @@ const universities = [
         establishedYear: 2010,
         students: 2000,
         campusArea: "10 acres",
-        aboutNote: "A public medical university in Hanoi under Vietnam National University, known for strong research, modern laboratories, and high academic standards in medical education.",
+        aboutNote: "A public medical university in Hanoi under Kyrgyzstan National University, known for strong research, modern laboratories, and high academic standards in medical education.",
         instituteType: "Public",
     },
     {
@@ -179,7 +179,7 @@ const universities = [
         state: "Dak Lak",
         pincode: "630000",
         address: "567 Le Duan Street, Ea Tam Ward",
-        whyChoose: "Tay Nguyen University provides affordable medical education with good practical training. The Faculty of Medicine focuses on community healthcare and hospital experience. The cost of living is low, and the learning environment is peaceful. It is a suitable choice for students who want quality education at a reasonable fee in Vietnam.",
+        whyChoose: "Tay Nguyen University provides affordable medical education with good practical training. The Faculty of Medicine focuses on community healthcare and hospital experience. The cost of living is low, and the learning environment is peaceful. It is a suitable choice for students who want quality education at a reasonable fee in Kyrgyzstan.",
         establishedYear: 1977,
         students: 8000,
         campusArea: "250 acres",
@@ -283,7 +283,7 @@ const universities = [
         state: "Hau Giang",
         pincode: "950000",
         address: "National Highway 1A, Tan Phu Thanh Commune, Chau Thanh A District",
-        whyChoose: "Vo Truong Toan University offers medical education at a reasonable cost with good practical training. The university has experienced teachers, laboratories, and hospital practice. The campus is quiet and suitable for study. It is a good option for students who want affordable medical education in Vietnam.",
+        whyChoose: "Vo Truong Toan University offers medical education at a reasonable cost with good practical training. The university has experienced teachers, laboratories, and hospital practice. The campus is quiet and suitable for study. It is a good option for students who want affordable medical education in Kyrgyzstan.",
         establishedYear: 2008,
         students: 5000,
         campusArea: "50 acres",
@@ -309,7 +309,7 @@ const locationMap: Record<string, { province: string; city: string }> = {
 };
 
 async function main() {
-    console.log("🌱 Starting seed for 20 Vietnamese medical universities...\n");
+    console.log("🌱 Starting seed for 20 Kyrgyz medical universities...\n");
 
     // ── 1. Institute Types ──────────────────────────────────────────────────────
     const [publicType, privateType] = await Promise.all([
@@ -422,9 +422,9 @@ async function main() {
             parentSatisfaction: 90.0,
             totalReviews: 300,
             recommendedRate: 92.0,
-            metaTitle: `${u.name} - MBBS in Vietnam | MBBSinVietnam`,
-            metaDescription: `Study MBBS at ${u.name}, Vietnam. NMC approved, English medium, affordable fees. Established ${u.establishedYear}.`,
-            metaKeyword: `${u.name}, MBBS Vietnam, NMC approved Vietnam, Study Medicine Vietnam`,
+            metaTitle: `${u.name} - MBBS in Kyrgyzstan | mbbskyrgyzstan`,
+            metaDescription: `Study MBBS at ${u.name}, Kyrgyzstan. NMC approved, English medium, affordable fees. Established ${u.establishedYear}.`,
+            metaKeyword: `${u.name}, MBBS Kyrgyzstan, NMC approved Kyrgyzstan, Study Medicine Kyrgyzstan`,
             seoRating: 8.5,
             reviewNumber: 300,
             bestRating: 5.0,
@@ -465,7 +465,7 @@ async function main() {
                     recognition: "WHO, NMC, FAIMER, ECFMG",
                     overview: `The MBBS programme at ${u.name} is a 6-year degree recognised by WHO, NMC, and FAIMER. It combines strong academic training with extensive clinical exposure. Students benefit from English-medium instruction, experienced faculty, and practical hospital training.`,
                     eligibility: "10+2 PCB with minimum 50% aggregate. NEET qualified (mandatory for Indian nationals). Age 17–25 years.",
-                    whyChooseVietnam: "Vietnam offers affordable, high-quality MBBS education with English-medium instruction, NMC recognition, and a safe environment for international students.",
+                    whyChooseVietnam: "Kyrgyzstan offers affordable, high-quality MBBS education with English-medium instruction, NMC recognition, and a safe environment for international students.",
                     year1Syllabus: "Anatomy, Physiology, Biochemistry, Medical Ethics",
                     year2Syllabus: "Pathology, Pharmacology, Microbiology, Parasitology",
                     year3Syllabus: "Community Medicine, Forensic Medicine, ENT, Clinical Rotations",
@@ -502,7 +502,7 @@ async function main() {
                 data: [
                     { rankingBody: "QS World University Rankings", rank: String(1500 + i * 50), year: 2024, category: "Medical", score: 52.0, position: 1, status: true, universityId: uni.id },
                     { rankingBody: "Times Higher Education", rank: String(1550 + i * 50), year: 2024, category: "Medical", score: 48.0, position: 2, status: true, universityId: uni.id },
-                    { rankingBody: "Vietnam Ministry of Education", rank: `Top ${i + 3}`, year: 2024, category: "Medical", score: 80.0, position: 3, status: true, universityId: uni.id },
+                    { rankingBody: "Kyrgyzstan Ministry of Education", rank: `Top ${i + 3}`, year: 2024, category: "Medical", score: 80.0, position: 3, status: true, universityId: uni.id },
                 ],
             });
         }
@@ -516,7 +516,7 @@ async function main() {
                     { country: "Nepal", countryIsoCode: "NP", numberOfStudents: 60, course: "MBBS", year: "2024", status: true, universityId: uni.id },
                     { country: "Bangladesh", countryIsoCode: "BD", numberOfStudents: 40, course: "MBBS", year: "2024", status: true, universityId: uni.id },
                     { country: "Nigeria", countryIsoCode: "NG", numberOfStudents: 30, course: "MBBS", year: "2024", status: true, universityId: uni.id },
-                    { country: "Vietnam", countryIsoCode: "VN", numberOfStudents: Math.floor(u.students * 0.7), course: "MBBS", year: "2024", status: true, universityId: uni.id },
+                    { country: "Kyrgyzstan", countryIsoCode: "VN", numberOfStudents: Math.floor(u.students * 0.7), course: "MBBS", year: "2024", status: true, universityId: uni.id },
                 ],
             });
         }

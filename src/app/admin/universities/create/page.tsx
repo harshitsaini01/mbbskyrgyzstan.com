@@ -153,20 +153,20 @@ export default function CreateUniversityPage() {
                             <Input
                                 value={form.name}
                                 onChange={(e) => { set("name", e.target.value); set("slug", slugify(e.target.value)); }}
-                                placeholder="e.g. Hanoi Medical University"
+                                placeholder="e.g. Kyrgyz State Medical Academy"
                             />
                         </div>
                         <div className="space-y-1.5">
                             <Label>Slug <span className="text-red-500">*</span></Label>
-                            <Input value={form.slug} onChange={(e) => set("slug", e.target.value)} placeholder="hanoi-medical-university" />
+                            <Input value={form.slug} onChange={(e) => set("slug", e.target.value)} placeholder="kyrgyz-state-medical-academy" />
                         </div>
                         <div className="space-y-1.5">
                             <Label>City <span className="text-red-500">*</span></Label>
-                            <Input value={form.city} onChange={(e) => set("city", e.target.value)} placeholder="Hanoi" />
+                            <Input value={form.city} onChange={(e) => set("city", e.target.value)} placeholder="Bishkek" />
                         </div>
                         <div className="space-y-1.5">
                             <Label>State / Province</Label>
-                            <Input value={form.state} onChange={(e) => set("state", e.target.value)} placeholder="Hanoi" />
+                            <Input value={form.state} onChange={(e) => set("state", e.target.value)} placeholder="Chui Region" />
                         </div>
                         <div className="md:col-span-2 space-y-1.5">
                             <Label>Apply Now URL <span className="text-xs text-gray-400 font-normal">(custom link for the Apply Now button — leave blank to use /apply)</span></Label>

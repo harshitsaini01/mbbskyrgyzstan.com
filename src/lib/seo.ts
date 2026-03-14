@@ -7,8 +7,8 @@
 import type { Metadata } from "next";
 import { prisma } from "./prisma";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://mbbsinvietnam.com";
-const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Vietnam";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://mbbskyrgyzstan.com";
+const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Kyrgyzstan";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
 
 interface SeoData {
@@ -143,8 +143,8 @@ export function universitySchema(university: {
         image: university.thumbnailPath || DEFAULT_OG_IMAGE,
         address: {
             "@type": "PostalAddress",
-            addressLocality: university.city || "Vietnam",
-            addressCountry: "VN",
+            addressLocality: university.city || "Kyrgyzstan",
+            addressCountry: "KG",
         },
         ...(university.rating && {
             aggregateRating: {

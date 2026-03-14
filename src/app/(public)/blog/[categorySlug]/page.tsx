@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }).catch(() => null);
     if (!cat) return { title: "Blog Category Not Found" };
     return buildMetadata({
-        title: cat.metaTitle || `${cat.name} — MBBS Vietnam Blog`,
-        description: cat.metaDescription || cat.description || `Read articles about ${cat.name} — MBBS in Vietnam.`,
+        title: cat.metaTitle || `${cat.name} — MBBS Kyrgyzstan Blog`,
+        description: cat.metaDescription || cat.description || `Read articles about ${cat.name} — MBBS in Kyrgyzstan.`,
     });
 }
 

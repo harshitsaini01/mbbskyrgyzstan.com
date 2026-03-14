@@ -37,9 +37,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }).catch(() => null);
     if (!program) return { title: "Program Not Found" };
     return buildMetadata({
-        title: program.metaTitle || `${program.programName} at ${program.university.name} — Vietnam`,
-        description: program.metaDescription || `Study ${program.programName} at ${program.university.name}, Vietnam. NMC recognized, English medium.`,
-        entitySeo: { metaKeyword: program.metaKeyword || `${program.programName} Vietnam, MBBS Vietnam` },
+        title: program.metaTitle || `${program.programName} at ${program.university.name} — Kyrgyzstan`,
+        description: program.metaDescription || `Study ${program.programName} at ${program.university.name}, Kyrgyzstan. NMC recognized, English medium.`,
+        entitySeo: { metaKeyword: program.metaKeyword || `${program.programName} Kyrgyzstan, MBBS Kyrgyzstan` },
     });
 }
 
@@ -95,8 +95,8 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
         { step: 2, icon: FileText, title: "University Selection & Application", description: "Choose your university and submit application with required documents.", timeline: "June–July", color: "bg-green-100 text-green-600" },
         { step: 3, icon: CheckCircle, title: "Document Verification", description: "University verifies your documents and academic credentials.", timeline: "July–Aug", color: "bg-purple-100 text-purple-600" },
         { step: 4, icon: CreditCard, title: "Fee Payment & Admission Letter", description: "Pay registration fee and receive official admission offer letter.", timeline: "August", color: "bg-orange-100 text-orange-600" },
-        { step: 5, icon: Plane, title: "Visa Processing", description: "Apply for Vietnamese student visa with your admission documents.", timeline: "Aug–Sep", color: "bg-pink-100 text-pink-600" },
-        { step: 6, icon: GraduationCap, title: "Travel & Enrollment", description: "Travel to Vietnam and complete university enrollment and orientation.", timeline: "September", color: "bg-red-100 text-red-600" },
+        { step: 5, icon: Plane, title: "Visa Processing", description: "Apply for Kyrgyz student visa with your admission documents.", timeline: "Aug–Sep", color: "bg-pink-100 text-pink-600" },
+        { step: 6, icon: GraduationCap, title: "Travel & Enrollment", description: "Travel to Kyrgyzstan and complete university enrollment and orientation.", timeline: "September", color: "bg-red-100 text-red-600" },
     ];
 
     // Strip HTML to plain text for ExpandableText
@@ -141,7 +141,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                             </div>
                             <h1 className="text-3xl lg:text-4xl font-bold mb-3">{program.programName}</h1>
                             <p className="text-red-200 text-lg mb-2">{u.name}</p>
-                            {u.city && <p className="text-red-200 text-sm">📍 {u.city}, Vietnam</p>}
+                            {u.city && <p className="text-red-200 text-sm">📍 {u.city}, Kyrgyzstan</p>}
                             {program.overview && (
                                 <p className="text-red-100 mt-5 leading-relaxed max-w-2xl line-clamp-4">
                                     {getPlainText(program.overview)}
@@ -358,7 +358,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                     {additionalInfoText && (
                         <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
                             <h2 className="text-2xl font-bold text-gray-900 mb-2">Additional Information</h2>
-                            <p className="text-gray-500 text-base mb-5">Learn more about the education system and opportunities in Vietnam</p>
+                            <p className="text-gray-500 text-base mb-5">Learn more about the education system and opportunities in Kyrgyzstan</p>
                             <ExpandableText text={additionalInfoText} wordLimit={80} />
                         </section>
                     )}
@@ -439,7 +439,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                                 <Stethoscope className="w-7 h-7 text-red-600" /> Hospital Affiliations & Clinical Training
                             </h2>
                             <p className="text-gray-600 mb-6 text-sm">
-                                Students gain hands-on clinical experience at top-tier hospitals across Vietnam,
+                                Students gain hands-on clinical experience at top-tier hospitals across Kyrgyzstan,
                                 ensuring comprehensive practical training.
                             </p>
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
@@ -512,11 +512,11 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                         </div>
                     </section>
 
-                    {/* Why Vietnam */}
+                    {/* Why Kyrgyzstan */}
                     {program.whyChooseVietnam && !program.additionalInformation && (
                         <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                                <GraduationCap className="w-7 h-7 text-red-600" /> Why Study in Vietnam?
+                                <GraduationCap className="w-7 h-7 text-red-600" /> Why Study in Kyrgyzstan?
                             </h2>
                             <div className="prose prose-sm max-w-none text-gray-700 leading-relaxed">
                                 <div dangerouslySetInnerHTML={{ __html: program.whyChooseVietnam }} />
@@ -557,7 +557,7 @@ export default async function UniversityProgramDetailPage({ params }: Props) {
                                     </div>
                                     <div className="p-4">
                                         <h3 className="font-bold text-gray-900 text-sm">{u.name}</h3>
-                                        {u.city && <p className="text-xs text-gray-500 mt-0.5">📍 {u.city}, Vietnam</p>}
+                                        {u.city && <p className="text-xs text-gray-500 mt-0.5">📍 {u.city}, Kyrgyzstan</p>}
                                     </div>
                                 </div>
                             )}

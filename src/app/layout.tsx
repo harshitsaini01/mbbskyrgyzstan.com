@@ -16,17 +16,17 @@ const outfit = Outfit({
   weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://mbbsinvietnam.com";
-const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Vietnam";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://mbbskyrgyzstan.com";
+const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Kyrgyzstan";
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE_NAME} — Study MBBS in Vietnam 2025`,
+    default: `${SITE_NAME} — Study MBBS in Kyrgyzstan 2025`,
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Study MBBS in Vietnam at top MCI-recognized medical universities. Low tuition fees, English-medium programs, high FMGE pass rates. Apply for 2025 admissions.",
-  keywords: "MBBS in Vietnam, study MBBS Vietnam, medical university Vietnam, MCI recognized Vietnam",
+    "Study MBBS in Kyrgyzstan at top MCI-recognized medical universities. Low tuition fees, English-medium programs, high FMGE pass rates. Apply for 2025 admissions.",
+  keywords: "MBBS in Kyrgyzstan, study MBBS Kyrgyzstan, medical university Kyrgyzstan, MCI recognized Kyrgyzstan",
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: SITE_URL },
   openGraph: {
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Study MBBS in Vietnam 2025`,
-    description: "Study MBBS in Vietnam at top MCI-recognized medical universities.",
+    title: `${SITE_NAME} — Study MBBS in Kyrgyzstan 2025`,
+    description: "Study MBBS in Kyrgyzstan at top MCI-recognized medical universities.",
     images: [
       {
         url: `${SITE_URL}/og-default.jpg`,
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Study MBBS in Vietnam 2025`,
-    description: "Study MBBS in Vietnam at top MCI-recognized medical universities.",
+    title: `${SITE_NAME} — Study MBBS in Kyrgyzstan 2025`,
+    description: "Study MBBS in Kyrgyzstan at top MCI-recognized medical universities.",
     images: [`${SITE_URL}/og-default.jpg`],
   },
   robots: {

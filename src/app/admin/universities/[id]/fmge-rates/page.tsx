@@ -65,7 +65,7 @@ export default function UniversityFmgeRatesPage() {
                             <div className="space-y-1.5"><Label>Students Passed</Label><Input type="number" value={form.passed} onChange={(e) => set("passed", e.target.value)} /></div>
                             <div className="space-y-1.5"><Label>Pass % (Total)</Label><Input type="number" value={form.passPercentage} onChange={(e) => set("passPercentage", e.target.value)} placeholder="82.5" /></div>
                             <div className="space-y-1.5"><Label>First Attempt Pass %</Label><Input type="number" value={form.firstAttemptPassRate} onChange={(e) => set("firstAttemptPassRate", e.target.value)} placeholder="76.3" /></div>
-                            <div className="space-y-1.5"><Label>Rank in Vietnam</Label><Input type="number" value={form.rank} onChange={(e) => set("rank", e.target.value)} placeholder="1" /></div>
+                            <div className="space-y-1.5"><Label>Rank in Kyrgyzstan</Label><Input type="number" value={form.rank} onChange={(e) => set("rank", e.target.value)} placeholder="1" /></div>
                         </div>
                         <div className="flex gap-2">
                             <Button onClick={handleSave} disabled={saving} className="bg-red-600 hover:bg-red-700">{saving ? <Loader2 size={14} className="mr-2 animate-spin" /> : null}{editId ? "Save" : "Add"}</Button>

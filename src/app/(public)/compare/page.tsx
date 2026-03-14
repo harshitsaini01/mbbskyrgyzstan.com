@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+﻿import { prisma } from "@/lib/prisma";
 import { cdn } from "@/lib/cdn";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,20 +7,26 @@ import FmgeRatesTable from "@/components/homepage/FmgeRatesTable";
 import CompareForm from "@/components/compare/CompareForm";
 
 export const metadata = {
-    title: "Compare MBBS Universities in Vietnam | MBBS Vietnam",
-    description: "Compare top MBBS universities in Vietnam side by side — fees, duration, facilities, rankings, and more.",
+    title: "Compare MBBS Universities in Kyrgyzstan | MBBS Kyrgyzstan",
+    description: "Compare top MBBS universities in Kyrgyzstan side by side â€” fees, duration, facilities, rankings, and more.",
 };
 
 export const revalidate = 3600;
 
+type ComparePageSearchParams = {
+    ids?: string | string[];
+};
+
+
 export default async function ComparePage({
     searchParams,
 }: {
-    searchParams: Promise<{ ids?: string }> | { ids?: string };
+    searchParams?: Promise<ComparePageSearchParams>;
 }) {
-    const params = await Promise.resolve(searchParams);
+    const params = (await searchParams) ?? {};
+    const idsParam = Array.isArray(params.ids) ? params.ids[0] : params.ids;
 
-    // Get all universities for the picker — use correct scalar/relation fields
+    // Get all universities for the picker â€” use correct scalar/relation fields
     const all = await prisma.university.findMany({
         where: { status: true },
         select: {
@@ -33,7 +39,7 @@ export default async function ComparePage({
     }).catch(() => []);
 
     // Parse selected IDs (up to 3)
-    const rawIds = params?.ids?.split(",").map(Number).filter(Boolean).slice(0, 3) ?? [];
+    const rawIds = idsParam?.split(",").map(Number).filter(Boolean).slice(0, 3) ?? [];
 
     // Load selected universities with rich details
     const selected = rawIds.length > 0
@@ -73,27 +79,27 @@ export default async function ComparePage({
     type SelectedUni = (typeof selected)[number];
 
     const rows: { label: string; key: (u: SelectedUni) => string }[] = [
-        { label: "📍 Location", key: (u) => u.cityRelation?.name || u.city || "—" },
-        { label: "📅 Established", key: (u) => u.establishedYear?.toString() || "—" },
-        { label: "🏛️ Institute Type", key: (u) => u.instituteType?.name || "—" },
-        { label: "🌐 Medium", key: (u) => u.mediumOfInstruction || "English" },
-        { label: "👥 Total Students", key: (u) => u.students ? u.students.toLocaleString() : "—" },
-        { label: "💰 Annual Tuition", key: (u) => u.tuitionFee ? `$${Number(u.tuitionFee).toLocaleString()}` : (u.programs[0]?.annualTuitionFee ? `${u.programs[0].currency || "$"} ${Number(u.programs[0].annualTuitionFee).toLocaleString()}` : "—") },
-        { label: "🎓 Course Duration", key: (u) => u.courseDuration || u.programs[0]?.duration || "6 Years" },
-        { label: "⭐ Rating", key: (u) => u.rating ? `★ ${Number(u.rating).toFixed(1)}` : "—" },
-        { label: "🏆 Global Ranking", key: (u) => u.globalRanking ? `#${u.globalRanking}` : "—" },
-        { label: "📊 FMGE Pass Rate", key: (u) => u.fmgePassRate ? `${Number(u.fmgePassRate)}%` : "—" },
-        { label: "✅ NMC Recognised", key: (u) => u.nmcApproved ? "yes" : "no" },
-        { label: "✅ MCI Recognition", key: (u) => u.mciRecognition ? "yes" : "no" },
-        { label: "✅ WHO Listed", key: (u) => u.whoListed ? "yes" : "no" },
-        { label: "✅ FAIMER Listed", key: (u) => u.faimerListed ? "yes" : "no" },
-        { label: "✅ Ministry Licensed", key: (u) => u.ministryLicensed ? "yes" : "no" },
-        { label: "🏥 NEET Requirement", key: (u) => u.neetRequirement || "—" },
-        { label: "📋 Eligibility", key: (u) => u.eligibility || "—" },
-        { label: "🏢 Campus Area", key: (u) => u.campusArea || "—" },
-        { label: "🔬 Labs", key: (u) => u.labs?.toString() || "—" },
-        { label: "🌎 Countries Rep.", key: (u) => u.countriesRepresented?.toString() || "—" },
-        { label: "📅 Intakes", key: (u) => u.intakes?.map((i) => `${i.intakeMonth} ${i.intakeYear}`).join(", ") || "—" },
+        { label: "ðŸ“ Location", key: (u) => u.cityRelation?.name || u.city || "â€”" },
+        { label: "ðŸ“… Established", key: (u) => u.establishedYear?.toString() || "â€”" },
+        { label: "ðŸ›ï¸ Institute Type", key: (u) => u.instituteType?.name || "â€”" },
+        { label: "ðŸŒ Medium", key: (u) => u.mediumOfInstruction || "English" },
+        { label: "ðŸ‘¥ Total Students", key: (u) => u.students ? u.students.toLocaleString() : "â€”" },
+        { label: "ðŸ’° Annual Tuition", key: (u) => u.tuitionFee ? `$${Number(u.tuitionFee).toLocaleString()}` : (u.programs[0]?.annualTuitionFee ? `${u.programs[0].currency || "$"} ${Number(u.programs[0].annualTuitionFee).toLocaleString()}` : "â€”") },
+        { label: "ðŸŽ“ Course Duration", key: (u) => u.courseDuration || u.programs[0]?.duration || "6 Years" },
+        { label: "â­ Rating", key: (u) => u.rating ? `â˜… ${Number(u.rating).toFixed(1)}` : "â€”" },
+        { label: "ðŸ† Global Ranking", key: (u) => u.globalRanking ? `#${u.globalRanking}` : "â€”" },
+        { label: "ðŸ“Š FMGE Pass Rate", key: (u) => u.fmgePassRate ? `${Number(u.fmgePassRate)}%` : "â€”" },
+        { label: "âœ… NMC Recognised", key: (u) => u.nmcApproved ? "yes" : "no" },
+        { label: "âœ… MCI Recognition", key: (u) => u.mciRecognition ? "yes" : "no" },
+        { label: "âœ… WHO Listed", key: (u) => u.whoListed ? "yes" : "no" },
+        { label: "âœ… FAIMER Listed", key: (u) => u.faimerListed ? "yes" : "no" },
+        { label: "âœ… Ministry Licensed", key: (u) => u.ministryLicensed ? "yes" : "no" },
+        { label: "ðŸ¥ NEET Requirement", key: (u) => u.neetRequirement || "â€”" },
+        { label: "ðŸ“‹ Eligibility", key: (u) => u.eligibility || "â€”" },
+        { label: "ðŸ¢ Campus Area", key: (u) => u.campusArea || "â€”" },
+        { label: "ðŸ”¬ Labs", key: (u) => u.labs?.toString() || "â€”" },
+        { label: "ðŸŒŽ Countries Rep.", key: (u) => u.countriesRepresented?.toString() || "â€”" },
+        { label: "ðŸ“… Intakes", key: (u) => u.intakes?.map((i) => `${i.intakeMonth} ${i.intakeYear}`).join(", ") || "â€”" },
     ];
 
     // Fetch FMGE rates for the section below
@@ -128,7 +134,7 @@ export default async function ComparePage({
             </div>
 
             <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
-                {/* Picker Form — client component (uses window.location) */}
+                {/* Picker Form â€” client component (uses window.location) */}
                 <CompareForm all={all.map(u => ({ id: u.id, name: u.name }))} selectedIds={rawIds} />
 
                 {/* Empty state */}
@@ -136,7 +142,7 @@ export default async function ComparePage({
                     <div className="text-center py-16 text-gray-500">
                         <GraduationCap className="w-14 h-14 mx-auto text-gray-300 mb-4" />
                         <p className="text-xl font-semibold text-gray-700 mb-2">No universities selected</p>
-                        <p className="text-sm">Use the form above to pick 2–3 universities and compare them.</p>
+                        <p className="text-sm">Use the form above to pick 2â€“3 universities and compare them.</p>
                     </div>
                 )}
 
@@ -176,7 +182,7 @@ export default async function ComparePage({
                                     )}
                                     <Link href={`/universities/${u.slug}`}
                                         className="inline-block mt-2 text-xs bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded-full transition-colors">
-                                        View Details →
+                                        View Details â†’
                                     </Link>
                                 </div>
                             ))}
@@ -211,7 +217,7 @@ export default async function ComparePage({
                             className="grid border-b bg-gray-50"
                             style={{ gridTemplateColumns: `220px repeat(${selected.length}, 1fr)` }}
                         >
-                            <div className="px-5 py-4 text-sm font-medium text-gray-700 flex items-center">🏗️ Facilities</div>
+                            <div className="px-5 py-4 text-sm font-medium text-gray-700 flex items-center">ðŸ—ï¸ Facilities</div>
                             {selected.map((u) => (
                                 <div key={u.id} className="px-5 py-4 border-l border-gray-100">
                                     <div className="flex flex-wrap gap-1.5 justify-center">
@@ -220,7 +226,7 @@ export default async function ComparePage({
                                                 {f.facility.name}
                                             </span>
                                         ))}
-                                        {u.facilities.length === 0 && <span className="text-xs text-gray-400">—</span>}
+                                        {u.facilities.length === 0 && <span className="text-xs text-gray-400">â€”</span>}
                                     </div>
                                 </div>
                             ))}
@@ -231,12 +237,12 @@ export default async function ComparePage({
                             className="grid bg-gray-50"
                             style={{ gridTemplateColumns: `220px repeat(${selected.length}, 1fr)` }}
                         >
-                            <div className="p-5 text-sm font-medium text-gray-700 flex items-center">🔗 View / Apply</div>
+                            <div className="p-5 text-sm font-medium text-gray-700 flex items-center">ðŸ”— View / Apply</div>
                             {selected.map((u) => (
                                 <div key={u.id} className="p-5 border-l border-gray-100 text-center">
                                     <Link href={`/universities/${u.slug}`}
                                         className="inline-block bg-red-600 hover:bg-red-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-colors">
-                                        View Details →
+                                        View Details â†’
                                     </Link>
                                 </div>
                             ))}

@@ -5,9 +5,9 @@ import { prisma } from "@/lib/prisma";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-    title: "FMGE / NExT Pass Rates — Vietnam MBBS Universities 2024",
-    description: "Compare FMGE and NExT pass rates for Vietnam MBBS graduates by university and year. Real data from NMC-approved Vietnamese medical universities.",
-    entitySeo: { metaKeyword: "FMGE pass rate Vietnam, NExT exam Vietnam MBBS, FMGE percentage Vietnam, Vietnam medical university pass rate" },
+    title: "FMGE / NExT Pass Rates — Kyrgyzstan MBBS Universities 2024",
+    description: "Compare FMGE and NExT pass rates for Kyrgyzstan MBBS graduates by university and year. Real data from NMC-approved Kyrgyz medical universities.",
+    entitySeo: { metaKeyword: "FMGE pass rate Kyrgyzstan, NExT exam Kyrgyzstan MBBS, FMGE percentage Kyrgyzstan, Kyrgyzstan medical university pass rate" },
     pageKey: "fmge-rates",
 });
 
@@ -55,7 +55,7 @@ export default async function FmgeRatesPage() {
                         <h1 className="text-4xl lg:text-5xl font-bold">FMGE / NExT Pass Rates</h1>
                     </div>
                     <p className="text-xl text-green-100 max-w-3xl mx-auto mt-3">
-                        Compare pass rates for Vietnam MBBS graduates by university and year. Make an informed decision based on real performance data.
+                        Compare pass rates for Kyrgyzstan MBBS graduates by university and year. Make an informed decision based on real performance data.
                     </p>
                     {/* Summary stats */}
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-2xl mx-auto mt-10">
@@ -79,7 +79,7 @@ export default async function FmgeRatesPage() {
                     <div className="text-center py-20">
                         <BarChart3 className="w-16 h-16 text-gray-300 mx-auto mb-4" />
                         <h2 className="text-xl font-semibold text-gray-600 mb-2">FMGE Data Coming Soon</h2>
-                        <p className="text-gray-500">We are compiling FMGE pass rate data for Vietnam universities. Check back soon.</p>
+                        <p className="text-gray-500">We are compiling FMGE pass rate data for Kyrgyzstan universities. Check back soon.</p>
                     </div>
                 ) : (
                     <>
@@ -181,7 +181,7 @@ export default async function FmgeRatesPage() {
                         {/* CTA */}
                         <div className="mt-10 bg-gradient-to-br from-green-600 to-teal-700 rounded-2xl p-8 text-white text-center">
                             <TrendingUp className="w-10 h-10 mx-auto mb-3 text-green-200" />
-                            <h3 className="text-2xl font-bold mb-2">Ready to Study MBBS in Vietnam?</h3>
+                            <h3 className="text-2xl font-bold mb-2">Ready to Study MBBS in Kyrgyzstan?</h3>
                             <p className="text-green-100 mb-6 max-w-xl mx-auto">
                                 Join universities with strong FMGE track records. Get free counselling from our experts.
                             </p>

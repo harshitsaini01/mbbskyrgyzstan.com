@@ -45,7 +45,7 @@ export default async function ScholarshipsSection() {
                     <h2 className="text-4xl font-bold text-gray-800 mb-4">Scholarships &amp; Financial Aid</h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Make your education dreams affordable with various scholarship opportunities
-                        available for international students studying in Vietnam.
+                        available for international students studying in Kyrgyzstan.
                     </p>
                 </div>
 

@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Vietnam";
+const SITE_NAME = process.env.NEXT_PUBLIC_SITE_NAME || "MBBS in Kyrgyzstan";
 const FROM_NAME = process.env.EMAIL_FROM_NAME || SITE_NAME;
 
 /** Build a Gmail SMTP transporter, or null if creds not configured */

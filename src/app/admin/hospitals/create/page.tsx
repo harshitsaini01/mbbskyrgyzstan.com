@@ -56,19 +56,19 @@ export default function CreateHospitalPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="md:col-span-2 space-y-1.5">
                             <Label>Hospital Name <span className="text-red-500">*</span></Label>
-                            <Input value={form.name} onChange={(e) => { set("name", e.target.value); set("slug", slugify(e.target.value)); }} placeholder="e.g. Bach Mai Hospital" />
+                            <Input value={form.name} onChange={(e) => { set("name", e.target.value); set("slug", slugify(e.target.value)); }} placeholder="e.g. National Hospital Bishkek" />
                         </div>
                         <div className="space-y-1.5">
                             <Label>Slug <span className="text-red-500">*</span></Label>
-                            <Input value={form.slug} onChange={(e) => set("slug", e.target.value)} placeholder="bach-mai-hospital" className="font-mono text-sm" />
+                            <Input value={form.slug} onChange={(e) => set("slug", e.target.value)} placeholder="national-hospital-bishkek" className="font-mono text-sm" />
                         </div>
                         <div className="space-y-1.5">
                             <Label>City</Label>
-                            <Input value={form.city} onChange={(e) => set("city", e.target.value)} placeholder="Hanoi" />
+                            <Input value={form.city} onChange={(e) => set("city", e.target.value)} placeholder="Bishkek" />
                         </div>
                         <div className="space-y-1.5">
                             <Label>State / Province</Label>
-                            <Input value={form.state} onChange={(e) => set("state", e.target.value)} placeholder="Ha Noi Province" />
+                            <Input value={form.state} onChange={(e) => set("state", e.target.value)} placeholder="Chui Region" />
                         </div>
                         <div className="space-y-1.5">
                             <Label>Number of Beds</Label>

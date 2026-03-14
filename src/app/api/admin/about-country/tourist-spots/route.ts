@@ -4,7 +4,7 @@ import { prisma } from "@/lib/prisma";
 const PAGE_ID = 1;
 
 export async function GET() {
-    await prisma.aboutCountryPage.upsert({ where: { id: PAGE_ID }, create: { id: PAGE_ID, name: "Vietnam" }, update: {} });
+    await prisma.aboutCountryPage.upsert({ where: { id: PAGE_ID }, create: { id: PAGE_ID, name: "Kyrgyzstan" }, update: {} });
     const items = await prisma.countryTouristAttraction.findMany({ where: { pageId: PAGE_ID, isActive: true }, orderBy: [{ ordering: "asc" }, { id: "asc" }] });
     return NextResponse.json(items);
 }

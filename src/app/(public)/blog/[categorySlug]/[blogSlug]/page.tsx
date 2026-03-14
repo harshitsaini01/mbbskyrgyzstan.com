@@ -226,7 +226,7 @@ export default async function BlogDetailPage({ params }: Props) {
 
                         {/* CTA */}
                         <div className="bg-gradient-to-br from-red-600 to-red-800 text-white rounded-2xl p-6">
-                            <h3 className="font-bold text-lg mb-2">Interested in MBBS Vietnam?</h3>
+                            <h3 className="font-bold text-lg mb-2">Interested in MBBS Kyrgyzstan?</h3>
                             <p className="text-red-100 text-sm mb-4">Get free counselling from our experts.</p>
                             <Link
                                 href="/contact-us"

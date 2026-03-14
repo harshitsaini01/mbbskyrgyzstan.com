@@ -48,7 +48,7 @@ export default function AdminSettingsPage() {
                 <div className="bg-white rounded-xl border border-gray-200 p-6 space-y-5">
                     <h2 className="font-semibold text-gray-900 border-b pb-3">General</h2>
                     {[
-                        { key: "siteName", label: "Site Name", placeholder: "MBBS in Vietnam" },
+                        { key: "siteName", label: "Site Name", placeholder: "MBBS in Kyrgyzstan" },
                         { key: "tagline", label: "Tagline", placeholder: "Your trusted MBBS consultant" },
                         { key: "siteEmail", label: "Contact Email" },
                         { key: "sitePhone", label: "Contact Phone" },

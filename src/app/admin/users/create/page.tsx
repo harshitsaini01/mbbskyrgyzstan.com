@@ -63,7 +63,7 @@ export default function UserCreatePage() {
                     </div>
                     <div className="space-y-1.5">
                         <Label>Phone</Label>
-                        <Input value={form.phone} onChange={(e) => set("phone", e.target.value)} placeholder="+84…" />
+                        <Input value={form.phone} onChange={(e) => set("phone", e.target.value)} placeholder="+996…" />
                     </div>
                     <div className="space-y-1.5">
                         <Label>Password *</Label>

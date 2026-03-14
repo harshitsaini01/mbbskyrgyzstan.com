@@ -78,7 +78,7 @@ export default function UniversityFaqsPage() {
                         <h3 className="font-semibold text-blue-900">{editId ? "Edit FAQ" : "New FAQ"}</h3>
                         <div className="space-y-1.5">
                             <Label>Question *</Label>
-                            <Input value={question} onChange={(e) => setQuestion(e.target.value)} placeholder="e.g. Is NEET mandatory for MBBS in Vietnam?" />
+                            <Input value={question} onChange={(e) => setQuestion(e.target.value)} placeholder="e.g. Is NEET mandatory for MBBS in Kyrgyzstan?" />
                         </div>
                         <div className="space-y-1.5">
                             <Label>Answer *</Label>

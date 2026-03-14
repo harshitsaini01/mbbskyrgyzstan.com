@@ -104,17 +104,17 @@ export default function DynamicSeoPage() {
                         </div>
                         <div>
                             <label className="text-xs text-gray-500 mb-1 block">Meta Title Template</label>
-                            <Input value={newEntry.metaTitle} onChange={(e) => setNewEntry({ ...newEntry, metaTitle: e.target.value })} placeholder={`{{name}} - MBBS in Vietnam`} />
+                            <Input value={newEntry.metaTitle} onChange={(e) => setNewEntry({ ...newEntry, metaTitle: e.target.value })} placeholder={`{{name}} - MBBS in Kyrgyzstan`} />
                         </div>
                         <div className="col-span-2">
                             <label className="text-xs text-gray-500 mb-1 block">Meta Description Template</label>
                             <textarea value={newEntry.metaDescription} onChange={(e) => setNewEntry({ ...newEntry, metaDescription: e.target.value })}
-                                rows={2} placeholder={`Learn about {{name}} - top medical university in Vietnam...`}
+                                rows={2} placeholder={`Learn about {{name}} - top medical university in Kyrgyzstan...`}
                                 className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-500" />
                         </div>
                         <div>
                             <label className="text-xs text-gray-500 mb-1 block">Meta Keywords</label>
-                            <Input value={newEntry.metaKeyword} onChange={(e) => setNewEntry({ ...newEntry, metaKeyword: e.target.value })} placeholder="mbbs vietnam, {{name}}" />
+                            <Input value={newEntry.metaKeyword} onChange={(e) => setNewEntry({ ...newEntry, metaKeyword: e.target.value })} placeholder="mbbs Kyrgyzstan, {{name}}" />
                         </div>
                     </div>
                     <div className="flex gap-2">

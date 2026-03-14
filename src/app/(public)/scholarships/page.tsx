@@ -5,9 +5,9 @@ import { prisma } from "@/lib/prisma";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-    title: "MBBS Scholarships in Vietnam 2025 — Government & Merit Based",
-    description: "Find all scholarships for MBBS in Vietnam. Government, merit, and embassy scholarships for Indian students. Apply before deadlines.",
-    entitySeo: { metaKeyword: "MBBS scholarship Vietnam, scholarship for MBBS Vietnam 2025, merit scholarship Vietnam" },
+    title: "MBBS Scholarships in Kyrgyzstan 2025 — Government & Merit Based",
+    description: "Find all scholarships for MBBS in Kyrgyzstan. Government, merit, and embassy scholarships for Indian students. Apply before deadlines.",
+    entitySeo: { metaKeyword: "MBBS scholarship Kyrgyzstan, scholarship for MBBS Kyrgyzstan 2025, merit scholarship Kyrgyzstan" },
     pageKey: "scholarships",
 });
 
@@ -62,9 +62,9 @@ export default async function ScholarshipsPage() {
                             <GraduationCap className="w-12 h-12 text-white" />
                         </div>
                     </div>
-                    <h1 className="text-4xl lg:text-5xl font-bold mb-4">MBBS Scholarships in Vietnam</h1>
+                    <h1 className="text-4xl lg:text-5xl font-bold mb-4">MBBS Scholarships in Kyrgyzstan</h1>
                     <p className="text-xl text-red-100 max-w-3xl mx-auto mb-10">
-                        Discover government, merit, and university scholarships to fund your MBBS education in Vietnam.
+                        Discover government, merit, and university scholarships to fund your MBBS education in Kyrgyzstan.
                     </p>
 
                     {/* Stats row — 4 items like old React */}
@@ -125,7 +125,7 @@ export default async function ScholarshipsPage() {
                                                 {cityName && (
                                                     <div className="flex items-center text-red-100 mt-1">
                                                         <MapPin className="w-3.5 h-3.5 mr-1" />
-                                                        <span className="text-sm">{cityName}, Vietnam</span>
+                                                        <span className="text-sm">{cityName}, Kyrgyzstan</span>
                                                     </div>
                                                 )}
                                             </div>

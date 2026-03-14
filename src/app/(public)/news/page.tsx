@@ -7,9 +7,9 @@ import { cdn } from "@/lib/cdn";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Promise<Metadata> = buildMetadata({
-    title: "News — MBBS Vietnam Medical Education Updates",
-    description: "Stay updated with the latest news about MBBS in Vietnam, medical education policies, university announcements, and student success stories.",
-    entitySeo: { metaKeyword: "MBBS Vietnam news, medical education news, Vietnam university news" },
+    title: "News — MBBS Kyrgyzstan Medical Education Updates",
+    description: "Stay updated with the latest news about MBBS in Kyrgyzstan, medical education policies, university announcements, and student success stories.",
+    entitySeo: { metaKeyword: "MBBS Kyrgyzstan news, medical education news, Kyrgyzstan university news" },
     pageKey: "news",
 });
 
@@ -40,7 +40,7 @@ export default async function NewsPage() {
                         <h1 className="text-4xl lg:text-5xl font-bold">Latest News</h1>
                     </div>
                     <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                        Stay informed with the latest updates on MBBS in Vietnam, medical education, and university announcements.
+                        Stay informed with the latest updates on MBBS in Kyrgyzstan, medical education, and university announcements.
                     </p>
                 </div>
             </div>

@@ -35,7 +35,7 @@ export default function EducationSystem() {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-gray-800 mb-4">
-                        Education System in Vietnam
+                        Education System in Kyrgyzstan
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Understand the comprehensive education system that has produced thousands
@@ -51,7 +51,7 @@ export default function EducationSystem() {
                                 World-Class Education Standards
                             </h3>
                             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                Vietnam&apos;s higher education system is built on strong academic foundations
+                                Kyrgyzstan&apos;s higher education system is built on strong academic foundations
                                 with international recognition. The country has been a preferred destination
                                 for medical education for over two decades.
                             </p>
@@ -92,10 +92,10 @@ export default function EducationSystem() {
                     </div>
                 </div>
 
-                {/* Why Choose Vietnam's Education System? */}
+                {/* Why Choose Kyrgyzstan's Education System? */}
                 <div className="mb-16">
                     <h3 className="text-3xl font-bold text-gray-800 text-center mb-12">
-                        Why Choose Vietnam&apos;s Education System?
+                        Why Choose Kyrgyzstan&apos;s Education System?
                     </h3>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {systemFeatures.map((feature) => (

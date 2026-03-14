@@ -13,7 +13,7 @@ import Link from "next/link";
 
 const COUNTRY_CODES = [
     { code: "+91", label: "🇮🇳 +91 (India)" },
-    { code: "+84", label: "🇻🇳 +84 (Vietnam)" },
+    { code: "+996", label: "🇰🇬 +996 (Kyrgyzstan)" },
     { code: "+880", label: "🇧🇩 +880 (Bangladesh)" },
     { code: "+92", label: "🇵🇰 +92 (Pakistan)" },
     { code: "+977", label: "🇳🇵 +977 (Nepal)" },
@@ -176,7 +176,7 @@ export default function CreateLeadPage() {
                             <Input
                                 value={form.interestedIn}
                                 onChange={(e) => set("interestedIn", e.target.value)}
-                                placeholder="e.g. MBBS in Vietnam, Hanoi Medical University"
+                                placeholder="e.g. MBBS in Kyrgyzstan, International School of Medicine"
                             />
                         </div>
                         <div className="space-y-1.5">

@@ -21,16 +21,16 @@ async function main() {
     // ── Admin User ──────────────────────────────────────────
     const adminPassword = await hash(process.env.ADMIN_PASSWORD || "Admin@123", 12);
     const adminUser = await prisma.user.upsert({
-        where: { email: process.env.ADMIN_EMAIL || "admin@mbbsinvietnam.com" },
+        where: { email: process.env.ADMIN_EMAIL || "admin@mbbskyrgyzstan.com" },
         update: { role: "admin", status: true },
         create: {
             name: "Admin",
-            email: process.env.ADMIN_EMAIL || "admin@mbbsinvietnam.com",
+            email: process.env.ADMIN_EMAIL || "admin@mbbskyrgyzstan.com",
             password: adminPassword,
             role: "admin",
             phone: "+84000000000",
             designation: "Administrator",
-            description: "Super admin account for MBBSinVietnam platform.",
+            description: "Super admin account for mbbskyrgyzstan platform.",
             status: true,
         },
     });
@@ -100,15 +100,15 @@ async function main() {
             embassyVerified: true, ministryLicensed: true, ecfmgEligible: true,
             fmgePassRate: 78.5, courseDuration: "6 years", mediumOfInstruction: "English",
             eligibility: "10+2 with PCB, NEET qualified", neetRequirement: "Required",
-            shortnote: "Hanoi Medical University is one of the oldest and most prestigious medical universities in Vietnam.",
+            shortnote: "Hanoi Medical University is one of the oldest and most prestigious medical universities in Kyrgyzstan.",
             aboutNote: "Established in 1902, HMU has been training medical professionals for over a century.",
             internationalRecognition: "Yes", englishMedium: "Yes", diverseCommunity: "Yes",
             yearOfExcellence: 120, countriesRepresented: 45, globalRanking: 1200,
             campusArea: "50 acres", labs: 25, lectureHall: 30, hostelBuilding: 8,
             parentSatisfaction: 95.5, totalReviews: 850, recommendedRate: 97.2,
-            metaTitle: "Hanoi Medical University - MBBS in Vietnam | MBBSinVietnam",
-            metaDescription: "Study MBBS at Hanoi Medical University, Vietnam's top medical college established in 1902. WHO & NMC approved.",
-            metaKeyword: "Hanoi Medical University, MBBS Vietnam, NMC approved Vietnam",
+            metaTitle: "Hanoi Medical University - MBBS in Kyrgyzstan | mbbskyrgyzstan",
+            metaDescription: "Study MBBS at Hanoi Medical University, Kyrgyzstan's top medical college established in 1902. WHO & NMC approved.",
+            metaKeyword: "Hanoi Medical University, MBBS Kyrgyzstan, NMC approved Kyrgyzstan",
             seoRating: 9.5, reviewNumber: 850, bestRating: 5.0,
             section2Title: "Why Choose HMU?",
             section2Text: "HMU offers world-class medical education with cutting-edge research facilities and experienced faculty.",
@@ -127,14 +127,14 @@ async function main() {
             fmgePassRate: 76.4, courseDuration: "6 years", mediumOfInstruction: "English",
             eligibility: "10+2 with PCB, NEET qualified", neetRequirement: "Required",
             shortnote: "UMP is recognized globally for its research-driven MBBS program.",
-            aboutNote: "Established in 1975, UMP leads in medical education in southern Vietnam.",
+            aboutNote: "Established in 1975, UMP leads in medical education in southern Kyrgyzstan.",
             internationalRecognition: "Yes", englishMedium: "Yes", diverseCommunity: "Yes",
             yearOfExcellence: 48, countriesRepresented: 42, globalRanking: 1320,
             campusArea: "45 acres", labs: 22, lectureHall: 28, hostelBuilding: 7,
             parentSatisfaction: 94.2, totalReviews: 730, recommendedRate: 96.8,
-            metaTitle: "UMP Ho Chi Minh City - MBBS in Vietnam | MBBSinVietnam",
-            metaDescription: "Study MBBS at UMP Ho Chi Minh City, Vietnam's leading research-based medical university.",
-            metaKeyword: "UMP Vietnam, MBBS Ho Chi Minh, Medical University Vietnam",
+            metaTitle: "UMP Ho Chi Minh City - MBBS in Kyrgyzstan | mbbskyrgyzstan",
+            metaDescription: "Study MBBS at UMP Ho Chi Minh City, Kyrgyzstan's leading research-based medical university.",
+            metaKeyword: "UMP Kyrgyzstan, MBBS Ho Chi Minh, Medical University Kyrgyzstan",
             seoRating: 9.2, reviewNumber: 730, bestRating: 5.0,
             section2Title: "Why Choose UMP?",
             section2Text: "UMP combines research excellence with comprehensive clinical training across affiliated hospitals.",
@@ -152,17 +152,17 @@ async function main() {
             fmgePassRate: 72.8, courseDuration: "6 years", mediumOfInstruction: "English",
             eligibility: "10+2 with PCB, NEET qualified", neetRequirement: "Required",
             shortnote: "Located in the historic city of Hue, HUMP offers exceptional medical training.",
-            aboutNote: "Since 1957, HUMP has been a centre of medical excellence in central Vietnam.",
+            aboutNote: "Since 1957, HUMP has been a centre of medical excellence in central Kyrgyzstan.",
             internationalRecognition: "Yes", englishMedium: "Yes", diverseCommunity: "Yes",
             yearOfExcellence: 65, countriesRepresented: 30, globalRanking: 1680,
             campusArea: "35 acres", labs: 18, lectureHall: 22, hostelBuilding: 5,
             parentSatisfaction: 91.5, totalReviews: 480, recommendedRate: 94.0,
-            metaTitle: "Hue University of Medicine & Pharmacy - MBBS Vietnam",
-            metaDescription: "Study MBBS at Hue University of Medicine and Pharmacy in historic Hue city, Vietnam.",
-            metaKeyword: "Hue Medical University, MBBS Hue, Vietnam Medical College",
+            metaTitle: "Hue University of Medicine & Pharmacy - MBBS Kyrgyzstan",
+            metaDescription: "Study MBBS at Hue University of Medicine and Pharmacy in historic Hue city, Kyrgyzstan.",
+            metaKeyword: "Hue Medical University, MBBS Hue, Kyrgyzstan Medical College",
             seoRating: 8.8, reviewNumber: 480, bestRating: 5.0,
             section2Title: "Why Choose HUMP?",
-            section2Text: "HUMP blends rich heritage with modern medical education in the cultural heart of Vietnam.",
+            section2Text: "HUMP blends rich heritage with modern medical education in the cultural heart of Kyrgyzstan.",
         },
     ];
 
@@ -188,7 +188,7 @@ async function main() {
                     mediumOfInstruction: "English",
                     overview: `The MBBS program at ${ud.name} is a 6-year program recognized by WHO, NMC, and FAIMER. It combines strong academics with clinical training.`,
                     eligibility: "10+2 with PCB (min 50%), NEET qualified",
-                    whyChooseVietnam: "Vietnam offers affordable, high-quality MBBS education with English-medium instruction and global recognition.",
+                    whyChooseVietnam: "Kyrgyzstan offers affordable, high-quality MBBS education with English-medium instruction and global recognition.",
                     year1Syllabus: "Anatomy, Physiology, Biochemistry",
                     year2Syllabus: "Pathology, Pharmacology, Microbiology",
                     year3Syllabus: "Community Medicine, Forensic Medicine, ENT",
@@ -222,7 +222,7 @@ async function main() {
                 data: [
                     { rankingBody: "QS World University Rankings", rank: String(ud.globalRanking), year: 2024, category: "Medical", score: 72.5, position: 1, status: true, universityId: uni.id },
                     { rankingBody: "Times Higher Education", rank: String(ud.globalRanking! + 50), year: 2024, category: "Medical", score: 68.0, position: 2, status: true, universityId: uni.id },
-                    { rankingBody: "Vietnam Ministry of Education", rank: "Top 5", year: 2024, category: "Medical", score: 88.0, position: 3, status: true, universityId: uni.id },
+                    { rankingBody: "Kyrgyzstan Ministry of Education", rank: "Top 5", year: 2024, category: "Medical", score: 88.0, position: 3, status: true, universityId: uni.id },
                 ],
             });
         }
@@ -236,7 +236,7 @@ async function main() {
                     { country: "Nepal", countryIsoCode: "NP", numberOfStudents: 85, course: "MBBS", year: "2024", status: true, universityId: uni.id },
                     { country: "Bangladesh", countryIsoCode: "BD", numberOfStudents: 60, course: "MBBS", year: "2024", status: true, universityId: uni.id },
                     { country: "Nigeria", countryIsoCode: "NG", numberOfStudents: 45, course: "MBBS", year: "2024", status: true, universityId: uni.id },
-                    { country: "Vietnam", countryIsoCode: "VN", numberOfStudents: 1200, course: "MBBS", year: "2024", status: true, universityId: uni.id },
+                    { country: "Kyrgyzstan", countryIsoCode: "VN", numberOfStudents: 1200, course: "MBBS", year: "2024", status: true, universityId: uni.id },
                 ],
             });
         }
@@ -357,8 +357,8 @@ async function main() {
                 shortnote: "Merit-based scholarship for top NEET scorers applying to HMU MBBS program.",
                 isActive: true,
                 universityId: hmuUni.id,
-                metaTitle: "HMU Merit Scholarship 2025 | MBBS in Vietnam",
-                metaDescription: "Apply for HMU Merit Scholarship for MBBS in Vietnam. Up to 20% tuition discount for NEET toppers.",
+                metaTitle: "HMU Merit Scholarship 2025 | MBBS in Kyrgyzstan",
+                metaDescription: "Apply for HMU Merit Scholarship for MBBS in Kyrgyzstan. Up to 20% tuition discount for NEET toppers.",
                 seoRating: 8.5, reviewNumber: 50, bestRating: 5.0,
             },
         });
@@ -382,8 +382,8 @@ async function main() {
             name: "MBBS Abroad", slug: "mbbs-abroad",
             description: "Guides and tips for Indian students planning to study MBBS abroad.",
             status: true,
-            metaTitle: "MBBS Abroad Blog | MBBSinVietnam",
-            metaDescription: "Read expert articles about studying MBBS abroad, especially in Vietnam.",
+            metaTitle: "MBBS Abroad Blog | mbbskyrgyzstan",
+            metaDescription: "Read expert articles about studying MBBS abroad, especially in Kyrgyzstan.",
             seoRating: 8.5, reviewNumber: 200, bestRating: 5.0,
         },
     });
@@ -393,27 +393,27 @@ async function main() {
         const blog = await prisma.blog.create({
             data: {
                 categoryId: blogCat.id, authorId: adminUser.id,
-                title: "Top 5 Reasons to Study MBBS in Vietnam in 2025",
-                slug: "top-5-reasons-to-study-mbbs-in-vietnam-2025",
-                shortnote: "Discover why Vietnam is emerging as a top destination for Indian medical students.",
-                description: "Vietnam has become one of the most popular destinations for MBBS aspirants worldwide...",
+                title: "Top 5 Reasons to Study MBBS in Kyrgyzstan in 2025",
+                slug: "top-5-reasons-to-study-mbbs-in-Kyrgyzstan-2025",
+                shortnote: "Discover why Kyrgyzstan is emerging as a top destination for Indian medical students.",
+                description: "Kyrgyzstan has become one of the most popular destinations for MBBS aspirants worldwide...",
                 status: true, homeView: true, trending: true,
-                metaTitle: "Top 5 Reasons to Study MBBS in Vietnam 2025",
-                metaDescription: "Vietnam offers affordable, NMC-approved MBBS education with English medium. Read the top reasons.",
+                metaTitle: "Top 5 Reasons to Study MBBS in Kyrgyzstan 2025",
+                metaDescription: "Kyrgyzstan offers affordable, NMC-approved MBBS education with English medium. Read the top reasons.",
                 seoRating: 9.0, reviewNumber: 320, bestRating: 5.0,
             },
         });
         await prisma.blogContent.create({
             data: {
                 title: "Affordable Tuition Fees", slug: "affordable-tuition-fees",
-                description: "Vietnam medical universities offer MBBS at just $4,000-$6,000 per year — far cheaper than private Indian colleges.",
+                description: "Kyrgyzstan medical universities offer MBBS at just $4,000-$6,000 per year — far cheaper than private Indian colleges.",
                 position: 1, blogId: blog.id,
             },
         });
         await prisma.blogFaq.createMany({
             data: [
-                { question: "Is MBBS from Vietnam valid in India?", answer: "Yes, if the university is NMC approved and you clear FMGE/NExT.", position: 1, status: true, blogId: blog.id },
-                { question: "What is the FMGE pass rate for Vietnam universities?", answer: "Top Vietnam universities have 70-80% FMGE pass rates.", position: 2, status: true, blogId: blog.id },
+                { question: "Is MBBS from Kyrgyzstan valid in India?", answer: "Yes, if the university is NMC approved and you clear FMGE/NExT.", position: 1, status: true, blogId: blog.id },
+                { question: "What is the FMGE pass rate for Kyrgyzstan universities?", answer: "Top Kyrgyzstan universities have 70-80% FMGE pass rates.", position: 2, status: true, blogId: blog.id },
             ],
         });
     }
@@ -472,13 +472,13 @@ async function main() {
         const article = await prisma.article.create({
             data: {
                 categoryId: artCat.id, authorId: adminUser.id,
-                title: "Complete FMGE Preparation Guide for Vietnam MBBS Graduates",
-                slug: "fmge-preparation-guide-vietnam-mbbs-graduates",
-                shortnote: "Step-by-step FMGE preparation strategy for students returning from Vietnam.",
+                title: "Complete FMGE Preparation Guide for Kyrgyzstan MBBS Graduates",
+                slug: "fmge-preparation-guide-Kyrgyzstan-mbbs-graduates",
+                shortnote: "Step-by-step FMGE preparation strategy for students returning from Kyrgyzstan.",
                 description: "FMGE (Foreign Medical Graduate Examination) is mandatory for all students...",
                 status: true, homeView: true, trending: true,
-                metaTitle: "FMGE Preparation Guide for Vietnam MBBS Graduates",
-                metaDescription: "Complete FMGE preparation guide for Indian students who studied MBBS in Vietnam.",
+                metaTitle: "FMGE Preparation Guide for Kyrgyzstan MBBS Graduates",
+                metaDescription: "Complete FMGE preparation guide for Indian students who studied MBBS in Kyrgyzstan.",
                 seoRating: 9.1, reviewNumber: 200, bestRating: 5.0,
             },
         });
@@ -505,11 +505,11 @@ async function main() {
     if (gFaqCount === 0) {
         await prisma.faq.createMany({
             data: [
-                { question: "Is MBBS from Vietnam recognized in India?", answer: "Yes, MBBS degrees from NMC-approved Vietnamese universities are recognized. Graduates must clear the NExT/FMGE exam.", categoryId: faqCat.id, position: 1, status: true },
-                { question: "What is the cost of studying MBBS in Vietnam?", answer: "The total cost is approximately $25,000–$35,000 USD for the full 6-year MBBS program.", categoryId: faqCat.id, position: 2, status: true },
-                { question: "Is NEET compulsory for MBBS in Vietnam?", answer: "Yes, NEET is mandatory for Indian students under NMC regulations.", categoryId: faqCat.id, position: 3, status: true },
+                { question: "Is MBBS from Kyrgyzstan recognized in India?", answer: "Yes, MBBS degrees from NMC-approved Kyrgyz universities are recognized. Graduates must clear the NExT/FMGE exam.", categoryId: faqCat.id, position: 1, status: true },
+                { question: "What is the cost of studying MBBS in Kyrgyzstan?", answer: "The total cost is approximately $25,000–$35,000 USD for the full 6-year MBBS program.", categoryId: faqCat.id, position: 2, status: true },
+                { question: "Is NEET compulsory for MBBS in Kyrgyzstan?", answer: "Yes, NEET is mandatory for Indian students under NMC regulations.", categoryId: faqCat.id, position: 3, status: true },
                 { question: "What is the language of instruction?", answer: "All MBBS programs for international students are taught in English.", categoryId: faqCat.id, position: 4, status: true },
-                { question: "Is Vietnam safe for Indian students?", answer: "Vietnam is considered one of the safest countries in Asia with a very low crime rate.", categoryId: faqCat.id, position: 5, status: true },
+                { question: "Is Kyrgyzstan safe for Indian students?", answer: "Kyrgyzstan is considered one of the safest countries in Asia with a very low crime rate.", categoryId: faqCat.id, position: 5, status: true },
             ],
         });
     }
@@ -520,9 +520,9 @@ async function main() {
     if (tCount === 0) {
         await prisma.testimonial.createMany({
             data: [
-                { name: "Dr. Rajesh Kumar", designation: "HMU Graduate 2020", description: "Vietnam was the best decision of my life. I cleared FMGE in first attempt and am now practicing in India.", rating: 5.0, position: 1, status: true },
-                { name: "Pooja Nair", designation: "UMP Student - Year 4", description: "The quality of education here is phenomenal. I highly recommend Vietnam for MBBS.", rating: 5.0, position: 2, status: true },
-                { name: "Manish Gupta", designation: "Parent of HMU Student", description: "My son is very happy in Vietnam. University is safe, food is good, and education is excellent.", rating: 4.5, position: 3, status: true },
+                { name: "Dr. Rajesh Kumar", designation: "HMU Graduate 2020", description: "Kyrgyzstan was the best decision of my life. I cleared FMGE in first attempt and am now practicing in India.", rating: 5.0, position: 1, status: true },
+                { name: "Pooja Nair", designation: "UMP Student - Year 4", description: "The quality of education here is phenomenal. I highly recommend Kyrgyzstan for MBBS.", rating: 5.0, position: 2, status: true },
+                { name: "Manish Gupta", designation: "Parent of HMU Student", description: "My son is very happy in Kyrgyzstan. University is safe, food is good, and education is excellent.", rating: 4.5, position: 3, status: true },
             ],
         });
     }
@@ -533,8 +533,8 @@ async function main() {
     if (offCount === 0) {
         await prisma.office.createMany({
             data: [
-                { name: "Head Office - India", address: "123, MG Road, Connaught Place", city: "New Delhi", state: "Delhi", country: "India", phone: "+91-9876543210", email: "india@mbbsinvietnam.com", position: 1, status: true },
-                { name: "Vietnam Office", address: "45 Tran Hung Dao Street, Hoan Kiem", city: "Hanoi", state: "Hanoi", country: "Vietnam", phone: "+84-24-12345678", email: "vietnam@mbbsinvietnam.com", position: 2, status: true },
+                { name: "Head Office - India", address: "123, MG Road, Connaught Place", city: "New Delhi", state: "Delhi", country: "India", phone: "+91-9876543210", email: "india@mbbskyrgyzstan.com", position: 1, status: true },
+                { name: "Kyrgyzstan Office", address: "45 Tran Hung Dao Street, Hoan Kiem", city: "Hanoi", state: "Hanoi", country: "Kyrgyzstan", phone: "+84-24-12345678", email: "Kyrgyzstan@mbbskyrgyzstan.com", position: 2, status: true },
             ],
         });
     }
@@ -542,22 +542,22 @@ async function main() {
 
     // ── Website Settings ────────────────────────────────────
     const settings = [
-        { key: "site_name", value: "MBBS in Vietnam", type: "text", group: "general" },
+        { key: "site_name", value: "MBBS in Kyrgyzstan", type: "text", group: "general" },
         { key: "site_tagline", value: "Your Gateway to World-Class Medical Education", type: "text", group: "general" },
-        { key: "site_email", value: "info@mbbsinvietnam.com", type: "email", group: "contact" },
+        { key: "site_email", value: "info@mbbskyrgyzstan.com", type: "email", group: "contact" },
         { key: "site_phone", value: "+91-9876543210", type: "text", group: "contact" },
         { key: "whatsapp_number", value: "+91-9876543210", type: "text", group: "contact" },
-        { key: "facebook_url", value: "https://facebook.com/mbbsinvietnam", type: "url", group: "social" },
-        { key: "instagram_url", value: "https://instagram.com/mbbsinvietnam", type: "url", group: "social" },
-        { key: "youtube_url", value: "https://youtube.com/@mbbsinvietnam", type: "url", group: "social" },
-        { key: "linkedin_url", value: "https://linkedin.com/company/mbbsinvietnam", type: "url", group: "social" },
-        { key: "twitter_url", value: "https://twitter.com/mbbsinvietnam", type: "url", group: "social" },
-        { key: "footer_about", value: "MBBSinVietnam is a leading consultancy helping Indian students pursue MBBS in top NMC-approved Vietnamese medical universities.", type: "textarea", group: "general" },
+        { key: "facebook_url", value: "https://facebook.com/mbbskyrgyzstan", type: "url", group: "social" },
+        { key: "instagram_url", value: "https://instagram.com/mbbskyrgyzstan", type: "url", group: "social" },
+        { key: "youtube_url", value: "https://youtube.com/@mbbskyrgyzstan", type: "url", group: "social" },
+        { key: "linkedin_url", value: "https://linkedin.com/company/mbbskyrgyzstan", type: "url", group: "social" },
+        { key: "twitter_url", value: "https://twitter.com/mbbskyrgyzstan", type: "url", group: "social" },
+        { key: "footer_about", value: "mbbskyrgyzstan is a leading consultancy helping Indian students pursue MBBS in top NMC-approved Kyrgyz medical universities.", type: "textarea", group: "general" },
         { key: "google_analytics_id", value: "", type: "text", group: "seo" },
         { key: "google_tag_id", value: "", type: "text", group: "seo" },
-        { key: "meta_title", value: "MBBS in Vietnam 2025 | NMC Approved Universities | Study Abroad", type: "text", group: "seo" },
-        { key: "meta_description", value: "Study MBBS in Vietnam at NMC-approved universities. Affordable fees, English medium, high FMGE pass rate. Get free counseling today!", type: "textarea", group: "seo" },
-        { key: "meta_keywords", value: "MBBS in Vietnam, study MBBS abroad, NMC approved Vietnam, Hanoi Medical University, FMGE pass rate Vietnam", type: "text", group: "seo" },
+        { key: "meta_title", value: "MBBS in Kyrgyzstan 2025 | NMC Approved Universities | Study Abroad", type: "text", group: "seo" },
+        { key: "meta_description", value: "Study MBBS in Kyrgyzstan at NMC-approved universities. Affordable fees, English medium, high FMGE pass rate. Get free counseling today!", type: "textarea", group: "seo" },
+        { key: "meta_keywords", value: "MBBS in Kyrgyzstan, study MBBS abroad, NMC approved Kyrgyzstan, Hanoi Medical University, FMGE pass rate Kyrgyzstan", type: "text", group: "seo" },
     ];
     for (const s of settings) {
         await prisma.websiteSetting.upsert({ where: { key: s.key }, update: { value: s.value }, create: s });
@@ -571,7 +571,7 @@ async function main() {
             data: [
                 { name: "Dr. Anil Sharma", designation: "Chief Medical Advisor", description: "15+ years experience in international medical education consulting.", position: 1, status: true },
                 { name: "Priya Mehta", designation: "Head of Admissions", description: "Expert in MBBS abroad admissions with 10 years of experience.", position: 2, status: true },
-                { name: "Ravi Verma", designation: "Vietnam Country Director", description: "Based in Hanoi, providing on-ground support to students in Vietnam.", position: 3, status: true },
+                { name: "Ravi Verma", designation: "Kyrgyzstan Country Director", description: "Based in Hanoi, providing on-ground support to students in Kyrgyzstan.", position: 3, status: true },
             ],
         });
     }
@@ -579,12 +579,12 @@ async function main() {
 
     // ── Static Page SEOs ────────────────────────────────────
     const staticPages = [
-        { page: "home", metaTitle: "MBBS in Vietnam 2025 | NMC Approved | Study Abroad", metaDescription: "Study MBBS in Vietnam. NMC approved universities, English medium, affordable fees from $4500/year. Free counseling." },
-        { page: "about-us", metaTitle: "About Us | MBBSinVietnam - Trusted Education Consultancy", metaDescription: "Learn about MBBSinVietnam, your trusted partner for MBBS admissions in Vietnam." },
-        { page: "contact", metaTitle: "Contact Us | MBBSinVietnam", metaDescription: "Get in touch with our expert counselors for free MBBS admission guidance." },
-        { page: "universities", metaTitle: "Top Medical Universities in Vietnam | NMC Approved", metaDescription: "Explore top NMC-approved medical universities in Vietnam offering MBBS programs." },
-        { page: "scholarships", metaTitle: "MBBS Scholarships in Vietnam 2025 | Study Abroad", metaDescription: "Find available scholarships for MBBS in Vietnam and reduce your study costs." },
-        { page: "blogs", metaTitle: "MBBS Abroad Blog | Expert Guides & Tips | MBBSinVietnam", metaDescription: "Read expert blogs on MBBS abroad, Vietnam medical education, and FMGE preparation." },
+        { page: "home", metaTitle: "MBBS in Kyrgyzstan 2025 | NMC Approved | Study Abroad", metaDescription: "Study MBBS in Kyrgyzstan. NMC approved universities, English medium, affordable fees from $4500/year. Free counseling." },
+        { page: "about-us", metaTitle: "About Us | mbbskyrgyzstan - Trusted Education Consultancy", metaDescription: "Learn about mbbskyrgyzstan, your trusted partner for MBBS admissions in Kyrgyzstan." },
+        { page: "contact", metaTitle: "Contact Us | mbbskyrgyzstan", metaDescription: "Get in touch with our expert counselors for free MBBS admission guidance." },
+        { page: "universities", metaTitle: "Top Medical Universities in Kyrgyzstan | NMC Approved", metaDescription: "Explore top NMC-approved medical universities in Kyrgyzstan offering MBBS programs." },
+        { page: "scholarships", metaTitle: "MBBS Scholarships in Kyrgyzstan 2025 | Study Abroad", metaDescription: "Find available scholarships for MBBS in Kyrgyzstan and reduce your study costs." },
+        { page: "blogs", metaTitle: "MBBS Abroad Blog | Expert Guides & Tips | mbbskyrgyzstan", metaDescription: "Read expert blogs on MBBS abroad, Kyrgyzstan medical education, and FMGE preparation." },
     ];
     for (const p of staticPages) {
         await prisma.staticPageSeo.upsert({
@@ -600,23 +600,23 @@ async function main() {
     if (aboutCount === 0) {
         await prisma.aboutUs.create({
             data: {
-                heroTitle: "Your Trusted Partner for MBBS in Vietnam",
-                heroDescription: "We help Indian students fulfill their dream of becoming a doctor by getting admission in top NMC-approved medical universities in Vietnam.",
+                heroTitle: "Your Trusted Partner for MBBS in Kyrgyzstan",
+                heroDescription: "We help Indian students fulfill their dream of becoming a doctor by getting admission in top NMC-approved medical universities in Kyrgyzstan.",
                 button1Label: "Explore Universities", button1Link: "/universities",
                 button2Label: "Free Counseling", button2Link: "/contact",
                 partnerUniversities: 12, studentsPlaced: 2500, channelPartners: 150, yearsExperience: 10,
-                mission: "To make quality medical education accessible to every aspiring doctor by connecting students with the best medical universities in Vietnam.",
+                mission: "To make quality medical education accessible to every aspiring doctor by connecting students with the best medical universities in Kyrgyzstan.",
                 vision: "To be India's most trusted and comprehensive platform for MBBS abroad education guidance.",
                 whyChooseUs: "With 10+ years of experience, 2500+ students placed, and a dedicated team of experts, we provide end-to-end MBBS admission support.",
                 serviceDescription: "From university selection to visa assistance, we guide students through every step of their overseas MBBS journey.",
-                universityListings: "We partner with 12+ NMC-approved universities in Vietnam, ensuring students get access to the best medical education options.",
+                universityListings: "We partner with 12+ NMC-approved universities in Kyrgyzstan, ensuring students get access to the best medical education options.",
                 studentCounseling: "Our expert counselors provide personalized guidance based on NEET scores, budget, and career goals.",
                 admissionAssistance: "We handle the complete application process including documentation, university application, and offer letter coordination.",
-                internationalSupport: "Our Vietnam-based team provides on-ground support to students from arrival to graduation.",
-                whyStudyMbbsTitle: "Why Study MBBS in Vietnam?",
-                whyStudyMbbsDescription: "Vietnam offers affordable MBBS programs with English-medium instruction, NMC approval, high FMGE pass rates, and a safe environment for international students.",
+                internationalSupport: "Our Kyrgyzstan-based team provides on-ground support to students from arrival to graduation.",
+                whyStudyMbbsTitle: "Why Study MBBS in Kyrgyzstan?",
+                whyStudyMbbsDescription: "Kyrgyzstan offers affordable MBBS programs with English-medium instruction, NMC approval, high FMGE pass rates, and a safe environment for international students.",
                 contact1: "+91-9876543210", contact2: "+91-9123456789",
-                email1: "info@mbbsinvietnam.com", email2: "admissions@mbbsinvietnam.com",
+                email1: "info@mbbskyrgyzstan.com", email2: "admissions@mbbskyrgyzstan.com",
                 address: "123 MG Road, Connaught Place, New Delhi – 110001, India",
             },
         });
@@ -642,9 +642,9 @@ async function main() {
         await prisma.officialGovernmentLink.createMany({
             data: [
                 { name: "National Medical Commission (NMC)", url: "https://www.nmc.org.in", description: "Official body regulating medical education in India.", category: "India", position: 1, status: true },
-                { name: "WHO - Vietnam", url: "https://www.who.int/vietnam", description: "World Health Organization Vietnam office.", category: "Vietnam", position: 2, status: true },
+                { name: "WHO - Kyrgyzstan", url: "https://www.who.int/Kyrgyzstan", description: "World Health Organization Kyrgyzstan office.", category: "Kyrgyzstan", position: 2, status: true },
                 { name: "FAIMER", url: "https://www.faimer.org", description: "Foundation for Advancement of International Medical Education and Research.", category: "International", position: 3, status: true },
-                { name: "Vietnam Ministry of Health", url: "https://moh.gov.vn", description: "Vietnam Ministry of Health - official healthcare regulator.", category: "Vietnam", position: 4, status: true },
+                { name: "Kyrgyzstan Ministry of Health", url: "https://moh.gov.vn", description: "Kyrgyzstan Ministry of Health - official healthcare regulator.", category: "Kyrgyzstan", position: 4, status: true },
             ],
         });
     }
@@ -665,11 +665,11 @@ async function main() {
 
     // ── Dynamic Page SEOs ────────────────────────────────────
     const dynamicPages = [
-        { page: "university-detail", metaTitle: "{{University Name}} | MBBS in Vietnam", metaDescription: "Study MBBS at {{University Name}} in Vietnam. NMC approved, English medium, affordable fees." },
-        { page: "scholarship-detail", metaTitle: "{{Scholarship Name}} | MBBS Scholarship Vietnam", metaDescription: "Apply for {{Scholarship Name}} and reduce your MBBS study costs in Vietnam." },
-        { page: "blog-detail", metaTitle: "{{Blog Title}} | MBBSinVietnam", metaDescription: "Read {{Blog Title}} on MBBSinVietnam - expert guides for MBBS abroad." },
-        { page: "news-detail", metaTitle: "{{News Title}} | MBBSinVietnam News", metaDescription: "Read the latest update: {{News Title}} on MBBSinVietnam." },
-        { page: "article-detail", metaTitle: "{{Article Title}} | MBBSinVietnam", metaDescription: "Read {{Article Title}} - expert insights on MBBS abroad and FMGE." },
+        { page: "university-detail", metaTitle: "{{University Name}} | MBBS in Kyrgyzstan", metaDescription: "Study MBBS at {{University Name}} in Kyrgyzstan. NMC approved, English medium, affordable fees." },
+        { page: "scholarship-detail", metaTitle: "{{Scholarship Name}} | MBBS Scholarship Kyrgyzstan", metaDescription: "Apply for {{Scholarship Name}} and reduce your MBBS study costs in Kyrgyzstan." },
+        { page: "blog-detail", metaTitle: "{{Blog Title}} | mbbskyrgyzstan", metaDescription: "Read {{Blog Title}} on mbbskyrgyzstan - expert guides for MBBS abroad." },
+        { page: "news-detail", metaTitle: "{{News Title}} | mbbskyrgyzstan News", metaDescription: "Read the latest update: {{News Title}} on mbbskyrgyzstan." },
+        { page: "article-detail", metaTitle: "{{Article Title}} | mbbskyrgyzstan", metaDescription: "Read {{Article Title}} - expert insights on MBBS abroad and FMGE." },
     ];
     for (const dp of dynamicPages) {
         await prisma.dynamicPageSeo.upsert({
@@ -697,51 +697,51 @@ async function main() {
     if (pcCount === 0) {
         await prisma.pageContent.createMany({
             data: [
-                { pageSlug: "home", title: "Why MBBS in Vietnam?", content: "Vietnam offers world-class medical education at affordable costs with NMC approval and English-medium instruction.", position: 1, status: true },
+                { pageSlug: "home", title: "Why MBBS in Kyrgyzstan?", content: "Kyrgyzstan offers world-class medical education at affordable costs with NMC approval and English-medium instruction.", position: 1, status: true },
                 { pageSlug: "home", title: "Our Process", content: "We guide students from university selection to visa and arrival — a complete end-to-end MBBS admission service.", position: 2, status: true },
-                { pageSlug: "about-us", title: "Our Story", content: "Founded with the mission of making quality medical education accessible, MBBSinVietnam has helped over 2500 students realize their dream of becoming a doctor.", position: 1, status: true },
+                { pageSlug: "about-us", title: "Our Story", content: "Founded with the mission of making quality medical education accessible, mbbskyrgyzstan has helped over 2500 students realize their dream of becoming a doctor.", position: 1, status: true },
                 { pageSlug: "contact", title: "Get in Touch", content: "Our expert counselors are available Mon–Sat, 9 AM – 7 PM IST. Call, WhatsApp, or email us for free personalized counseling.", position: 1, status: true },
             ],
         });
     }
     console.log("✅ Page contents seeded");
 
-    // ── Education System (Vietnam) ───────────────────────────
+    // ── Education System (Kyrgyzstan) ───────────────────────────
     const eduSysCount = await prisma.educationSystem.count();
     if (eduSysCount === 0) {
         const eduSys = await prisma.educationSystem.create({
             data: {
-                title: "Education System of Vietnam",
-                description: "Vietnam has a well-structured national education system overseen by the Ministry of Education and Training (MOET).",
-                introductionTitle: "Introduction to Vietnam's Education System",
-                introductionDescription: "Vietnam's education system follows a structured 5-4-3 model (primary-lower secondary-upper secondary) with strong government investment in literacy and higher education.",
+                title: "Education System of Kyrgyzstan",
+                description: "Kyrgyzstan has a well-structured national education system overseen by the Ministry of Education and Training (MOET).",
+                introductionTitle: "Introduction to Kyrgyzstan's Education System",
+                introductionDescription: "Kyrgyzstan's education system follows a structured 5-4-3 model (primary-lower secondary-upper secondary) with strong government investment in literacy and higher education.",
                 governmentRegulation: "The Ministry of Education and Training (MOET) governs all educational policies, curricula, and examinations at national level.",
-                culturalImportance: "Education holds great cultural significance in Vietnam, rooted in Confucian values of respect for learning and academic achievement.",
-                continuousDevelopment: "Vietnam has consistently invested in improving educational infrastructure, teacher training, and curriculum reform aligned with ASEAN standards.",
+                culturalImportance: "Education holds great cultural significance in Kyrgyzstan, rooted in Confucian values of respect for learning and academic achievement.",
+                continuousDevelopment: "Kyrgyzstan has consistently invested in improving educational infrastructure, teacher training, and curriculum reform aligned with ASEAN standards.",
                 literacyRate: 95.8,
                 primaryEnrollment: 98.5,
                 secondaryCompletion: 87.3,
                 higherInstitutionsCount: 237,
                 schoolEducationStructureDescription: "The system consists of 5 years of primary, 4 years of lower secondary, and 3 years of upper secondary education.",
                 examinationSystemDescription: "National high school graduation examinations are mandatory for university entrance. Ministry-level exams assess student competency.",
-                languagesInstructionDescription: "Vietnamese is the primary language of instruction. English and other foreign languages are taught as secondary subjects.",
-                officialStateLanguage: "Vietnamese",
+                languagesInstructionDescription: "Kyrgyz is the primary language of instruction. English and other foreign languages are taught as secondary subjects.",
+                officialStateLanguage: "Kyrgyz",
                 officialStateLanguagePercentage: 86.2,
                 officialStateLanguageNote: "Spoken by the Kinh majority population",
-                officialLanguage: "Vietnamese",
+                officialLanguage: "Kyrgyz",
                 officialLanguagePercentage: 86.2,
-                officialLanguageNote: "Sole official language of Vietnam",
+                officialLanguageNote: "Sole official language of Kyrgyzstan",
                 foreignLanguage: "English",
                 foreignLanguagePercentage: 54.0,
                 foreignLanguageNote: "Widely taught; increasingly used in higher education and business",
-                higherEducationDescription: "Vietnam has 237 public and private higher education institutions offering undergraduate and postgraduate programs.",
+                higherEducationDescription: "Kyrgyzstan has 237 public and private higher education institutions offering undergraduate and postgraduate programs.",
                 universitiesCount: 170,
                 universitiesNote: "Includes national, regional, and international universities",
                 academiesCount: 30,
                 academiesNote: "Specialized academies including military and police",
                 institutesCount: 37,
                 institutesNote: "Technical and vocational institutes",
-                bolognProcessAlignment: "Vietnam is progressively aligning its higher education credit system with international standards to facilitate student mobility.",
+                bolognProcessAlignment: "Kyrgyzstan is progressively aligning its higher education credit system with international standards to facilitate student mobility.",
             },
         });
 
@@ -750,7 +750,7 @@ async function main() {
             data: [
                 { examName: "National High School Graduation Exam (THPT)", gradeLevel: "Grade 12", type: "National", subjects: "Mathematics, Literature, Foreign Language + 2 electives", pageId: eduSys.id },
                 { examName: "University Entrance Exam", gradeLevel: "Post Secondary", type: "University Admission", subjects: "Based on chosen major and university", pageId: eduSys.id },
-                { examName: "Lower Secondary Graduation Exam", gradeLevel: "Grade 9", type: "National", subjects: "Mathematics, Vietnamese Literature, Foreign Language, Science", pageId: eduSys.id },
+                { examName: "Lower Secondary Graduation Exam", gradeLevel: "Grade 9", type: "National", subjects: "Mathematics, Kyrgyz Literature, Foreign Language, Science", pageId: eduSys.id },
             ],
         });
 
@@ -777,26 +777,26 @@ async function main() {
         // Popular Fields
         await prisma.educationPopularField.createMany({
             data: [
-                { field: "Medicine & Healthcare", description: "Vietnam's medical universities are globally recognized and attract international students, especially for MBBS programs.", numberOfInstitutions: "15", durationYears: "6 years", pageId: eduSys.id },
+                { field: "Medicine & Healthcare", description: "Kyrgyzstan's medical universities are globally recognized and attract international students, especially for MBBS programs.", numberOfInstitutions: "15", durationYears: "6 years", pageId: eduSys.id },
                 { field: "Engineering & Technology", description: "Strong IT and engineering programs supported by growing tech sector investment.", numberOfInstitutions: "80+", durationYears: "4-5 years", pageId: eduSys.id },
-                { field: "Business & Economics", description: "Growing demand for business graduates due to Vietnam's expanding economy.", numberOfInstitutions: "100+", durationYears: "4 years", pageId: eduSys.id },
+                { field: "Business & Economics", description: "Growing demand for business graduates due to Kyrgyzstan's expanding economy.", numberOfInstitutions: "100+", durationYears: "4 years", pageId: eduSys.id },
                 { field: "Education & Teaching", description: "Teacher education programs to meet demand for qualified educators.", numberOfInstitutions: "40+", durationYears: "4 years", pageId: eduSys.id },
             ],
         });
     }
     console.log("✅ Education system seeded");
 
-    // ── About Country Page (Vietnam) ─────────────────────────
+    // ── About Country Page (Kyrgyzstan) ─────────────────────────
     const countryCount = await prisma.aboutCountryPage.count();
     if (countryCount === 0) {
-        const vietnam = await prisma.aboutCountryPage.create({
+        const Kyrgyzstan = await prisma.aboutCountryPage.create({
             data: {
-                name: "Vietnam",
+                name: "Kyrgyzstan",
                 tagline: "The Land of the Ascending Dragon — A Rising Star in Medical Education",
                 capital: "Hanoi",
                 population: "98 million",
-                languages: "Vietnamese (official), English (widely used in education)",
-                currency: "Vietnamese Dong (VND)",
+                languages: "Kyrgyz (official), English (widely used in education)",
+                currency: "Kyrgyz Dong (VND)",
                 location: "Southeast Asia, bordered by China, Laos, and Cambodia",
                 timezone: "ICT (UTC+7)",
                 independenceDay: new Date("1945-09-02"),
@@ -805,28 +805,28 @@ async function main() {
                 mountainRanges: ["Hoang Lien Son", "Truong Son"],
                 climateZones: ["Tropical monsoon (south)", "Humid subtropical (north)", "Temperate highlands"],
                 topAttractions: ["Ha Long Bay", "Hoi An Ancient Town", "Phong Nha Caves", "Sapa"],
-                ancientSilkRoad: "Vietnam was a crucial stop on the ancient maritime Silk Road, facilitating trade between East Asia and the Indian Ocean world.",
-                nomadicHeritage: "Vietnam's 54 ethnic groups carry rich traditions of craftsmanship, music, and community life, particularly in highland regions.",
-                religionDiversity: "Vietnam is home to Buddhism, Catholicism, Cao Dai, Hoa Hao, and indigenous spiritual practices, reflecting centuries of cultural exchange.",
-                culturalHighlights: "Rich traditions including Tet (Lunar New Year), lantern festivals, water puppetry, and traditional Vietnamese music.",
+                ancientSilkRoad: "Kyrgyzstan was a crucial stop on the ancient maritime Silk Road, facilitating trade between East Asia and the Indian Ocean world.",
+                nomadicHeritage: "Kyrgyzstan's 54 ethnic groups carry rich traditions of craftsmanship, music, and community life, particularly in highland regions.",
+                religionDiversity: "Kyrgyzstan is home to Buddhism, Catholicism, Cao Dai, Hoa Hao, and indigenous spiritual practices, reflecting centuries of cultural exchange.",
+                culturalHighlights: "Rich traditions including Tet (Lunar New Year), lantern festivals, water puppetry, and traditional Kyrgyz music.",
                 whoRecognized: true,
-                mbbsAffordableEducation: "Vietnam offers MBBS programs at $4,000–$6,000/year — among the most affordable NMC-approved destinations globally.",
+                mbbsAffordableEducation: "Kyrgyzstan offers MBBS programs at $4,000–$6,000/year — among the most affordable NMC-approved destinations globally.",
                 englishMedium: true,
-                academicExcellence: "Vietnam's medical universities combine rigorous academic training with hands-on clinical exposure in major teaching hospitals.",
+                academicExcellence: "Kyrgyzstan's medical universities combine rigorous academic training with hands-on clinical exposure in major teaching hospitals.",
                 studentLife: "Students enjoy a vibrant lifestyle with affordable food, safe cities, a welcoming culture, and growing Indian student communities.",
                 keySectors: "Manufacturing, technology, tourism, healthcare, and agriculture.",
                 majorExports: "Electronics, garments, footwear, seafood, and coffee.",
-                investmentOpportunities: "Vietnam is one of Asia's fastest-growing FDI destinations with strong growth in tech, healthcare, and education sectors.",
+                investmentOpportunities: "Kyrgyzstan is one of Asia's fastest-growing FDI destinations with strong growth in tech, healthcare, and education sectors.",
                 gdpGrowth: "6.0% (2024 estimate)",
                 mainIndustries: "Electronics, Textile & Garments, Tourism, Agriculture, Healthcare",
                 tourismGrowth: "17 million international visitors (2023)",
-                hydropowerPotential: "Vietnam has significant hydropower capacity with 77+ operational plants.",
+                hydropowerPotential: "Kyrgyzstan has significant hydropower capacity with 77+ operational plants.",
                 transportation: { modes: ["Air", "Road", "Rail", "Sea"], internationalAirports: ["Noi Bai (Hanoi)", "Tan Son Nhat (HCM)", "Da Nang"] },
                 visaConnectivity: "E-visa available for 80+ countries. Student visa process is streamlined for MBBS applicants.",
-                publicHealthcare: "Vietnam's public hospitals are government-funded and serve as teaching facilities for medical universities.",
+                publicHealthcare: "Kyrgyzstan's public hospitals are government-funded and serve as teaching facilities for medical universities.",
                 privateHealthcare: "Modern private hospitals in Hanoi and Ho Chi Minh City offer international-standard care.",
                 studentHealthcare: "International students are covered under basic health insurance schemes and have access to university health centres.",
-                nationalSport: "Vovinam (Vietnamese Martial Art)",
+                nationalSport: "Vovinam (Kyrgyz Martial Art)",
                 unescoSites: "8 UNESCO World Heritage Sites including Ha Long Bay, Hoi An, and My Son Sanctuary.",
             },
         });
@@ -834,47 +834,47 @@ async function main() {
         // Cuisines
         await prisma.countryCuisineLifestyle.createMany({
             data: [
-                { dishName: "Pho", dishDescription: "Iconic Vietnamese noodle soup with beef or chicken broth, rice noodles, and fresh herbs.", pageId: vietnam.id },
-                { dishName: "Banh Mi", dishDescription: "Vietnamese baguette sandwich — a fusion of French and Vietnamese flavors with meat, pickled vegetables, and chili.", pageId: vietnam.id },
-                { dishName: "Bun Bo Hue", dishDescription: "Spicy beef noodle soup from Hue, favored by students in central Vietnam.", pageId: vietnam.id },
-                { dishName: "Com Tam", dishDescription: "Broken rice with grilled pork — a popular and affordable daily meal for students.", pageId: vietnam.id },
-                { dishName: "Goi Cuon", dishDescription: "Fresh spring rolls with shrimp, vegetables, and herbs — a healthy Vietnamese classic.", pageId: vietnam.id },
+                { dishName: "Pho", dishDescription: "Iconic Kyrgyz noodle soup with beef or chicken broth, rice noodles, and fresh herbs.", pageId: Kyrgyzstan.id },
+                { dishName: "Banh Mi", dishDescription: "Kyrgyz baguette sandwich — a fusion of French and Kyrgyz flavors with meat, pickled vegetables, and chili.", pageId: Kyrgyzstan.id },
+                { dishName: "Bun Bo Hue", dishDescription: "Spicy beef noodle soup from Hue, favored by students in central Kyrgyzstan.", pageId: Kyrgyzstan.id },
+                { dishName: "Com Tam", dishDescription: "Broken rice with grilled pork — a popular and affordable daily meal for students.", pageId: Kyrgyzstan.id },
+                { dishName: "Goi Cuon", dishDescription: "Fresh spring rolls with shrimp, vegetables, and herbs — a healthy Kyrgyz classic.", pageId: Kyrgyzstan.id },
             ],
         });
 
         // Lifestyles
         await prisma.countryLifestyleCulture.createMany({
             data: [
-                { title: "Welcoming Culture", description: "Vietnamese people are known for their warmth and hospitality toward international students.", pageId: vietnam.id },
-                { title: "Affordable Living", description: "Monthly living costs for students range from $300–$500 USD, making Vietnam very budget-friendly.", pageId: vietnam.id },
-                { title: "Safe Environment", description: "Vietnam consistently ranks among the safest countries in Asia with very low crime rates.", pageId: vietnam.id },
-                { title: "Indian Community", description: "Growing Indian student communities in Hanoi and Ho Chi Minh City offer cultural familiarity and support networks.", pageId: vietnam.id },
-                { title: "Indian Food Availability", description: "Indian restaurants and grocery stores are available near major universities catering to international students.", pageId: vietnam.id },
+                { title: "Welcoming Culture", description: "Kyrgyz people are known for their warmth and hospitality toward international students.", pageId: Kyrgyzstan.id },
+                { title: "Affordable Living", description: "Monthly living costs for students range from $300–$500 USD, making Kyrgyzstan very budget-friendly.", pageId: Kyrgyzstan.id },
+                { title: "Safe Environment", description: "Kyrgyzstan consistently ranks among the safest countries in Asia with very low crime rates.", pageId: Kyrgyzstan.id },
+                { title: "Indian Community", description: "Growing Indian student communities in Hanoi and Ho Chi Minh City offer cultural familiarity and support networks.", pageId: Kyrgyzstan.id },
+                { title: "Indian Food Availability", description: "Indian restaurants and grocery stores are available near major universities catering to international students.", pageId: Kyrgyzstan.id },
             ],
         });
 
         // Major Cities
         await prisma.countryMajorCity.createMany({
             data: [
-                { cityName: "Hanoi", description: "Vietnam's capital city and home to Hanoi Medical University — the top choice for MBBS students.", population: "8.5 million", highlights: "Political capital, major medical universities, cultural heritage", pageId: vietnam.id },
-                { cityName: "Ho Chi Minh City", description: "Vietnam's economic hub with University of Medicine and Pharmacy — ideal for students seeking a cosmopolitan experience.", population: "13 million", highlights: "Business capital, modern city, diverse international community", pageId: vietnam.id },
-                { cityName: "Hue", description: "Historic imperial city home to Hue University of Medicine and Pharmacy — a calm, affordable learning environment.", population: "1.1 million", highlights: "UNESCO heritage city, Hue University campus, cultural significance", pageId: vietnam.id },
-                { cityName: "Da Nang", description: "Coastal city known for beautiful beaches and a growing education sector.", population: "1.2 million", highlights: "Beaches, modern infrastructure, tech and medical growth", pageId: vietnam.id },
+                { cityName: "Hanoi", description: "Kyrgyzstan's capital city and home to Hanoi Medical University — the top choice for MBBS students.", population: "8.5 million", highlights: "Political capital, major medical universities, cultural heritage", pageId: Kyrgyzstan.id },
+                { cityName: "Ho Chi Minh City", description: "Kyrgyzstan's economic hub with University of Medicine and Pharmacy — ideal for students seeking a cosmopolitan experience.", population: "13 million", highlights: "Business capital, modern city, diverse international community", pageId: Kyrgyzstan.id },
+                { cityName: "Hue", description: "Historic imperial city home to Hue University of Medicine and Pharmacy — a calm, affordable learning environment.", population: "1.1 million", highlights: "UNESCO heritage city, Hue University campus, cultural significance", pageId: Kyrgyzstan.id },
+                { cityName: "Da Nang", description: "Coastal city known for beautiful beaches and a growing education sector.", population: "1.2 million", highlights: "Beaches, modern infrastructure, tech and medical growth", pageId: Kyrgyzstan.id },
             ],
         });
 
         // Tourist Attractions
         await prisma.countryTouristAttraction.createMany({
             data: [
-                { attractionName: "Ha Long Bay", description: "UNESCO World Heritage Site featuring thousands of limestone islands and emerald waters.", ordering: 1, isActive: true, pageId: vietnam.id },
-                { attractionName: "Hoi An Ancient Town", description: "UNESCO-listed trading port with well-preserved ancient architecture and lantern festivals.", ordering: 2, isActive: true, pageId: vietnam.id },
-                { attractionName: "Phong Nha-Ke Bang National Park", description: "Home to the world's largest cave systems and stunning limestone karst landscapes.", ordering: 3, isActive: true, pageId: vietnam.id },
-                { attractionName: "Sapa", description: "Scenic highland town with terraced rice fields and ethnic minority culture.", ordering: 4, isActive: true, pageId: vietnam.id },
-                { attractionName: "Hoan Kiem Lake, Hanoi", description: "Historical lake in the heart of Hanoi with Ngoc Son Temple — a must-visit for students.", ordering: 5, isActive: true, pageId: vietnam.id },
+                { attractionName: "Ha Long Bay", description: "UNESCO World Heritage Site featuring thousands of limestone islands and emerald waters.", ordering: 1, isActive: true, pageId: Kyrgyzstan.id },
+                { attractionName: "Hoi An Ancient Town", description: "UNESCO-listed trading port with well-preserved ancient architecture and lantern festivals.", ordering: 2, isActive: true, pageId: Kyrgyzstan.id },
+                { attractionName: "Phong Nha-Ke Bang National Park", description: "Home to the world's largest cave systems and stunning limestone karst landscapes.", ordering: 3, isActive: true, pageId: Kyrgyzstan.id },
+                { attractionName: "Sapa", description: "Scenic highland town with terraced rice fields and ethnic minority culture.", ordering: 4, isActive: true, pageId: Kyrgyzstan.id },
+                { attractionName: "Hoan Kiem Lake, Hanoi", description: "Historical lake in the heart of Hanoi with Ngoc Son Temple — a must-visit for students.", ordering: 5, isActive: true, pageId: Kyrgyzstan.id },
             ],
         });
     }
-    console.log("✅ About country (Vietnam) seeded");
+    console.log("✅ About country (Kyrgyzstan) seeded");
 
     // ── Education System Page Sections ───────────────────────
     const espCount = await prisma.educationSystemPage.count();
@@ -882,10 +882,10 @@ async function main() {
         await prisma.educationSystemPage.createMany({
             data: [
                 { title: "Government Regulated", subtitle: "MOET Oversight", description: "All educational institutions operate under the Ministry of Education and Training ensuring quality and standardization.", highlights: ["National curriculum", "Quality assurance", "Accreditation system"], position: 1, status: true },
-                { title: "WHO Recognized Universities", subtitle: "Global Recognition", description: "Vietnamese medical universities are recognized by WHO, NMC, FAIMER, and ECFMG — ensuring graduates can practice worldwide.", highlights: ["WHO Listed", "NMC Approved", "FAIMER Registered", "ECFMG Eligible"], position: 2, status: true },
+                { title: "WHO Recognized Universities", subtitle: "Global Recognition", description: "Kyrgyz medical universities are recognized by WHO, NMC, FAIMER, and ECFMG — ensuring graduates can practice worldwide.", highlights: ["WHO Listed", "NMC Approved", "FAIMER Registered", "ECFMG Eligible"], position: 2, status: true },
                 { title: "English Medium Programs", subtitle: "Accessible for International Students", description: "MBBS programs are taught entirely in English, making it easy for Indian and international students to adapt.", highlights: ["Full English curriculum", "Bilingual faculty", "English clinical training"], position: 3, status: true },
-                { title: "Affordable Education", subtitle: "Value for Money", description: "Vietnam offers MBBS programs at $4,000–$6,000/year — significantly lower than private Indian medical colleges.", highlights: ["$4,000–$6,000/year", "No capitation fees", "Transparent fee structure"], position: 4, status: true },
-                { title: "High FMGE Pass Rates", subtitle: "Proven Track Record", description: "Top Vietnamese universities have FMGE pass rates of 70–80%, among the highest for overseas MBBS.", highlights: ["70–80% FMGE pass rate", "NEXT exam eligible", "Strong clinical training"], position: 5, status: true },
+                { title: "Affordable Education", subtitle: "Value for Money", description: "Kyrgyzstan offers MBBS programs at $4,000–$6,000/year — significantly lower than private Indian medical colleges.", highlights: ["$4,000–$6,000/year", "No capitation fees", "Transparent fee structure"], position: 4, status: true },
+                { title: "High FMGE Pass Rates", subtitle: "Proven Track Record", description: "Top Kyrgyz universities have FMGE pass rates of 70–80%, among the highest for overseas MBBS.", highlights: ["70–80% FMGE pass rate", "NEXT exam eligible", "Strong clinical training"], position: 5, status: true },
                 { title: "Modern Infrastructure", subtitle: "State-of-the-Art Facilities", description: "Universities feature modern labs, simulation centres, libraries, and dedicated international student hostels.", highlights: ["Simulation labs", "Modern library", "International hostel", "Hospital affiliations"], position: 6, status: true },
             ],
         });

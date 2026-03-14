@@ -46,7 +46,7 @@ export default function NotFound() {
                             { label: "Universities", href: "/universities" },
                             { label: "Scholarships", href: "/scholarships" },
                             { label: "Compare Universities", href: "/compare" },
-                            { label: "About Vietnam", href: "/about-vietnam" },
+                            { label: "About Kyrgyzstan", href: "/about-kyrgyzstan" },
                             { label: "FMGE Pass Rates", href: "/fmge-rates" },
                             { label: "Contact Us", href: "/contact-us" },
                         ].map((l) => (

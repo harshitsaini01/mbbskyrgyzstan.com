@@ -53,7 +53,7 @@ export default function CityCreatePage() {
             <form onSubmit={handleSubmit} className="bg-white rounded-xl border border-gray-200 p-6 space-y-5">
                 <div className="space-y-1.5">
                     <Label>City Name *</Label>
-                    <Input value={form.name} onChange={(e) => set("name", e.target.value)} placeholder="e.g. Hanoi" required />
+                    <Input value={form.name} onChange={(e) => set("name", e.target.value)} placeholder="e.g. Bishkek" required />
                 </div>
                 <div className="space-y-1.5">
                     <Label>Province *</Label>

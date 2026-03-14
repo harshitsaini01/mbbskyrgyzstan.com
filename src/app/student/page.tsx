@@ -84,7 +84,7 @@ export default async function StudentDashboard() {
             <div className="grid sm:grid-cols-2 gap-4">
                 <Link href="/universities" className="bg-red-600 text-white rounded-2xl p-6 hover:bg-red-700 transition-colors group">
                     <div className="font-bold text-lg mb-1">Browse Universities</div>
-                    <div className="text-red-100 text-sm">Find your ideal MBBS university in Vietnam</div>
+                    <div className="text-red-100 text-sm">Find your ideal MBBS university in Kyrgyzstan</div>
                     <ArrowRight className="w-5 h-5 mt-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link href="/scholarships" className="bg-white border-2 border-red-600 text-red-600 rounded-2xl p-6 hover:bg-red-50 transition-colors group">

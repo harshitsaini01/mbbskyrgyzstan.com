@@ -8,7 +8,7 @@ import { Menu, X, ChevronDown, GraduationCap, User } from "lucide-react";
 const resourcesMenu = [
     { name: "About Us", path: "/about-us" },
     { name: "Contact Us", path: "/contact-us" },
-    { name: "About Vietnam", path: "/about-vietnam" },
+    { name: "About Kyrgyzstan", path: "/about-kyrgyzstan" },
     { name: "Education System", path: "/education-system" },
     { name: "View Our Partners", path: "/our-partners" },
     { name: "Blog & News", path: "/blog" },
@@ -57,7 +57,7 @@ export default function Header() {
                             <GraduationCap className="w-8 h-8 text-white" />
                         </div>
                         <div>
-                            <h1 className="text-2xl font-bold text-gray-800">MBBS in Vietnam</h1>
+                            <h1 className="text-2xl font-bold text-gray-800">MBBS in Kyrgyzstan</h1>
                         </div>
                     </Link>
 

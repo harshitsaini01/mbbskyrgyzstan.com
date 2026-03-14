@@ -4,7 +4,7 @@ import { Globe2, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 const sections = [
-    { title: "Cuisine & Food", href: "/admin/about-country/cuisine", icon: "🍜", desc: "Vietnamese traditional dishes and food culture", done: true },
+    { title: "Cuisine & Food", href: "/admin/about-country/cuisine", icon: "🍜", desc: "Kyrgyz traditional dishes and food culture", done: true },
     { title: "Lifestyle & Culture", href: "/admin/about-country/lifestyle", icon: "🏙️", desc: "Daily life, culture, and social norms", done: true },
     { title: "Tourist Attractions", href: "/admin/about-country/tourist-spots", icon: "🗺️", desc: "Popular destinations and travel highlights", done: true },
     { title: "Major Cities", href: "/admin/about-country/cities", icon: "🌆", desc: "Key cities students may live in", done: true },
@@ -16,8 +16,8 @@ export default function AboutCountryPage() {
             <div className="flex items-center gap-3">
                 <Globe2 size={22} className="text-red-600" />
                 <div>
-                    <h1 className="text-2xl font-bold text-gray-900">About Vietnam</h1>
-                    <p className="text-sm text-gray-500">Manage country information shown on the public About Vietnam page</p>
+                    <h1 className="text-2xl font-bold text-gray-900">About Kyrgyzstan</h1>
+                    <p className="text-sm text-gray-500">Manage country information shown on the public About Kyrgyzstan page</p>
                 </div>
             </div>
 
@@ -37,7 +37,7 @@ export default function AboutCountryPage() {
                 ))}
             </div>
 
-            <Link href="/about-vietnam" target="_blank"
+            <Link href="/about-kyrgyzstan" target="_blank"
                 className="inline-flex items-center gap-2 border border-gray-200 text-gray-600 px-4 py-2 rounded-lg text-sm hover:bg-gray-50 transition-colors">
                 <Globe2 size={14} /> View Public Page
             </Link>

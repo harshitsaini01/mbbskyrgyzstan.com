@@ -121,7 +121,7 @@ export default function EditFaqPage() {
                         <Input
                             value={form.question}
                             onChange={(e) => set("question", e.target.value)}
-                            placeholder="What is the eligibility for MBBS in Vietnam?"
+                            placeholder="What is the eligibility for MBBS in Kyrgyzstan?"
                         />
                     </div>
                     <div className="space-y-1.5">

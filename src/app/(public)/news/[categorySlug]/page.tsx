@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }).catch(() => null);
     if (!cat) return { title: "News Category Not Found" };
     return buildMetadata({
-        title: cat.metaTitle || `${cat.name} — MBBS Vietnam News`,
-        description: cat.metaDescription || cat.description || `Latest news about ${cat.name} — MBBS in Vietnam.`,
+        title: cat.metaTitle || `${cat.name} — MBBS Kyrgyzstan News`,
+        description: cat.metaDescription || cat.description || `Latest news about ${cat.name} — MBBS in Kyrgyzstan.`,
     });
 }
 
@@ -133,7 +133,7 @@ export default async function NewsCategoryPage({ params }: Props) {
                                 </ul>
                             </div>
                             <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 text-white text-center">
-                                <h3 className="font-bold text-lg mb-2">Study MBBS in Vietnam</h3>
+                                <h3 className="font-bold text-lg mb-2">Study MBBS in Kyrgyzstan</h3>
                                 <p className="text-blue-100 text-sm mb-4">Get free expert counseling today</p>
                                 <Link href="/contact-us" className="inline-flex items-center gap-2 bg-white text-blue-700 font-semibold px-4 py-2 rounded-xl hover:bg-blue-50 transition-colors text-sm">
                                     Contact Us <ArrowRight className="w-4 h-4" />

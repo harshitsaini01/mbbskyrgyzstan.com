@@ -47,7 +47,7 @@ export default function AdminLoginPage() {
                             M
                         </div>
                         <h1 className="text-2xl font-bold text-gray-900">Admin Login</h1>
-                        <p className="text-sm text-gray-500 mt-1">MBBS Vietnam CMS</p>
+                        <p className="text-sm text-gray-500 mt-1">MBBS Kyrgyzstan CMS</p>
                     </div>
 
                     <form onSubmit={handleSubmit} className="space-y-5">
@@ -60,7 +60,7 @@ export default function AdminLoginPage() {
                                 <Input
                                     id="email"
                                     type="email"
-                                    placeholder="admin@mbbsinvietnam.com"
+                                    placeholder="admin@mbbskyrgyzstan.com"
                                     className="pl-9"
                                     value={form.email}
                                     onChange={(e) => setForm({ ...form, email: e.target.value })}
